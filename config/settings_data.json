@@ -1,30 +1,31 @@
 {
   "current": {
     "color--accent": "#f2a7a0",
+    "bg-color--light": "#f7edec",
     "color-page-bg": "#ffffff",
-    "color-text": "#212121",
+    "color-text": "#000000",
     "color--alternative": "#ffffff",
     "color-border": "#e0e0e0",
     "color-button": "#ffffff",
     "color-button-bg": "#212121",
-    "color-header-bg": "#fafafa",
+    "color-header-bg": "#f7edec",
     "color-header": "#212121",
     "color-header-cart": "#212121",
-    "bg-color--footer": "#f7f7f7",
+    "bg-color--footer": "#f7edec",
     "color--footer": "#212121",
     "typography--heading": "futura_n4",
     "typography--heading--uppercase": false,
-    "typography--heading--size": "medium",
+    "typography--heading--size": "small",
     "typography--accent": "karla_n4",
     "typography--paragraph": "karla_n4",
-    "typography--paragraph--size": "medium",
+    "typography--paragraph--size": "small",
     "search--show-in-header": true,
     "favicon": "shopify:\/\/shop_images\/favicon-32x32.png",
     "sections": {
       "header": {
         "type": "header",
         "settings": {
-          "transparent-menu": false,
+          "transparent-menu": true,
           "header-account-show": true,
           "cart--icon": "bag",
           "header-menu-center": false,
@@ -33,8 +34,8 @@
           "show-locale-selector": false,
           "header-logo-center": true,
           "logo": "shopify:\/\/shop_images\/md-tm-logo.png",
-          "logo-height": 65,
-          "mobile-logo-height": 60
+          "logo-height": 40,
+          "mobile-logo-height": 35
         }
       },
       "footer": {
@@ -43,7 +44,7 @@
           "footer--subscribe": {
             "type": "subscribe",
             "settings": {
-              "newsletter--heading": "<span class=\"heading-top\">Enjoy 15% off<\/span><span class=\"heading-bottom\"> your first order!<\/span>",
+              "newsletter--heading": "<span class=\"heading-top\">ENJOY 15% OFF <\/span> <br> <span class=\"heading-bottom\">YOUR FIRST ORDER!<\/span>",
               "newsletter--info": "<p>Plus as a VIP, you'll be the first to know about sales, new skincare launches, & more!<\/p>",
               "subscribe--show-newsletter": true
             }
@@ -53,8 +54,10 @@
             "settings": {
               "menu-title": "ABOUT",
               "menu": "about",
-              "menu-title-1": "SERVICE",
-              "menu-1": "service"
+              "menu-title-sec": "SERVICE",
+              "contact-info": "1 (855) 768-0555",
+              "email-info": "",
+              "menu-sec": "service"
             }
           },
           "94d0b62b-38a8-4bb5-b722-d3fe3aaaf224": {
@@ -62,8 +65,10 @@
             "settings": {
               "menu-title": "SHOP",
               "menu": "shop",
-              "menu-title-1": "FOLLOW US",
-              "menu-1": "follow-us"
+              "menu-title-sec": "FOLLOW US",
+              "contact-info": "",
+              "email-info": "help@mdglam.com",
+              "menu-sec": "follow-us"
             }
           }
         },
@@ -73,8 +78,6 @@
           "94d0b62b-38a8-4bb5-b722-d3fe3aaaf224"
         ],
         "settings": {
-          "contact-phone": "1 (855) 768-0555",
-          "contact-email": "help@mdglam.com",
           "show-region-selector": false,
           "show-locale-selector": false,
           "show-payment-icons": true
@@ -95,7 +98,7 @@
           "enabled": true,
           "home-page-only": false,
           "background-color": "accent",
-          "light-text": true,
+          "light-text": false,
           "text": "Take 50% off on SPF50. Limited Time! Use the promo code SUN50 at the checkout.",
           "link": ""
         }

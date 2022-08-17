@@ -49,24 +49,7 @@
     </div>
   {% endif %}
 
-<div class="header--inner">
-  <div class="header--bottom-row left">
-    {%- liquid
-      if linklists[menu].links.size > 0
-        assign menu_alignment = 'left'
-        if menu_center
-          assign menu_alignment = 'center'
-        endif
-
-        echo '<div class="header--menu">'
-          render 'x-menu', align: menu_alignment, overlap_parent: 1, handle: menu
-        echo '</div>'
-      endif
-    
-    -%}
-  </div>
-  
-  <div class="header--top-row logo--middle">
+  <div class="header--top-row">
     {% if locale_enabled or region_enabled %}
       <div class="header--localization">
         {% render
@@ -79,14 +62,14 @@
     {% endif %}
 
     {% if request.page_type == 'index' %}
-    
+      <h1 class="header--logo">
         {%
           render 'logo',
           logo: logo_image,
           height: logo_height,
           mobile_height: mobile_logo_height
         %}
-  
+      </h1>
     {% else %}
       <div class="header--logo">
         {%
@@ -97,10 +80,10 @@
         %}
       </div>
     {% endif %}
-  
-  </div>
-<div class="header--right">
-  {% if settings.search--show-in-header %}
+ <div class="header--menu">
+         {%   render 'x-menu', align: menu_alignment, overlap_parent: 1, handle: menu %}
+        </div>
+    {% if settings.search--show-in-header %}
       <a
         class="header--search"
         href="{{ routes.search_url }}"
@@ -124,12 +107,26 @@
         {% render 'icons', icon: 'account' %}
       </a>
     {% endif %}
-  {%- liquid
-     
-        render 'header-cart', cart_icon: cart_icon
-     
-  -%}
-</div>
+     <div class="header--cart">
+       {%   render 'header-cart', cart_icon: cart_icon%}
+       </div>
+  </div>
+
+  <div class="header--bottom-row">
+    {%- liquid
+      if linklists[menu].links.size > 0
+        assign menu_alignment = 'left'
+        if menu_center
+          assign menu_alignment = 'center'
+        endif
+
+       
+      endif
+
+      
+    -%}
+  </div>
+
   <div class="header--mobile">
     <div class="header--mobile--menu">
       <div
@@ -153,7 +150,7 @@
     <div class="header--mobile--cart" data-item="accent-text">
       {% render 'header-cart', cart_icon: cart_icon %}
     </div>
-  </div>
+
   </div>
 </header-root>
 
@@ -181,9 +178,6 @@
     .header--top-row {
       height: {{ logo_height | plus: 16 }}px;
     }
-    .header--inner {display: grid;max-width: 1170px;margin: 0px auto;grid-gap: 10px;grid-template-columns: auto auto auto;}
-    .header--right {text-align: right;}
-    .header--top-row.logo--middle {text-align: center;}
   </style>
 {% endif %}
 

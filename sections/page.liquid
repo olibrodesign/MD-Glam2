@@ -6,7 +6,9 @@
   assign spacing_above = section.settings.spacing-above
   assign spacing_below = section.settings.spacing-below
 -%}
-
+<div class="product-page--header" data-mq="medium-large">
+        {% render 'breadcrumbs' %}
+      </div>
 {% if page.content != blank or show_title %}
   <div
     class="template-page--root"

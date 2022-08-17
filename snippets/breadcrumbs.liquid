@@ -1,6 +1,6 @@
 <ul class="breadcrumbs--root">
    <li data-item="block-link">
-      <a href="{{ routes.root_url }}">{{ 'general.breadcrumbs.home' | t }}</a>
+      <a id="breadcrumbtext" href="{{ routes.root_url }}">{{ 'general.breadcrumbs.home' | t }}</a>
    </li>
 
    {% if request.page_type == "product" %}
@@ -48,7 +48,7 @@
    {% elsif request.page_type == "blog" %}
       <li data-item="accent-text">{{ blog.title }}</li>
    {% elsif request.page_type == "page" %}
-      <li data-item="accent-text">{{ page.title }}</li>
+      <li id ="breadcrumbtitle" data-item="accent-text">{{ page.title }}</li>
    {% elsif request.page_type == "article" %}
       <li data-item="block-link">{{ blog.title | link_to: blog.url }}</li>
       <li data-item="accent-text">{{ article.title }}</li>

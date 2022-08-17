@@ -283,8 +283,8 @@
     },
     "footer": {
       "navigation": "Navigation",
-      "newsletter_placeholder": "Your Email",
-      "newsletter_button": "Ok"
+      "newsletter_placeholder": "Enter your email address",
+      "newsletter_button": "ADD TO BAG"
     }
   },
   "navigation": {
@@ -366,11 +366,16 @@
     "newsletter": {
       "email_placeholder": "Your email",
       "success": "Thanks for subscribing",
-      "button": "Subscribe"
+      "button": "Get 15% off"
     },
     "featured_collection": {
       "view_collection": "View Collection",
       "skip_link": "skip carousel"
+    }
+  },
+  "shopify": {
+    "links": {
+      "powered_by_shopify": "© 2022 MD GLAM"
     }
   }
 }

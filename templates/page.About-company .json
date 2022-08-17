@@ -1,0 +1,302 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "settings": {
+        "show-title": false,
+        "background-color": "light",
+        "light-text": false,
+        "container-width": 1,
+        "spacing-above": false,
+        "spacing-below": false
+      }
+    },
+    "166012342128eb4c5e": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "light",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "mobile-heading": "SKINCARE PRODUCTS YOUR SKIN DESERVES",
+        "overline": "SKINCARE PRODUCTS",
+        "heading": "YOUR SKIN DESERVES",
+        "text": "<p>\"Like many women, I always felt confused about which products to use and in what combination and I've always been skeptical of marketing claims.\"<\/p>",
+        "text-1": "<p>Dr. Cat<\/p>",
+        "text-2": "<p>(Board-Certified Plastic Surgeon,<br> Founder of MD GLAM)<\/p>",
+        "button-name": "",
+        "button-url": ""
+      }
+    },
+    "166074711258782bb2": {
+      "type": "featured-video",
+      "disabled": true,
+      "settings": {
+        "video-url": "",
+        "html5_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/86dad62a1d9e4beda529695f20b86b15.mp4?s=a01b2aeb4e1c0304ab64127d9a91f7cb&profile_id=113",
+        "image": "shopify:\/\/shop_images\/ezgif_10.png",
+        "full-width": true,
+        "background-color": "none",
+        "section-height": "regular",
+        "light-text": true,
+        "darken-video": true,
+        "heading": "",
+        "sub-heading": "",
+        "button-text": "",
+        "button-url": ""
+      }
+    },
+    "1660123733ecf837b5": {
+      "type": "image-with-text",
+      "settings": {
+        "text-color": "auto",
+        "background-color": "light",
+        "container-width": 5,
+        "spacing-above": true,
+        "spacing-below": true,
+        "video-icon": true,
+        "html5_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/86dad62a1d9e4beda529695f20b86b15.mp4?s=a01b2aeb4e1c0304ab64127d9a91f7cb&profile_id=113&",
+        "image-height": 1,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "center",
+        "text-width": "medium",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "overline": "",
+        "heading-mobile": "",
+        "title": "",
+        "title-sec": "",
+        "description": "",
+        "description-sec": "",
+        "description-third": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "16601246718cb82e3a": {
+      "type": "image-with-text",
+      "settings": {
+        "text-color": "auto",
+        "background-color": "light",
+        "container-width": 5,
+        "spacing-above": true,
+        "spacing-below": true,
+        "video-icon": false,
+        "html5_video": "",
+        "image-height": 1,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "right",
+        "text-width": "large",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "image": "shopify:\/\/shop_images\/Dr_90213_ce1ccc55-3603-4f55-9246-f08f326b6497.png",
+        "overline": "PLASTIC SURGEON",
+        "heading-mobile": "PLASTIC SURGEON IN BEVERLY HILLS,AND SCIENTIST",
+        "title": "IN BEVERLY HILLS,",
+        "title-sec": "AND SCIENTIST",
+        "description": "<p>As a woman, a plastic surgeon in Beverly Hills, and scientist, I am very particular about anything I put on my skin and only want the best. I’ve used skincare products my whole life, but it's been frustrating finding one that was effective and had all the ingredients I wanted. I also had a hard time finding products that smelled fresh and light and were non-greasy.<\/p>",
+        "description-sec": "<p>In 2005 I started my journey and started researching the science behind anti-aging skin care products. Being a published scientist with a degree in Molecular Biology from Harvard - I wanted to investigate what ingredients and compounds had real scientific data.<\/p>",
+        "description-third": "<p>In 2007, I published my research in the Aesthetic Surgery Journal entitled “The truth about over-the-counter topical anti-aging products: a comprehensive review.” From that research and through continued scientific investigation, I developed my skin care line MD GLAM.<\/p>",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "16601278614e17a8a1": {
+      "type": "image-with-text",
+      "settings": {
+        "text-color": "auto",
+        "background-color": "light",
+        "container-width": 5,
+        "spacing-above": true,
+        "spacing-below": true,
+        "video-icon": false,
+        "html5_video": "",
+        "image-height": 1,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "left",
+        "text-width": "large",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "image": "shopify:\/\/shop_images\/cleanser1_1_1.png",
+        "overline": "MD GLAM",
+        "heading-mobile": "MD GLAM IS AN EXTENSION OF MYSELF",
+        "title": "IS AN EXTENSION",
+        "title-sec": "OF MYSELF",
+        "description": "<p><sup>01<\/sup> Based on science, but with the luxury all women desire. <\/p><p><sup>02<\/sup> Combine the most effective, scientifically proven anti-aging and hydrating ingredients to improve the way skin looks and feels. <\/p>  <p><sup>03<\/sup> MD GLAM products are simple to use. <\/p> <p><sup>04<\/sup> The products are clean, safe, and gentle that I feel comfortable even using them on my own daughter. They are paraben-free, sulfate-free, and cruelty-free. To make it more affordable to my patients and consumers, I have skipped distribution, retail, and any other middle man completely to sell it directly to customers. <\/p> <p><sup>05<\/sup> MD GLAM is sold strictly and exclusively through MDGLAM.COM. I am super excited to share my exclusive skin care line with all of you - Enjoy!! <\/p>",
+        "description-sec": "",
+        "description-third": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "16601278761386c26f": {
+      "type": "image-with-text",
+      "settings": {
+        "text-color": "auto",
+        "background-color": "light",
+        "container-width": 5,
+        "spacing-above": true,
+        "spacing-below": true,
+        "video-icon": false,
+        "html5_video": "",
+        "image-height": 1,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "right",
+        "text-width": "medium",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "image": "shopify:\/\/shop_images\/UltimateAntiAgingKit3_2.png",
+        "overline": "OUR MISSION",
+        "heading-mobile": "OUR MISSION",
+        "title": "",
+        "title-sec": "",
+        "description": "My mission is to provide the best possible skin care products that I can stand behind 100% with effective anti-aging and skin health ingredients based on scientific research. I have put the same love and passion into taking care of my patients and their surgeries as I have put into every step of creating this skincare line that I am so proud and excited about.",
+        "description-sec": "<p>Just as medicine is constantly evolving, so is the field of skin care and anti-aging and I am committed to constantly researching new ingredients and staying on the cutting edge of skin care and anti-aging research so that all the products are innovative as well as effective.<\/p>",
+        "description-third": "<p>As a plastic surgeon I meet women every day who choose more invasive ways of achieving their aesthetic goals, but I feel that daily skin care maintenance is critical to looking young and beautiful and slowing the aging process.<\/p>",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "16601280622ca469f4": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "light",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "mobile-heading": "",
+        "overline": "",
+        "heading": "",
+        "text": "<p>MD GLAM is an extension of myself and my way of reaching out and helping women take care of themselves, feel amazing, be the best possible version of who they are.<\/p>",
+        "text-1": "",
+        "text-2": "",
+        "button-name": "SHOP",
+        "button-url": "shopify:\/\/collections\/frontpage"
+      }
+    },
+    "16603036182e9617bf": {
+      "type": "custom-Lookbook",
+      "blocks": {
+        "6c45aab1-cd3b-4b09-9ee7-d2c761ef7bec": {
+          "type": "twoImage",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/292254959_5382158651876639_5422781150819137862_n_1.png",
+            "title_1": "",
+            "des_1": "",
+            "color_1": "#ffffff",
+            "button_1": "",
+            "link_1": "",
+            "bg_button_1": "#ffffff",
+            "border_button_1": "#ffffff",
+            "color_button_1": "#232323",
+            "image_2": "shopify:\/\/shop_images\/276298438_5099320136827160_8577870474681519553_n_1.png",
+            "title_2": "",
+            "des_2": "",
+            "color_2": "#ffffff",
+            "button_2": "",
+            "link_2": "",
+            "bg_button_2": "#ffffff",
+            "border_button_2": "#ffffff",
+            "color_button_2": "#232323"
+          }
+        },
+        "1660303618930feeec-0": {
+          "type": "twoImage",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/274932157_5059573124135195_8441697978641207577_n_1.png",
+            "title_1": "",
+            "des_1": "",
+            "color_1": "#ffffff",
+            "button_1": "",
+            "link_1": "",
+            "bg_button_1": "#ffffff",
+            "border_button_1": "#ffffff",
+            "color_button_1": "#232323",
+            "image_2": "shopify:\/\/shop_images\/283820039_5261627580596414_1260625411024578347_n_1.png",
+            "title_2": "",
+            "des_2": "",
+            "color_2": "#ffffff",
+            "button_2": "",
+            "link_2": "",
+            "bg_button_2": "#ffffff",
+            "border_button_2": "#ffffff",
+            "color_button_2": "#232323"
+          }
+        },
+        "b743a100-c355-4d19-b128-a46cd3c27812": {
+          "type": "oneImage",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/284186598_5291036684322170_4875093671673570286_n_1.png",
+            "title": "",
+            "des": "",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff",
+            "link": "",
+            "title_2": "Special Offers",
+            "des_2": "Sale up to 60% off on selected items. End ins:",
+            "countdown_2": "2020\/01\/7 0:0:00",
+            "color_2": "#ffffff",
+            "link_2": ""
+          }
+        },
+        "1660303618930feeec-2": {
+          "type": "twoImage",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/293411373_5400170300075474_9074379176310277256_n_1.png",
+            "title_1": "",
+            "des_1": "",
+            "color_1": "#ffffff",
+            "button_1": "",
+            "link_1": "",
+            "bg_button_1": "#ffffff",
+            "border_button_1": "#ffffff",
+            "color_button_1": "#232323",
+            "image_2": "shopify:\/\/shop_images\/276155196_5086934118065762_3060182370824803369_n_1.png",
+            "title_2": "",
+            "des_2": "",
+            "color_2": "#ffffff",
+            "button_2": "",
+            "link_2": "",
+            "bg_button_2": "#ffffff",
+            "border_button_2": "#ffffff",
+            "color_button_2": "#232323"
+          }
+        }
+      },
+      "block_order": [
+        "6c45aab1-cd3b-4b09-9ee7-d2c761ef7bec",
+        "1660303618930feeec-0",
+        "b743a100-c355-4d19-b128-a46cd3c27812",
+        "1660303618930feeec-2"
+      ],
+      "settings": {
+        "font_size_title": "20px",
+        "block_des": "",
+        "margin_bottom_mb": 0,
+        "margin_bottom_tab": 0,
+        "margin_bottom": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166012342128eb4c5e",
+    "166074711258782bb2",
+    "1660123733ecf837b5",
+    "16601246718cb82e3a",
+    "16601278614e17a8a1",
+    "16601278761386c26f",
+    "16601280622ca469f4",
+    "16603036182e9617bf"
+  ]
+}

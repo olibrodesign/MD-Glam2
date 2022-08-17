@@ -91,8 +91,20 @@
     class="featured-content--container"
     data-background-color="{{ bg_color }}"
   >
+    {% if heading_mobile!=blank %}
+        <h3 class="Mobile-heading" id="Mobile-Heading" data-item="{{ heading_type }} {{ mobile_heading_type }}">
+              {{ heading_mobile | escape }}
+            </h3>
+      {% endif %}
     <div class="featured-content--image">
-      {% if image %}
+      {% if section.settings.html5_video != blank %}
+              <video width="900px"
+
+            controls  >
+                <source src="{{ section.settings.html5_video }}">
+              </video>
+            
+      {% elsif  image %}
         {%
           render "image",
           image: image,
@@ -115,6 +127,18 @@
           darken_mobile: darken_image_mobile
         %}
       {% endif %}
+      
+    {% if video_icon  %}
+      <a href="{{ icon_link }}">
+    <div class="custom-vector">
+     
+     {% render 'video-vector' %} 
+       <div class="custom-vector-icon">
+  
+     {% render 'video-icon' %} 
+         </div>
+    </div></a>
+      {% endif %}
     </div>
 
     {% if text_exists %}
@@ -130,12 +154,27 @@
               {{ title | escape }}
             </h3>
           {% endif %}
-
-          {% if description != blank %}
-            <div class="featured-content--description" data-item="rte-content">
+      {% if title_sec != blank %}
+            <h3 class="featured-content--title" data-item="{{ heading_type }} {{ mobile_heading_type }}">
+              {{ title_sec | escape }}
+            </h3>
+          {% endif %}
+{% if description != blank %}
+            <div class="featured-content--description" id="Featured-content-desc" data-item="rte-content">
               {{ description }}
             </div>
           {% endif %}
+          {% if desc_sec != blank %}
+            <div class="featured-content--description" data-item="rte-content">
+              {{ desc_sec }}
+            </div>
+          {% endif %}
+       {% if desc_third != blank %}
+            <div class="featured-content--description" data-item="rte-content">
+              {{ desc_third }}
+            </div>
+          {% endif %}
+       
 
           {% if link_text != blank %}
             <div class="featured-content--link" data-item="block-link">
@@ -159,5 +198,6 @@
   {% if cover_link %}
     </a>
   {% endif %}
+ 
 
 </div>

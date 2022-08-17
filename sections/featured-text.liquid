@@ -11,6 +11,11 @@
   assign spacing_above = section.settings.spacing-above
   assign spacing_below = section.settings.spacing-below
   assign text = section.settings.text
+  assign text_1=section.settings.text-1
+  assign text_2=section.settings.text-2
+  assign button_url=section.settings.button-url
+  assign button_name=section.settings.button-name
+  assign mobile_heading=section.settings.mobile-heading
 -%}
 
 {% comment %} View {% endcomment %}
@@ -24,7 +29,11 @@
   data-spacing-below="{{ spacing_below }}"
 >
   <div class="featured-text--wrapper">
-
+  {% if mobile_heading!=blank %}
+    <h2 class="featured-text--heading-mobile" data-item="section-heading">
+        {{ mobile_heading }}
+      </h2>
+    {% endif %}
     {% if overline != blank %}
       <h3 class="featured-text--overline" data-item="overline">
         {{ overline | escape }}
@@ -36,10 +45,29 @@
         {{ heading }}
       </h2>
     {% endif %}
-
+    <div class="custom-text">
     <div class="featured-text--body" data-item="rte-content">
       {{ text }}
     </div>
+    {% if text_1 !=blank %}
+    <div class="featured-text--body" id="featured-text-cat"data-item="rte-content">
+      {{ text_1 }}
+    </div>
+      {% endif %}
+      {% if text_2 !=blank %}
+    <div class="featured-text--body" id="featured-text-text" data-item="rte-content">
+      {{ text_2 }}
+    </div>
+        {% endif %}
+         {% if button_name !=blank %}
+           <a href="{{ button_url }}">
+    <div class="Richtext-button"  data-item="rte-content">
+    <button class="custom-button">  {{  button_name }}</button>
+    </div></a>
+        {% endif %}
+    </div>
+    
+    
 
   </div>
 </div>
@@ -92,6 +120,12 @@
         "content": "Content"
       },
       {
+        "id": "mobile-heading",
+        "label": "use this for mobile heading",
+        "type": "text",
+        "default": "Mobile heading"
+      },
+      {
         "id": "overline",
         "label": "Overline",
         "type": "text",
@@ -108,7 +142,32 @@
         "id": "text",
         "label": "Text",
         "default": "<p>Introduce your brand, products and vision statement and welcome customers to your store.</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "text-1",
+        "label": "Text 2",
+        "default": "<p>Introduce your brand, products and vision statement and welcome customers to your store.</p>"
+      },
+      {
+        "type": "text",
+        "id": "text-2",
+        "label": "Text 3",
+        "default": "<p>Introduce your brand, products and vision statement and welcome customers to your store.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button-name",
+        "label": "Button text"
+        
+      },
+      {
+        "type": "url",
+        "id": "button-url",
+        "label": "button link"
+        
       }
+      
     ],
     "presets": [
       {

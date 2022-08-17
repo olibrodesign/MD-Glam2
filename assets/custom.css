@@ -1,0 +1,890 @@
+@media(min-width:1024px) and ( max-width:1100px){
+.footer--block[data-block-type=subscribe] .footer--block--container {
+    width: 535px !important;
+}}
+@media(min-width:1024px)
+{.footer--block:nth-of-type(2) .footer--block--container {
+     margin: 0 ; 
+}
+  .footer--block[data-block-type=subscribe] {
+    flex-basis: 50% !important;
+}
+  .footer--block[data-block-type=subscribe] .footer--block--container {
+    width: 620px ;
+}
+   .header--logo {
+    margin-bottom: 5px;}
+
+  .header--root[data-section-id] {
+    padding-top: 5px;
+      padding-right:54px;
+       padding-left:54px
+}#shopify-section-template--16307266388222__16601246718cb82e3a #Featured-content-desc{
+    margin-top:20px}
+}
+
+
+@media (max-width:767px){
+  .footer--subscribe .footer--form-container {
+     margin: 0;
+}
+  .footer--blocks {
+    justify-content: flex-start;
+  }
+  h3#Mobile-Heading {
+    padding-top: 10px;
+}
+  .footer-phone,ul.footer--menu>li {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+       
+}
+  .footer--block {
+    padding-bottom: 40px;
+}
+  .footer-phone {
+    margin: 20px;
+    font-weight:400
+}
+  .footer--menu>li {
+    text-align: left;
+}
+  .footer--block--heading {
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 16px;
+    line-height: 120%;
+    text-align:left
+}
+  
+ .rowm .twoImage:first-child {
+        display: none;
+    }
+    .rowm .twoImage:last-child {
+        display: none;
+    }
+    .rowm .img-box {
+        padding: 8px;
+    }
+    .rowm {
+        align-items: center;
+    }
+
+  .heading-top,
+  .heading-bottom
+  {
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 32px;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align:left
+}
+  .footer--subscribe--info {
+    padding-bottom: 25px !important;
+}
+  input#footer-email {
+    background: #F7EDEC;
+    border: none;
+    border-bottom: 1px solid black;
+  
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    color: #515151;
+    opacity: 0.7;
+}
+  .flexbox-gap .footer--subscribe .footer--form-container {
+    gap: 16px;
+}
+  .footer--form-submit {
+    text-align: right;
+}
+  .footer--form-submit button{
+     width: 164px;
+    height: 40px;
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+/* identical to box height, or 16px */
+
+text-align: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+    color:#000000;
+    background:#F7EDEC;
+        border-radius: 120px/20px;
+    border:1px solid black
+    
+  }
+  .footer--subscribe .footer--form-container {
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+}
+  .footer--subscribe--info {
+    text-align: left;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+}
+.footer--block--container{
+  width:100%;
+}
+  footer.footer--root {
+    padding-top: 60px;
+}
+
+
+.page--about-company .announcement--text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: #ffffff;
+}
+
+ .page--about-company .header--mobile {
+    background-color:#F7EDEC;
+  
+ }
+ 
+.page--about-company  .product-page--header {
+    margin-left: 16px;
+}
+    #shopify-section-template--16307266388222__1660123733ecf837b5 .custom-vector{
+  position:absolute;
+  top:40%;
+  left:40%;}
+  #shopify-section-template--16307266388222__1660245352afc30b1c .container{
+    display:flex;
+    margin:0 auto;
+    
+    padding-left: 16px;
+    flex-wrap: wrap;
+     margin-top:23px;
+  }
+   .column2{
+    margin-right:16px;
+  }
+  .lookbookimage5{
+    margin-top:50%;
+  }
+  .lookbookimage3,.lookbookimage4,.lookbookimage5 {
+    
+    width: 164px;
+}
+  .lookbookimage4{
+    margin-top:16px;
+
+  
+  }
+  
+  .column1,
+  .column4{
+    display:none;
+    
+  }
+  
+  #shopify-section-template--16307266388222__16601280622ca469f4 .Richtext-button {
+    text-align:center !important;}
+  #shopify-section-template--16307266388222__16601280622ca469f4 .featured-text--body {
+    text-align: left;
+  
+font-style: normal;
+font-weight: 275;
+font-size: 18px;
+line-height: 120%;
+/* or 22px */
+
+text-transform: uppercase;
+    
+}
+  
+  #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--overline,
+ #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--heading{
+    display:none !important;
+  }
+  #shopify-section-template--16307266388222__16601246718cb82e3a div#Featured-content-desc,
+  #shopify-section-template--16307266388222__16601278761386c26f div#Featured-content-desc{
+    font-weight:400 !important;}
+   .page--about-company .featured-content--description{
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 130%;
+     margin-top: 10px;
+    
+  }
+ .page--about-company .featured-content--title,
+ .page--about-company .featured-content--overline{
+    display:none;
+    
+  }
+ .page--about-company .Mobile-heading{
+     
+      font-style: normal;
+      font-weight: 275;
+    font-size: 30px;
+    line-height: 120%;
+margin-bottom:16px;
+text-transform: uppercase;
+   max-width: 640px;
+   width: 100%;
+  
+   
+ }
+ 
+ .page--about-company .featured-content--description {
+    text-align: left;
+}
+ .page--about-company .featured-content--image {
+    height: 344px !important;
+}
+  #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--body {
+    margin-top: 10px;
+}
+  #shopify-section-template--16307266388222__166012342128eb4c5e #featured-text-cat {
+    margin-top: 20px;
+}
+  
+  #shopify-section-template--16307266388222__166012342128eb4c5e h2.featured-text--heading-mobile{
+  
+font-style: normal;
+font-weight: 275;
+font-size: 40px;
+line-height: 120%;
+text-align:left;
+
+text-transform: uppercase;
+  } #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--body{
+  font-family: 'Proxima Nova' ;
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 130%;
+  text-align:left}
+ 
+  background: #F7EDEC;
+}
+
+@media (min-width:768px){
+  .footer--block[data-block-type=subscribe] {
+    flex-basis: 50% !important;
+}
+  .footer-phone {
+   
+    position: absolute;
+    top: 86%;
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 130%;
+}
+
+.page--about-company .announcement--text {
+  padding:0 !important;
+  color:white;
+}
+
+/* .x-menu--level-2--list {
+   div.footer--sub:last-child {
+    display:none;
+} */
+.footer--block--heading {
+    font-size: 18px;
+    font-family: spectral;
+  font-style: normal;
+font-weight: 275;
+
+line-height: 130%;
+}
+  ul.footer--menu>li {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+        padding: 5px 0;
+}
+  .footer--blocks {
+ 
+    justify-content: flex-start !important;}
+  .footer--block {
+    flex: none;}
+ 
+  .featured-text--heading-mobile{
+    display:none
+  }
+  #Mobile-Heading{
+    display:none;
+  }
+
+   
+    
+#shopify-section-template--16307266388222__166012342128eb4c5e div#featured-text-cat {
+    margin-top: 16px;
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 130%;
+}
+#shopify-section-template--16307266388222__166012342128eb4c5e div#featured-text-text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+}}
+@media (min-width:768px){
+  #shopify-section-template--16307266388222__16601278614e17a8a1 .image-with-text--root {
+    padding-top: 28px;
+}
+  .payment-icons--root {
+    display: none;
+}
+  .featured-content--root[data-text-position=right][data-container-width="5"] .featured-content--container{
+ padding-right:0px;
+}
+ #shopify-section-template--16307266388222__166012342128eb4c5e h2.featured-text--heading{
+  margin-left: 100px;
+ }
+#shopify-section-template--16307266388222__166012342128eb4c5e h3.featured-text--overline{
+   text-align: left;
+}
+
+
+ #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--root {
+    padding-top: 20px;
+   padding-bottom:5px;
+}
+   
+ 
+ #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--wrapper {
+    margin-left: 10px;
+}
+ #shopify-section-template--16307266388222__166012342128eb4c5e  .custom-text{
+       
+  }
+  
+ #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--body{
+
+font-family:'Proxima Nova';
+font-size: 18px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: left;
+   max-width:424px;
+
+  }
+  #shopify-section-template--16307266388222__16601246718cb82e3a .featured-content--image,
+  #shopify-section-template--16307266388222__16601278614e17a8a1 .featured-content--image,
+  #shopify-section-template--16307266388222__16601278761386c26f .featured-content--image{
+    height:550px;
+    width:600px;
+    background: linear-gradient(197.14deg, #ECA29B -62.11%, #FFFFFF 108.54%);
+    min-width:40%
+    
+  }
+ .page--about-company H2.featured-content--overline,
+ .page--about-company H3.featured-content--title
+  {
+    
+    font-style: normal;
+    font-weight: 275;
+    font-size: 3.194vw;
+    line-height: 1.1em;
+    text-transform: uppercase;
+  }
+ .page--about-company .featured-content--container {
+    align-items: normal;
+  }
+  .page--about-company .header--root{
+    background:#F7EDEC
+  }
+  .page--about-company ul.breadcrumbs--root {
+    background:#F7EDEC;
+    padding-left: 62px;
+    padding-top: 10px;
+}
+#shopify-section-template--16307266388222__1660123733ecf837b5 .custom-vector{
+  position:absolute;
+  top:50%;
+  left:50%;
+  
+  
+}
+ #shopify-section-template--16307266388222__1660123733ecf837b5 .custom-vector-icon {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+   #shopify-section-template--16307266388222__16601246718cb82e3a .featured-content--text,
+  #shopify-section-template--16307266388222__16601278614e17a8a1 .featured-content--text,
+  #shopify-section-template--16307266388222__16601278761386c26f .featured-content--text{
+    max-width:700px;
+  }  
+  .page--about-company H3.featured-content--title
+  {
+   margin-left:120px;
+  }
+   .page--about-company .featured-content--description {
+    margin-left: 120px;
+    
+font-family: 'Proxima Nova';
+font-size: 16px;
+font-weight: 300;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+  #shopify-section-template--16307266388222__16601278614e17a8a1 .featured-content--description{
+    margin-left: 0;
+     margin-top:20px
+    
+  }
+#shopify-section-template--16307266388222__16601278761386c26f  #Featured-content-desc,
+  #shopify-section-template--16307266388222__16601246718cb82e3a #Featured-content-desc{
+  font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 130%;
+
+}
+ #shopify-section-template--16307266388222__16601246718cb82e3a .featured-content--description{
+   font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 130%;
+   margin-top:5px
+ }
+ #shopify-section-template--16307266388222__16601246718cb82e3a .featured-content--text{
+   padding-right:0px
+ }
+ 
+ #shopify-section-template--16307266388222__16601280622ca469f4 .custom-text 
+ {
+  margin:0 auto
+}
+  .featured-text--body {
+     font-family: 'spectral';
+font-style: normal;
+font-weight: 275;
+font-size: 24px;
+line-height: 120%;
+    text-transform: uppercase;
+
+    max-width: 535px;
+    text-align: left;
+}
+  #shopify-section-template--16307266388222__166012342128eb4c5e .custom-text {
+    display: block;
+    margin: 0 auto;
+    margin-right: 125px;
+    margin-top: 50px;
+}
+  #shopify-section-template--16307266388222__16601278761386c26f div#Featured-content-desc {
+    margin-top: 20px;
+    margin-left: 0;
+}
+   #shopify-section-template--16307266388222__16601278761386c26f .featured-content--description {
+    margin-top: 5px;
+}
+  #shopify-section-template--16307266388222__1660245352afc30b1c .container{
+    display:flex;
+    margin:0 auto;
+    
+    padding-left: 65px;
+    flex-wrap: wrap;
+  }
+   .column1,.column2,.column3{
+    margin-right:20px;
+  }
+  .lookbookimage5{
+    margin-top:50%;
+  }
+  .lookbookimage1,.lookbookimage2 {
+
+    width: 312px;
+}
+  .lookbookimage2,.lookbookimage4,.lookbookimage7{
+    margin-top:20px;
+  }
+  .column2 {
+    margin-top: 57px;
+}
+  .column3 {
+    margin-top: 30px;
+}
+  #shopify-section-template--16307266388222__1660123733ecf837b5 .custom-vector{
+  position:absolute;
+  top:50%;
+  left:50%;
+  
+  
+}
+}
+body.page--about-company.template--page{
+  background:#F7EDEC
+}
+/* #shopify-section-template--16307266388222__16601278614e17a8a1 .featured-content--description{
+font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 130%;
+} */
+ #shopify-section-template--16307266388222__16601246718cb82e3a .featured-content--image,
+  #shopify-section-template--16307266388222__16601278614e17a8a1 .featured-content--image,
+  #shopify-section-template--16307266388222__16601278761386c26f .featured-content--image{
+   
+    background: linear-gradient(197.14deg, #ECA29B -62.11%, #FFFFFF 108.54%);
+    
+    
+  }
+
+ #shopify-section-template--16307266388222__1660123733ecf837b5 .custom-vector-icon {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+#shopify-section-template--16307266388222__16601280622ca469f4 .Richtext-button {
+    text-align:left;
+    margin-top: 40px;
+}
+  #shopify-section-template--16307266388222__16601280622ca469f4 button.custom-button {
+    width: 202px;
+    height: 60px;
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+/* identical to box height, or 16px */
+
+text-align: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+    color:#F7EDEC;
+    background:black;
+        border-radius: 120px/20px;
+}
+@media screen and (max-width: 1439px) and   (min-width: 1342px) {
+  .lookbookimage2,.lookbookimage4,.lookbookimage1,.lookbookimage3,.lookbookimage5,.lookbookimage6{
+   max-width:280px;
+  }
+}
+@media(min-width:768px)
+  {h2.featured-content--overline {
+    padding-top: 10px;
+}
+    #shopify-section-template--16307266388222__1660123733ecf837b5 .featured-content--image {
+    height: 100% !important;
+}
+.rowm {
+    margin-bottom: 68px;
+}
+
+    .footer--blocks {
+    border-top: 1px solid #939598;
+    padding-top: 66px;
+}
+    div.twoImage:nth-child(2) {
+    margin-top: 4%;
+}.oneImage {
+    margin-top: 16%;
+}
+    
+    .rowm {
+    margin-left: 50px;}
+    .twoImage,.oneImage {
+    margin-right: 20px;
+   
+} .item.col-6.col-md-12 {
+    margin-top: 20px;
+}
+    .header--cart {
+    justify-self: flex-end;
+    flex-grow: 0;
+    order: 2;
+    margin-top: 12px;
+      position: relative !important;
+      top:0}
+
+    a.header--search,.header--account-icon {
+    padding-right: 37px;
+      padding-left:37px
+}
+    .header--cart{
+      padding-left:21px
+    }
+    
+   
+    .header--bottom-row {
+    display: none;
+}
+  }
+
+
+.rowm {
+    display: flex;
+    -ms-flex-wrap: wrap;
+   flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/*   Page About Copmany CSS for > 1440 */
+  @media (min-width:1441px){
+    .featured-text--wrapper {
+ 
+    max-width: 1550px !important;
+}
+    
+.featured-content--text {
+    max-width: 1020px !important;
+}
+  #shopify-section-template--16307266388222__16603036182e9617bf img.lazyautosizes.ls-is-cached.lazyloaded {
+    width: 436px;
+}
+
+#shopify-section-template--16307266388222__16603036182e9617bf img.lazyautosizes.lazyloaded {
+    width: 430px;
+}
+}
+
+
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Spectral Light' !important;
+}
+@media(min-width:768px){
+  .featured-text--wrapper {
+    padding-top: 36px;
+}
+  .footer--subscribe--info {
+   
+    font-family: Proxima Nova;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;}
+ span.heading-top,
+  span.heading-bottom{
+ 
+font-style: normal;
+font-weight: 275;
+font-size: 3.194vw;
+line-height: 110%;
+
+ }
+  .footer--form-submit button{
+ width: 202px;
+    height: 60px;
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+
+
+text-align: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+    color:#000000;
+    background:#F7EDEC;
+        border-radius: 120px/20px;
+    border: 1px solid;
+}
+   input#footer-email {
+    background: #F7EDEC;
+    border: none;
+    border-bottom: 1px solid black;
+  
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    color: #515151;
+    opacity: 0.7;
+}
+}
+
+@media(min-width:1200px)
+{
+  .page--about-company H2.featured-content--overline, .page--about-company H3.featured-content--title{
+    font-size:46px !important;
+  }
+   #shopify-section-template--16307266388222__166012342128eb4c5e h2.featured-text--heading
+  ,#shopify-section-template--16307266388222__166012342128eb4c5e h3.featured-text--overline {
+    
+    font-size: 82px !important;}.custom-footer {
+    margin-right: 75px;
+}
+  .footer--subscribe--info {
+    padding-bottom: 34px !important;
+}
+  .footer--block--heading {
+    padding-bottom: 30px;
+}
+  .footer--block[data-block-type=subscribe] {
+    flex-basis: 50% !important;
+}
+  .footer--block[data-block-type=subscribe] .footer--block--container {
+    width: 750px !important;
+}
+}
+@media(min-width:1023px)
+{
+  span.heading-bottom {
+    margin-left: 113px;
+}
+  .footer--subscribe .footer--form-container {
+   
+    max-width: 600px !important;
+}
+  .footer--subscribe--info {
+    max-width: 424px;
+}
+}
+
+
+#shopify-section-template--16307266388222__166012342128eb4c5e h3.featured-text--overline{
+   text-align: left;
+}
+@media (min-width:641px) 
+{
+ 
+  #shopify-section-template--16307266388222__166012342128eb4c5e h2.featured-text--heading
+  ,#shopify-section-template--16307266388222__166012342128eb4c5e h3.featured-text--overline {
+    
+    font-size: 5.694vw;
+    line-height: 1.4em;
+    font-weight: 275;
+   
+}
+ #shopify-section-template--16307266388222__166012342128eb4c5e .custom-text {
+    text-align: left;
+}
+
+    
+  
+}
+ .product-page--header {
+    display: block;
+}
+@media( min-width:768px ) and (max-width:1023px)
+{.footer-phone {top: 92%;}
+  .featured-content--root {
+    padding: 0 8px;
+   
+}
+  .page--about-company H3.featured-content--title {
+    margin-left: 70px;
+}
+  .page--about-company .featured-content--description {
+    margin-left: 0px;}
+  .header--root[data-section-id] {
+    padding: 0;
+}
+  .header--logo {
+    margin-top: 20px;
+}.page--about-company ul.breadcrumbs--root{
+      padding-left: 10px;}
+  [data-section-id]{
+    padding:0
+  }
+  #shopify-section-template--16307266388222__166012342128eb4c5e .custom-text {
+   
+    margin: 25px 30px 0 auto;
+}
+#shopify-section-template--16307266388222__16601278614e17a8a1 .featured-content--description{
+  margin-top:10px
+}
+  .footer--block[data-block-type=subscribe] .footer--block--container {
+    width: 300px !important;
+}
+  .footer--subscribe .footer--form-container {
+    
+    flex-direction: column;
+}
+  .footer--form-submit {
+    text-align: right;
+}
+}
+
+
+[data-item=block-link]>:after{
+  border:none;
+}
+@media(max-width:400px){
+  h2.featured-text--heading-mobile{
+    font-size:8.247vw !important;
+  }
+}
+@media(max-width:320px){
+  .footer-phone, ul.footer--menu>li{
+    font-size:13px;
+  }
+}
+.announcement--text {
+  
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+[data-item=nav-text]{
+
+font-family: Proxima Nova;
+font-size: 16px;
+font-weight: 300;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+
+}.page--about-company #breadcrumbtext,
+ .page--about-company #breadcrumbtitle{
+   font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 130%;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+   
+ }
+  .page--about-company #breadcrumbtitle{
+    color:#515151;
+  }
+main#main-content {
+    max-width: 1170px;
+    margin: 0px auto;
+}
+.ytp-chrome-top.ytp-show-cards-title {
+    display: none;
+}

@@ -26,7 +26,6 @@
     data-background-color="{{ bg_color }}"
     data-light-text="{{ light_text }}"
     data-spacing="none"
-    style="height:24px"
   >
     {% if link != blank %}
       <a class="announcement--link" href="{{ link }}">
@@ -40,7 +39,7 @@
       {% endif %}
 
       {% if text != blank %}
-        <div class="announcement--text" data-item="accent-text" style="padding:1px!important">
+        <div class="announcement--text" data-item="accent-text">
           {{ text | escape }}
         </div>
       {% endif %}

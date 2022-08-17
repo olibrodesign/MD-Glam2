@@ -1,4 +1,4 @@
-{% comment %}
+{% comment %} {% comment %} 
   Here's an example of a customization
   You can paste this at the bottom of the page to see how it works
 
@@ -18,3 +18,77 @@
 
   /* Add your theme customizations below */
 {% endcomment %}
+
+  @media only screen and (min-width: 768px) {
+   .featured-content--text {
+    position: absolute;
+    top: 20px;
+}
+h2.featured-content--overline {
+    color: #000000;
+    font-family: proxima nova;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+}
+h3.featured-content--title {
+    font-family:spectral;
+    color: #000000;
+    font-size: 6.875em;
+    line-height: 121px;
+    font-weight: 275;
+}
+.featured-content--root[data-text-width=large] .featured-content--text {
+    max-width: 970px;
+}
+.hero-sec-text{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+width: 313px;
+height: 100px;
+left: 64px;
+margin-top:20px;
+
+}
+.featured-content--description {
+    margin-bottom: 10px;
+}
+.main-banner-image {
+   
+    position: absolute;
+    right: -5%;
+    top: 10%;
+
+
+
+    
+}
+.main-banner-image-2 {
+    position: absolute;
+    bottom: 0px;
+    left: 32%;
+    width: 455px;
+    height: 261px;
+}
+.Banner_Rating_text {
+    display: flex;
+    flex-direction: column;
+}
+  }
+
+
+ #shopify-section-template--16307266388222__1660123733ecf837b5 .main-banner-image {
+ display :none;
+}
+
+
+
+
+
+
+
+
+ {% endcomment %}

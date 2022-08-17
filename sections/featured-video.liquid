@@ -54,7 +54,15 @@
             full_width: true
           %}
         </div>
-
+ {% if section.settings.html5_video != blank %}
+              <video
+                class="video-{{ section.id }}"
+                data-video-element
+                data-html5-video
+              >
+                <source src="{{ section.settings.html5_video }}">
+              </video>
+            {% endif %}
         <div class="featured-video--play-mobile">
           {% render 'icons', icon: 'play-solid' %}
         </div>
@@ -141,8 +149,13 @@
         "type": "video_url",
         "id": "video-url",
         "label": "Video URL",
-        "accept": ["youtube", "vimeo"]
+        "accept": ["youtube", "vimeo" ]
       },
+      {
+      "type": "text",
+      "id": "html5_video",
+      "label": "HTML5 MP4/OGV File URL"
+    },
       {
         "type": "image_picker",
         "id": "image",

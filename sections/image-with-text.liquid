@@ -25,7 +25,15 @@
     spacing_below: section.settings.spacing-below,
     text_position: section.settings.text-position,
     text_width: section.settings.text-width,
-    title: section.settings.title
+    title: section.settings.title,
+    video_icon:section.settings.video-icon,
+    icon_link:section.settings.icon-link,
+    title_sec: section.settings.title-sec,
+    desc_sec: section.settings.description-sec,
+    desc_third: section.settings.description-third,
+    heading_mobile:section.settings.heading-mobile,
+    html5_video:section.settings. html5_video
+    
   %}
 </div>
 
@@ -80,6 +88,17 @@
       "label": "Spacing below",
       "type": "checkbox",
       "default": false
+    },
+     {
+      "id": "video-icon",
+      "label": "Enable Video Icon",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "html5_video",
+      "label": "HTML5 MP4/OGV File URL"
     },
     {
       "id": "image-height",
@@ -164,15 +183,38 @@
       "type": "text",
       "default": "Overline text"
     },
+     {
+      "id": "heading-mobile",
+      "label": "Heading Mobile above the image",
+      "type": "text",
+      "default": "This heading will work only on mobile "
+    },
     {
       "id": "title",
       "label": "Heading",
+      "type": "text",
+      "default": "Image with text"
+    },{
+      "id": "title-sec",
+      "label": "Heading 2",
       "type": "text",
       "default": "Image with text"
     },
     {
       "id": "description",
       "label": "Text",
+      "type": "text",
+      "default": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.</p>"
+    },
+     {
+      "id": "description-sec",
+      "label": "Text 2",
+      "type": "richtext",
+      "default": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.</p>"
+    },
+     {
+      "id": "description-third",
+      "label": "Text 3",
       "type": "richtext",
       "default": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.</p>"
     },

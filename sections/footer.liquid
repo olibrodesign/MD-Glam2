@@ -79,9 +79,9 @@
           </div>
 
         {% when 'menu' %}
+        <div class="custom-footer">
           <div class="footer--block" data-block-type="menu" {{ block.shopify_attributes }}>
             <div class="footer--block--container">
-              <div class="footer--top-menu">
               {% if block.settings.menu-title != blank %}
                 <div class="footer--block--heading" data-item="block-heading">
                   {{ block.settings.menu-title | escape }}
@@ -106,17 +106,20 @@
                   </ul>
                 {% endif %}
               </div>
-              </div>
-              <div class="footer--bottom-menu">
-              {% if block.settings.menu-title-1 != blank %}
+            </div>
+          </div>
+        
+             <div class="footer--block" data-block-type="menu" {{ block.shopify_attributes }}>
+            <div class="footer--block--container">
+              {% if block.settings.menu-title-sec != blank %}
                 <div class="footer--block--heading" data-item="block-heading">
-                  {{ block.settings.menu-title-1 | escape }}
+                  {{ block.settings.menu-title-sec | escape }}
                 </div>
               {% endif %}
 
               <div class="footer--block--body" role="navigation" data-item="paragraph">
-                {% if linklists[block.settings.menu-1].links.size > 0 %}
-                  {% assign footer_nav = block.settings.menu-1 %}
+                {% if linklists[block.settings.menu-sec].links.size > 0 %}
+                  {% assign footer_nav = block.settings.menu-sec %}
 
                   <ul
                     class="footer--menu"
@@ -132,10 +135,19 @@
                   </ul>
                 {% endif %}
               </div>
-              </div>
             </div>
           </div>
-
+        {% if block.settings.contact-info !=blank  %}
+        <div class="footer-phone">
+       <a href="tel:"> {{ block.settings.contact-info }}</a>
+        </div>
+          {% endif %}
+         {% if block.settings.email-info !=blank  %}
+        <div class="footer-phone">
+       <a href="mailto:"> {{ block.settings.email-info }}</a>
+        </div>
+          {% endif %}
+        </div>
         {% when 'subscribe' %}
           <div class="footer--block" data-block-type="subscribe" {{ block.shopify_attributes }}>
             <div class="footer--block--container">
@@ -203,7 +215,7 @@
                           />
                           <div class="footer--form-submit" data-item="{{ button_type }}">
                             <button type="submit" value="{{ newsletter_button_t }}">
-                              {{ newsletter_button_t }}
+                              Get 15% off
                             </button>
                           </div>
                         </div>
@@ -232,13 +244,28 @@
   </div>
 
   <div class="footer--sub">
-    <div class="footer-sub-inner">
-      <div class="footer--sub--block" data-type="copyright">
-        <div class="footer--sub--container" data-item="paragraph">
-          <span class="footer--sub--shopify-link">&#169; {{ "now" | date: "%Y" }} {{ shop.name }}</span>
+    {% if locale_enabled or region_enabled %}
+      <div class="footer--sub--block" data-type="localization">
+        <div class="footer--sub--container">
+          {% render
+            'localization',
+            locale_enabled: locale_enabled,
+            region_enabled: region_enabled,
+            id: 'footer'
+          %}
         </div>
       </div>
-   
+    {% endif %}
+
+    {% assign powered_check = powered_by_link | split: '>' %}
+    {% if powered_check[1] != ' </a' %}
+      <div class="footer--sub--block" data-type="powered-by">
+        <div class="footer--sub--container" data-item="paragraph">
+          <span class="footer--sub--shopify-link">{{ powered_by_link }}</span>
+        </div>
+      </div>
+    {% endif %}
+
     {% unless shop.enabled_payment_types == empty %}
       {% if section.settings.show-payment-icons %}
         <div class="footer--sub--block" data-type="payment-icons">
@@ -248,48 +275,15 @@
         </div>
       {% endif %}
     {% endunless %}
-     
-      <div class="footer--sub--block" data-type="contact-phone-number">
-        <div class="footer--sub--container">
-        <span class="footer-sub-text phone-number"><a href="tel:{{ section.settings.contact-phone }}">{{ section.settings.contact-phone }}</a></span>
-        </div>
-      </div>
-   <div class="footer--sub--block" data-type="contact-email-address">
-        <div class="footer--sub--container">
-           <span class="footer-sub-text email-address"><a href="mailto:{{ section.settings.contact-email }}">{{ section.settings.contact-email }}</a></span>
-         </div>
-      </div>
-          </div>
   </div>
-  <style>
-    .footer--sub{display:bloc;}
-    .footer-sub-inner {grid-gap: 10px;grid-template-columns: auto auto auto auto;display: grid;}
-    .footer-sub-inner .footer--sub--block{text-align: center;}
-  </style>
 </footer>
 
 {% schema %}
 {
   "name": "Footer",
   "class": "section--footer",
-  "max_blocks": 3,
+  "max_blocks": 6,
   "settings": [
-    {
-      "type": "header",
-      "content": "Contact Information"
-    },
-     {
-      "type": "text",
-      "id": "contact-phone",
-      "label": "Phone Number"
-      
-    },
-     {
-      "type": "text",
-      "id": "contact-email",
-      "label": "Email Address"
-      
-    },
     {
       "type": "header",
       "content": "Country/region Selector",
@@ -366,16 +360,28 @@
           "default": "footer",
           "info": "This menu won't show submenu items."
         },
+         {
+          "type": "text",
+          "id": "menu-title-sec",
+          "label": "Title Second Menu",
+          "default": "Quick links"
+        },
+         {
+          "type": "text",
+          "id": "contact-info",
+          "label": "Enter phone no"
+          
+        },
         {
           "type": "text",
-          "id": "menu-title-1",
-          "label": "Title",
-          "default": "Quick links"
+          "id": "email-info",
+          "label": "Enter email "
+          
         },
         {
           "type": "link_list",
-          "id": "menu-1",
-          "label": "Menu",
+          "id": "menu-sec",
+          "label": "Second Menu",
           "default": "footer",
           "info": "This menu won't show submenu items."
         }
@@ -388,7 +394,7 @@
         {
           "id": "newsletter--heading",
           "label": "Newsletter heading",
-          "type": "html",
+          "type": "text",
           "default": "Newsletter"
         },
         {
