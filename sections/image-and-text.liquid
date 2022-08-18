@@ -1,42 +1,36 @@
-<section id="section--{{section.id}}">
-    <div class="image-text--wrapper page-width">
-        <div class="image--wrapper">
-            {% if section.settings.image != blank %}
-                <img class="sm--hide" src="{{ section.settings.image | img_url: '800x800' }}" alt="{{ section.settings.image.alt | escape }}">
-            {% endif %}
-            {% if section.settings.image != blank %}
-                <img class="lg--hide" src="{{ section.settings.image_mobile | img_url: '800x800' }}" alt="{{ section.settings.image_mobile.alt | escape }}">
-            {% endif %}
-            {% if section.settings.image_2 != blank %}
-                <img class="overlay_image" src="{{ section.settings.image_2 | img_url: '120x120' }}" alt="{{ section.settings.image_2.alt | escape }}">
-            {% endif %}
-        </div>
-        <div class="text--wrapper">
-            {% if section.settings.title != blank %}
-                <h1 class="uppercase title ff-heading lg--f2 sm--f40 ">{{ section.settings.title }}</h1>
+<section id="section--{{ section.id }}">
+    <div class="women-product__wrapper page-width">
+        <div class="women--wrapper sm--hide">
+            {% if section.settings.women_image != blank %}
+                <img src="{{ section.settings.women_image | img_url: '800x800'}}" alt="{{ section.settings.women_image.alt | escape }}">
             {% endif %}
             {% if section.settings.subtitle != blank %}
-                <h2 class="subtitle ff-body sm--f24 lg--f24">{{ section.settings.subtitle }}</h2>
+                <h2 class="subtitle uppercase lg--f24 ff-heading">{{ section.settings.subtitle }}</h2>
             {% endif %}
             {% if section.settings.text != blank %}
-                <div class="text lg--f18 ff-body sm--f16">{{ section.settings.text }}</div>
+                <div class="text lg--f18 ff-body">{{ section.settings.text }}</div>
             {% endif %}
-            {% if section.settings.btn_text != blank %}
-                <a class="btn bg-transparent lg--f16 sm--hide uppercase" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+        </div>
+        <div class="product--wrapper">
+            {% if section.settings.title != blank %}
+                <h1 class="title fw-light uppercase sm--f40 ff-heading lg--f2">{{ section.settings.title }}</h1>
+            {% endif %}
+            {% if section.settings.product_image != blank %}
+                <img src="{{ section.settings.product_image | img_url: '800x800'}}" alt="{{ section.settings.product_image.alt | escape }}">
             {% endif %}
         </div>
     </div>
 </section>
 <style>
-    #section--{{section.id}} .image-text--wrapper {
+    #section--{{section.id}} .women-product__wrapper {
         {% if section.settings.position == "left" %}
             flex-direction: row;
-            {% else %}
+        {% else %}
             flex-direction: row-reverse;  
         {% endif %}
     }
     @media (max-width: 767px) {
-        #section--{{section.id}} .image-text--wrapper {
+        #section--{{section.id}} .women-product__wrapper {
             {% if section.settings.position == "left" %}
                 flex-direction: column-reverse;
                 {% else %}
@@ -57,13 +51,13 @@
 </style>
 {% schema %}
     {
-        "name": "Text with image",
-        "class": "text-with-image",
+        "name": "Image and text",
+        "class": "image-and-text",
         "settings": [
             {
-                "type": "text",
-                "id": "title",
-                "label": "Title"
+                "type": "image_picker",
+                "id": "women_image",
+                "label": "Women image"
             },
             {
                 "type": "text",
@@ -77,33 +71,18 @@
             },
             {
                 "type": "text",
-                "id": "btn_text",
-                "label": "Button text"
-            },
-            {
-                "type": "url",
-                "id": "btn_url",
-                "label": "Button url"
+                "id": "title",
+                "label": "Title"
             },
             {
                 "type": "image_picker",
-                "id": "image",
-                "label": "Image"
-            },
-            {
-                "type": "image_picker",
-                "id": "image_mobile",
-                "label": "Mobile image"
-            },
-            {
-                "type": "image_picker",
-                "id": "image_2",
-                "label": "Overlay image"
+                "id": "product_image",
+                "label": "Product image"
             },
             {
                 "type": "select",
                 "id": "position",
-                "label": "Image position",
+                "label": "Position",
                 "options": [
                     {
                         "group": "position",
@@ -171,9 +150,8 @@
         ],
         "presets": [
             {
-                "name": "Text with image"
+                "name": "Image and text"
             }
         ]
     }
 {% endschema %}
-

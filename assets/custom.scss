@@ -3,10 +3,10 @@
         display: none !important;
     }
     .lg--f1 {
-        font-size: 7vw;
+        font-size: 6vw;
     }
     .lg--f2 {
-        font-size: 5vw;
+        font-size: 4.5vw;
     }
     .lg--f48 {
         font-size: 48px;
@@ -58,6 +58,12 @@
     .sm--f10 {
         font-size: 10px;
     }
+}
+
+.page-width {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
 }
 .fw-bold {
     font-weight: 700;
@@ -261,3 +267,47 @@
 }
 
 // logo style end............................................................
+
+// image and text style start................................................
+
+.women-product__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 65px;
+    @media (max-width: 767px) {
+        padding: 0 16px;
+    }
+    .women--wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+        .subtitle {
+            margin-top: 24px;
+        }
+        .text {
+            margin-top: 8px;
+        }
+    }
+    .product--wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+        .title {
+            line-height: 1.1;
+        }
+        img {
+            margin-top: 40px;
+            @media (max-width: 767px) {
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+// image and text style end..................................................
