@@ -27,13 +27,13 @@
 @media (max-width:767px){
   .footer--subscribe .footer--form-container {
      margin: 0;
-}
+  }
   .footer--blocks {
     justify-content: flex-start;
   }
   h3#Mobile-Heading {
     padding-top: 10px;
-}
+  }
   .footer-phone,ul.footer--menu>li {
     font-family: 'Proxima Nova';
     font-style: normal;
@@ -41,17 +41,17 @@
     font-size: 16px;
     line-height: 130%;
        
-}
+  }
   .footer--block {
     padding-bottom: 40px;
-}
+  }
   .footer-phone {
     margin: 20px;
     font-weight:400
-}
+  }
   .footer--menu>li {
     text-align: left;
-}
+ }
   .footer--block--heading {
     font-family: 'Spectral';
     font-style: normal;
@@ -271,17 +271,18 @@ line-height: 120%;
 text-align:left;
 
 text-transform: uppercase;
-  } #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--body{
+  } 
+  #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--body{
   font-family: 'Proxima Nova' ;
 font-style: normal;
 font-weight: 300;
 font-size: 16px;
 line-height: 130%;
-  text-align:left}
+  text-align:left;
  
   background: #F7EDEC;
 }
-
+}
 @media (min-width:768px){
   .footer--block[data-block-type=subscribe] {
     flex-basis: 50% !important;
@@ -881,10 +882,10 @@ text-transform: uppercase;
   .page--about-company #breadcrumbtitle{
     color:#515151;
   }
-main#main-content {
+/* main#main-content {
     max-width: 1170px;
     margin: 0px auto;
-}
+} */
 .ytp-chrome-top.ytp-show-cards-title {
     display: none;
 }

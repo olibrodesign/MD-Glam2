@@ -1,0 +1,178 @@
+<section id="section--{{section.id}}">
+    <div class="image-text--wrapper">
+        <div class="image--wrapper">
+            {% if section.settings.image != blank %}
+                <img class="small--hide" src="{{ section.settings.image | img_url: '800x800' }}" alt="{{ section.settings.image.alt | escape }}">
+            {% endif %}
+            {% if section.settings.image != blank %}
+                <img class="lg--hide" src="{{ section.settings.image_mobile | img_url: '800x800' }}" alt="{{ section.settings.image_mobile.alt | escape }}">
+            {% endif %}
+            {% if section.settings.image_2 != blank %}
+                <img class="overlay_image" src="{{ section.settings.image_2 | img_url: '120x120' }}" alt="{{ section.settings.image_2.alt | escape }}">
+            {% endif %}
+        </div>
+        <div class="text--wrapper">
+            {% if section.settings.title != blank %}
+                <h1 class="uppercase title ff-heading lg--f2 small--f2 ">{{ section.settings.title }}</h1>
+            {% endif %}
+            {% if section.settings.subtitle != blank %}
+                <h2 class="subtitle ff-body small--f4 lg--f5">{{ section.settings.subtitle }}</h2>
+            {% endif %}
+            {% if section.settings.text != blank %}
+                <div class="text lg--f6 ff-body small--f7">{{ section.settings.text }}</div>
+            {% endif %}
+            {% if section.settings.btn_text != blank %}
+                <a class="btn bg-transparent lg--f7 small--hide uppercase" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<style>
+    #section--{{section.id}} .image-text--wrapper {
+        {% if section.settings.position == "left" %}
+            flex-direction: row;
+            {% else %}
+            flex-direction: row-reverse;  
+        {% endif %}
+    }
+    @media (max-width: 767px) {
+        #section--{{section.id}} .image-text--wrapper {
+            {% if section.settings.position == "left" %}
+                flex-direction: column-reverse;
+                {% else %}
+                flex-direction: column;  
+            {% endif %}
+        }
+    }
+    #section--{{section.id}} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom}}px;
+    }
+    @media (max-width: 767px) {
+        #section--{{section.id}} {
+            padding-top: {{ section.settings.padding_top_mobile }}px;
+            padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+        }
+    }
+</style>
+{% schema %}
+    {
+        "name": "Text with image",
+        "class": "text-with-image",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "subtitle",
+                "label": "Subtitle"
+            },
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "Text"
+            },
+            {
+                "type": "text",
+                "id": "btn_text",
+                "label": "Button text"
+            },
+            {
+                "type": "url",
+                "id": "btn_url",
+                "label": "Button url"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_mobile",
+                "label": "Mobile image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_2",
+                "label": "Overlay image"
+            },
+            {
+                "type": "select",
+                "id": "position",
+                "label": "Image position",
+                "options": [
+                    {
+                        "group": "position",
+                        "value": "left",
+                        "label": "Left"
+                    },
+                    {
+                        "group": "position",
+                        "value": "right",
+                        "label": "Right"
+                    }
+                ],
+                "default": "left"
+            },
+            {
+                "type": "header",
+                "content": "Padding on desktop",
+                "info": "You can adjust the padding on desktop"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Top Padding",
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Bottom Padding",
+                "default": 50
+            },
+            {
+                "type": "header",
+                "content": "Padding on mobile",
+                "info": "You can adjust the padding on mobile"
+            },
+            {
+                "type": "range",
+                "id": "padding_top_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Top Padding",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Bottom Padding",
+                "default": 20
+            }
+        ],
+        "presets": [
+            {
+                "name": "Text with image"
+            }
+        ]
+    }
+{% endschema %}
