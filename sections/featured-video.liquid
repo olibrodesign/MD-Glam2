@@ -54,15 +54,7 @@
             full_width: true
           %}
         </div>
- {% if section.settings.html5_video != blank %}
-              <video
-                class="video-{{ section.id }}"
-                data-video-element
-                data-html5-video
-              >
-                <source src="{{ section.settings.html5_video }}">
-              </video>
-            {% endif %}
+ 
         <div class="featured-video--play-mobile">
           {% render 'icons', icon: 'play-solid' %}
         </div>

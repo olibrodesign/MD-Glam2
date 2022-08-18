@@ -16,6 +16,8 @@
   assign button_url=section.settings.button-url
   assign button_name=section.settings.button-name
   assign mobile_heading=section.settings.mobile-heading
+  assign html5_video=section.settings.html5_video
+   assign html5_video_M = section.settings.html5_video_M
 -%}
 
 {% comment %} View {% endcomment %}
@@ -66,9 +68,37 @@
     </div></a>
         {% endif %}
     </div>
-    
-    
+    {% if html5_video != blank %}
+      <div class="custom-video-with head">
+ <div class="featured-content--image">
+      
+              <video id="video_id" class="Video-content"  loop="true" autoplay="autoplay"  muted>
+                <source src="{{ html5_video }}">
+              </video>
+       
+          <video  id="video_id" class="featured-video--play-mobile"  loop="true" autoplay="autoplay"  muted>
+                <source src="{{ html5_video_M }}">
+              </video>
+     
+  
+      
+    <div class="custom-vector">
+     
+     {% render 'video-vector' %} 
+       <div class="custom-vector-icon">
+  
+     {% render 'video-icon' %} 
+         </div>
 
+    </div>
+           
+ </div>
+      <div class="videomute">
+       	<img id="video-mute" src="//cdn.shopify.com/s/files/1/0280/0035/4364/t/56/assets/mute.png?v=126087702582074586071658480708" class="mute">
+        </div>
+ </div>
+      {% endif %}
+ 
   </div>
 </div>
 
@@ -137,6 +167,16 @@
         "label": "Heading",
         "default": "Introduce your brand"
       },
+        {
+      "type": "text",
+      "id": "html5_video",
+      "label": "HTML5 MP4/OGV File URL for Desktop"
+    },
+    {
+      "type": "text",
+      "id": "html5_video_M",
+      "label": "HTML5 MP4/OGV File URL for Mobile"
+    },
       {
         "type": "richtext",
         "id": "text",

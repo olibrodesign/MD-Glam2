@@ -46,7 +46,7 @@
 
     <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
     <script src="{{ 'utilities.js' | asset_url }}"></script>
-
+  <script src="{{ 'custom.js' | asset_url }}"></script>
     {% render 'js-modules' %}
 
     {% if request.page_type contains 'customers' %}
@@ -162,21 +162,6 @@
       render 'modal'
       render 'feedback-bar'
     -%}
-    <script>
-      $(document).ready(function(){
-$(".videomute").click(function(){
- 
- jQuery(".Video-content").prop('muted', !jQuery(".Video-content").prop('muted'));
-  if (jQuery(this).html() == ' <img src="//cdn.shopify.com/s/files/1/0280/0035/4364/t/56/assets/unmute.png?v=71497788011133582291658480708" class="unmute">') {
-    jQuery(this).html(' <img src="//cdn.shopify.com/s/files/1/0280/0035/4364/t/56/assets/mute.png?v=126087702582074586071658480708" class="mute">');
-  } else {
-    jQuery(this).html(' <img src="//cdn.shopify.com/s/files/1/0280/0035/4364/t/56/assets/unmute.png?v=71497788011133582291658480708" class="unmute">');
-  }
-});
-
-      
-        });
-      
-    </script>
+    
   </body>
 </html>
