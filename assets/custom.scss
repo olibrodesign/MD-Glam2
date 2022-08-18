@@ -89,7 +89,7 @@
 .bg-transpatent {
     background-color: transparent !important;
 }
-// hero banner style start
+// hero banner style start...................................................
 
 .hero__wrapper {
     position: relative;
@@ -171,9 +171,9 @@
     }
 }
 
-// hero banner style end
+// hero banner style end.....................................................
 
-// text with image style start
+// text with image style start...............................................
 
 .image-text--wrapper {
     display: flex;
@@ -244,4 +244,20 @@
     }
 }
 
-// text with image style end
+// text with image style end.................................................
+
+// logo style start..........................................................
+
+.logos--wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 0;
+    @media (max-width: 767px) {
+        max-width: 1000px;
+        width: 1000px;
+        padding: 10px 0;
+    }
+}
+
+// logo style end............................................................

@@ -1,0 +1,44 @@
+<section id="section--{{section.id}}" style="overflow: auto;">
+    <div class="logos--wrapper" style="background-color: {{ section.settings.bg_color }};">
+        {% for block in section.blocks %}
+            {% if block.settings.logo != blank %}
+                {%
+                    render "image",
+                    image: block.settings.logo
+                %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{% schema %}
+    {
+        "name": "Logos",
+        "class": "logos",
+        "settings": [
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background color"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "logo",
+                "name": "Logo",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "logo",
+                        "label": "Logo image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Logos"
+            }
+        ]
+        
+    }
+{% endschema %}
