@@ -1,25 +1,25 @@
 <section id="section--{{section.id}}">
     <div class="hero__wrapper">
         <div class="hero__image--wrapper">
-            <img class="small--hide" src="{{section.settings.bg_desktop | img_url: '2000x2000'}}" alt="{{ section.settings.bg_desktop.alt | escape }}">
+            <img class="sm--hide" src="{{section.settings.bg_desktop | img_url: '2000x2000'}}" alt="{{ section.settings.bg_desktop.alt | escape }}">
             <img class="lg--hide" src="{{section.settings.bg_mobile | img_url: '600x600'}}" alt="{{ section.settings.bg_mobile.alt | escape }}">
         </div>
         <div class="hero__text--wrapper">
             {% if section.settings.subtitle != blank %}
-                <p class="uppercase small--f8 ff-body subtitle lg--f7">{{ section.settings.subtitle }}</p>
+                <p class="uppercase sm--f14 ff-body subtitle lg--f16">{{ section.settings.subtitle }}</p>
             {% endif %}
             {% if section.settings.title != blank %}
-                <h1 class="uppercase small--f1 fw-light ff-heading title lg--f1">{{ section.settings.title }}</h1>
+                <h1 class="uppercase sm--f42 fw-light ff-heading title lg--f1">{{ section.settings.title }}</h1>
             {% endif %}
             {% if section.settings.text != blank %}
-                <div class="text ff-body small--f7 lg--f6">{{ section.settings.text }}</div>
+                <div class="text ff-body sm--f16 lg--f18">{{ section.settings.text }}</div>
             {% endif %}
             <div class="hero__button--wrapper">
                 {% if section.settings.btn_text_1 != blank %}
-                    <a class="btn ff-body lg--f6 small--f7 uppercase bg-black color-white" href="{{ section.settings.btn_url_1 }}">{{ section.settings.btn_text_1 }}</a>
+                    <a class="btn ff-body lg--f18 sm--f16 uppercase bg-black color-white" href="{{ section.settings.btn_url_1 }}">{{ section.settings.btn_text_1 }}</a>
                 {% endif %}
                 {% if section.settings.btn_text_2 != blank %}
-                    <a class="btn ff-body lg--f6 small--f7 uppercase bg-transpatent color-black" href="{{ section.settings.btn_url_2 }}">{{ section.settings.btn_text_2 }}</a>
+                    <a class="btn ff-body lg--f18 sm--f16 uppercase bg-transpatent color-black" href="{{ section.settings.btn_url_2 }}">{{ section.settings.btn_text_2 }}</a>
                 {% endif %}
             </div>
             <div class="hero__review--wrapper">
@@ -31,7 +31,7 @@
                  {% endfor %}
                 </div>
                 {% if section.settings.reveiw_text != blank %}
-                    <p class="review_text fw-light ff-body small--f8 lg--f8">{{ section.settings.reveiw_text }}</p>
+                    <p class="review_text fw-light ff-body sm--f14 lg--f14">{{ section.settings.reveiw_text }}</p>
                 {% endif %}
             </div>
         </div>
@@ -112,3 +112,4 @@
         ]
     }
 {% endschema %}
+

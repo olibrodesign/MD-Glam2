@@ -8,99 +8,87 @@
     .lg--f2 {
         font-size: 5vw;
     }
-    .lg--f3 {
+    .lg--f48 {
         font-size: 48px;
     }
-    .lg--f4 {
+    .lg--f32 {
         font-size: 32px;
     }
-    .lg--f5 {
+    .lg--f24 {
         font-size: 24px;
     }
-    .lg--f6 {
+    .lg--f18 {
         font-size: 18px;
     }
-    .lg--f7 {
+    .lg--f16 {
         font-size: 16px;
     }
-    .lg--f8 {
+    .lg--f14 {
         font-size: 14px;
     }
 }
 @media (max-width: 768px) {
-    .small--hide {
+    .sm--hide {
         display: none !important;
     }
-    .small--f1 {
+    .sm--f42 {
         font-size: 42px;
     }
-    .small--f2 {
+    .sm--f40 {
         font-size: 40px;
     }
-    .small--f3 {
+    .sm--f30 {
         font-size: 30px;
     }
-    .small--f4 {
+    .sm--f24 {
         font-size: 24px;
     }
-    .small--f5 {
+    .sm--f20 {
         font-size: 20px;
     }
-    .small--f6 {
+    .sm--f18 {
         font-size: 18px;
     }
-    .small--f7 {
+    .sm--f16 {
         font-size: 16px;
     }
-    .small--f8 {
+    .sm--f14 {
         font-size: 14px;
     }
-    .small--f9 {
+    .sm--f10 {
         font-size: 10px;
     }
 }
-
 .fw-bold {
     font-weight: 700;
 }
-
 .fw-normal {
     font-weight: 400;
 }
-
 .fw-light {
     font-weight: 300;
 }
-
-
-
 .ff-heading {
     font-family: 'Spectral';
 }
-
 .ff-body {
     font-family: 'Proxima Nova';
 }
-
 .uppercase {
     text-transform: uppercase;
 }
-
 .color-black {
     color: #000 !important;
 }
 .color-white {
     color: #FFF !important;
 }
-
 .bg-black {
     background-color: #000 !important;
 }
-
 .bg-transpatent {
     background-color: transparent !important;
 }
-
 // hero banner style start
 
 .hero__wrapper {

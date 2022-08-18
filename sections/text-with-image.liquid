@@ -2,7 +2,7 @@
     <div class="image-text--wrapper">
         <div class="image--wrapper">
             {% if section.settings.image != blank %}
-                <img class="small--hide" src="{{ section.settings.image | img_url: '800x800' }}" alt="{{ section.settings.image.alt | escape }}">
+                <img class="sm--hide" src="{{ section.settings.image | img_url: '800x800' }}" alt="{{ section.settings.image.alt | escape }}">
             {% endif %}
             {% if section.settings.image != blank %}
                 <img class="lg--hide" src="{{ section.settings.image_mobile | img_url: '800x800' }}" alt="{{ section.settings.image_mobile.alt | escape }}">
@@ -13,16 +13,16 @@
         </div>
         <div class="text--wrapper">
             {% if section.settings.title != blank %}
-                <h1 class="uppercase title ff-heading lg--f2 small--f2 ">{{ section.settings.title }}</h1>
+                <h1 class="uppercase title ff-heading lg--f2 sm--f40 ">{{ section.settings.title }}</h1>
             {% endif %}
             {% if section.settings.subtitle != blank %}
-                <h2 class="subtitle ff-body small--f4 lg--f5">{{ section.settings.subtitle }}</h2>
+                <h2 class="subtitle ff-body sm--f24 lg--f24">{{ section.settings.subtitle }}</h2>
             {% endif %}
             {% if section.settings.text != blank %}
-                <div class="text lg--f6 ff-body small--f7">{{ section.settings.text }}</div>
+                <div class="text lg--f18 ff-body sm--f16">{{ section.settings.text }}</div>
             {% endif %}
             {% if section.settings.btn_text != blank %}
-                <a class="btn bg-transparent lg--f7 small--hide uppercase" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+                <a class="btn bg-transparent lg--f16 sm--hide uppercase" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
             {% endif %}
         </div>
     </div>
@@ -176,3 +176,4 @@
         ]
     }
 {% endschema %}
+
