@@ -26,3 +26,26 @@
     import "{{ 'product-model.js' | asset_url }}";
   </script>
 {%- endif -%}
+<script>
+  var prev_btn = document.querySelector('.prev_btn');
+  var next_btn = document.querySelector('.next_btn');
+  var scroll_content = document.querySelector('.featured-product--medias');
+  var scroll_position = 0;
+  scroll_content.on('scroll', event=> {
+    scroll_position = scroll_content.scrollLeft;
+  })
+  prev_btn.on('click', event=> {
+    scroll_content.scrollTo({
+      top: 0,
+      left: scroll_position - 316,
+      behavior: 'smooth'
+    });
+  })
+  next_btn.on('click', event=> {
+    scroll_content.scrollTo({
+      top: 0,
+      left: scroll_position + 316,
+      behavior: 'smooth'
+    });  
+  })
+</script>

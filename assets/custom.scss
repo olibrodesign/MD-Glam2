@@ -4,59 +4,80 @@
     }
     .lg--f1 {
         font-size: 6vw;
+        line-height: 1.1;
     }
     .lg--f2 {
-        font-size: 4.5vw;
+        font-size: 4vw;
+        line-height: 1.1;
     }
     .lg--f48 {
         font-size: 48px;
+        line-height: 1.1;
     }
     .lg--f32 {
         font-size: 32px;
+        line-height: 1.1;
     }
     .lg--f24 {
         font-size: 24px;
+        line-height: 1.1;
     }
     .lg--f18 {
         font-size: 18px;
+        line-height: 1.1;
     }
     .lg--f16 {
         font-size: 16px;
+        line-height: 1.1;
     }
     .lg--f14 {
         font-size: 14px;
+        line-height: 1.1;
     }
 }
 @media (max-width: 768px) {
     .sm--hide {
         display: none !important;
     }
+    .sm--f48 {
+        font-size: 48px;
+        line-height: 1.1;
+    }
     .sm--f42 {
         font-size: 42px;
+        line-height: 1.1;
     }
     .sm--f40 {
         font-size: 40px;
+        line-height: 1.1;
     }
     .sm--f30 {
         font-size: 30px;
+        line-height: 1.1;
     }
     .sm--f24 {
         font-size: 24px;
+        line-height: 1.1;
     }
     .sm--f20 {
         font-size: 20px;
+        line-height: 1.1;
     }
     .sm--f18 {
         font-size: 18px;
+        line-height: 1.1;
     }
     .sm--f16 {
         font-size: 16px;
+        line-height: 1.1;
     }
     .sm--f14 {
         font-size: 14px;
+        line-height: 1.1;
     }
     .sm--f10 {
         font-size: 10px;
+        line-height: 1.1;
     }
 }
 
@@ -65,6 +86,7 @@
     width: 100%;
     margin: auto;
 }
+
 .fw-bold {
     font-weight: 700;
 }
@@ -190,7 +212,7 @@
         gap: 20px;
     }
     .image--wrapper {
-        width: 48%;
+        width: 47%;
         padding: 5px;
         position: relative;
         @media (max-width: 767px) {
@@ -211,7 +233,7 @@
         }
     }
     .text--wrapper {
-        width: 48%;
+        width: 47%;
         padding: 5px;
         @media (max-width: 767px) {
             width: 100%;
@@ -280,7 +302,7 @@
     .women--wrapper {
         display: flex;
         flex-direction: column;
-        width: 48%;
+        width: 47%;
         @media (max-width: 767px) {
             width: 100%;
         }
@@ -294,7 +316,7 @@
     .product--wrapper {
         display: flex;
         flex-direction: column;
-        width: 48%;
+        width: 47%;
         @media (max-width: 767px) {
             width: 100%;
         }
@@ -311,3 +333,153 @@
 }
 
 // image and text style end..................................................
+
+// featured product style start.............................................
+
+.featured-product--wrapper {
+    justify-content: space-between;
+    padding: 0 65px;
+    @media (max-width: 767px) {
+        padding: 0;
+    }
+    .featured-product--media {
+        width: 47%;
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+        @media (max-width: 767px) {
+            width: 100%;
+            flex-direction: row;
+        }
+        .featured-product--slider__buttons {
+            position: absolute;
+            top: calc(50% - 41px);
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 16px;
+            img {
+                width: 32px;
+            }
+        }
+        .featured-product--medias {
+            width: 80%;
+            @media (max-width: 767px) {
+                width: 100%;
+                overflow: auto;
+                display: flex;
+                gap: 16px;
+                padding-bottom: 25px;
+                &::-webkit-scrollbar-track
+                {
+                    background-color: #FFF;
+                    width: 3px;
+
+                }
+
+                &::-webkit-scrollbar
+                {
+                    background-color: #FFF;
+                    height: 3px;
+                }
+
+                &::-webkit-scrollbar-thumb
+                {
+                    background-color: #F2A7A0;
+                    border: 2px solid #F2A7A0;
+                    border-radius: 2px;
+                    height: 3px;
+                }
+                .product-media--root {
+                    max-width: 300px;
+                    width: 100%;
+                    .product-media--featured {
+                        display: block;
+                    }
+                }
+            }
+        }
+        [data-view="thumb-container"] {
+            width: 20%;
+            @media (max-width: 767px) {
+                display: none;
+            }
+            .product-media--thumbs {
+                flex-direction: column;
+                display: flex;
+                gap: 10px;
+                align-items: flex-start;
+                .product-media--thumb-container {
+                    width: 100%;
+                    max-width: 56px;
+                    img {
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+        
+    }
+    .featured-product--blocks {
+        width: 47%;
+        margin-right: 0;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+        .featured-product--block {
+            position: relative;
+            .product-price--original {
+                font-size: 48px;
+                line-height: 1.1;
+            }
+            .product-price--compare {
+                font-size: 32px;
+                line-height: 1.1;
+                color: gray;
+            }
+            @media (max-width: 767px) {
+                text-align: left;
+                margin-top: 20px;
+                .product-price--root {
+                    align-items: flex-start;
+                    .product-price--original {
+                        font-size: 48px;
+                    }
+                    .product-price--compare {
+                        font-size: 24px;
+                    }
+                }
+            }
+            
+            .product-buy-buttons--root {
+                display: block;
+                position: absolute;
+                right: 50px;
+                top: -90px;
+                @media (max-width: 767px) {
+                    right: 0;
+                    top: -65px;
+                }
+
+                .product-buy-buttons--cta {
+                    font-family: var(--p-font-weight-regular);
+                    text-transform: uppercase;
+                    width: 200px;
+                    height: 60px;
+                    display: flex;
+                    font-size: 16px;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 70px/14px;
+                    @media (max-width: 767px) {
+                        width: 164px;
+                        height: 40px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+// featured product style end...............................................
