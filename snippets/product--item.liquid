@@ -181,7 +181,7 @@
 
   capture display_prices
     echo '<div class="product--price-container">'
-      echo '<div class="product--price-wrapper">'
+      echo '<div class="product--price-wrapper ff-body lg--f48 sm--f32 ">'
         if product.price_varies
           echo '<span class="product--from" data-item="accent-text">'
             echo from_t
@@ -283,12 +283,12 @@
         echo '<div class="product--details">'
           echo '<div class="product--details-wrapper">'
             if show_vendor
-              echo '<div class="product--vendor" data-item="light-accent-text">'
+              echo '<div class="product--vendor ff-body lg--f16 fw-light uppercase sm--f10" data-item="light-accent-text">'
                 echo vendor
               echo '</div>'
             endif
 
-            echo '<p class="product--title" data-item="paragraph">'
+            echo '<p class="product--title ff-heading lg--f32 sm--f16 fw-light uppercase" data-item="paragraph">'
               echo title
             echo '</p>'
 

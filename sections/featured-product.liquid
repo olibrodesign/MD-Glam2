@@ -51,7 +51,7 @@
 
 {% comment %} View {% endcomment %}
 <product-media-root
-  class="featured-product--root"
+  class="featured-product--root page-width"
   data-product-id="{{ product_id }}"
   data-section-id="{{ section.id }}"
   data-background-color="{{ bg_color }}"
@@ -59,7 +59,7 @@
   data-spacing-above="{{ spacing_above }}"
   data-spacing-below="{{ spacing_below }}"
 >
-  <div class="featured-product--wrapper  page-width">
+  <div class="featured-product--wrapper">
     <div class="featured-product--blocks lg--hide">
       {%- for block in section.blocks -%}
         <div
