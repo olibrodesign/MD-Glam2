@@ -3,12 +3,18 @@
         display: none !important;
     }
     .lg--f1 {
-        font-size: 6vw;
+        font-size: 7vw;
         line-height: 1.1;
-    }
+        @media (min-width: 1440px) {
+            font-size: 110px;
+        }
+    } 
     .lg--f2 {
-        font-size: 4vw;
+        font-size: 5vw;
         line-height: 1.1;
+        @media (min-width: 1440px) {
+            font-size: 82px;
+        }
     }
     .lg--f48 {
         font-size: 48px;
@@ -141,9 +147,7 @@
         @media (max-width: 767px) {
             padding: 0px 16px 16px;
         }
-        .subtitle {
-
-        }
+       
         .title {
             margin-top: 20px;
             margin-bottom: 0;
@@ -213,7 +217,6 @@
     }
     .image--wrapper {
         width: 47%;
-        padding: 5px;
         position: relative;
         @media (max-width: 767px) {
             width: 100%;
@@ -233,13 +236,13 @@
         }
     }
     .text--wrapper {
-        width: 47%;
-        padding: 5px;
+        width: 49%;
         @media (max-width: 767px) {
             width: 100%;
         }
         .title {
             margin-bottom: 16px;
+            letter-spacing: 0;
         }
         .subtitle {
             margin-bottom: 40px;
@@ -484,7 +487,6 @@
     }
 }
 
-
 // featured product style end...............................................
 
 // featured collection style start..........................................
@@ -536,3 +538,67 @@
 }
 
 // featured collection style end..........................................
+
+// image with accordion style start.........................................
+
+.image-accordion--wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 65px;
+    @media (max-width: 767px) {
+        padding: 0 16px;
+    }
+    .image--wrapper {
+        width: 47%;
+        img {
+            width: 85%;
+        }
+    }
+    .accordion--wrapper {
+        width: 47%;
+        .title {
+            margin-bottom: 50px;
+        }
+        .accordions {
+            .accordion_item {
+                border-bottom: #000 solid 1px;
+                .accordion_header {
+                    padding: 30px 0 0;
+                    position: relative;
+                    cursor: pointer;
+                    &::after {
+                        content: "";
+                        width: 17px;
+                        position: absolute;
+                        right: 0;
+                        height: 27px;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .accordion_body {
+                    max-height: 0;
+                    width: 100%;
+                    transition: max-height 0.2s ease-out;
+                    overflow: hidden;
+                    margin: 10px 0;
+                    p {
+                        margin-bottom: 10px;
+                    }
+                    ul {
+                        margin-top: 10px;
+                       
+                        column-count: 2;
+                        li {
+                            padding: 4px 0;
+                            display: flex;
+                            gap: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// image with accordion style end.........................................
