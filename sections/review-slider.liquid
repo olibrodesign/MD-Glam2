@@ -95,17 +95,17 @@
 </style>
 <script>
     var reviewSlider = function() {
-        const prev_btn = document.querySelector('.scroll-button .prev_btn');
-        const next_btn = document.querySelector('.scroll-button .next_btn');
-        const scroll_content = document.querySelector('.slider--content');
+        const prev_btn = document.querySelector('#section--{{ section.id }} .scroll-button .prev_btn');
+        const next_btn = document.querySelector('#section--{{ section.id }} .scroll-button .next_btn');
+        const scroll_content = document.querySelector('#section--{{ section.id }} .slider--content');
         const scroll_content_width = scroll_content.offsetWidth;
-        const count = document.querySelector('.item--count .position');
+        const count = document.querySelector('#section--{{ section.id }} .item--count .position');
         var scroll_position = 0;
         const device_width = document.querySelector('body').offsetWidth;
-        const item_width = document.querySelector('.review-slider--item').offsetWidth;
-        const scroll_bar_width = document.querySelector('.scroll-bar').offsetWidth;
+        const item_width = document.querySelector('#section--{{ section.id }} .review-slider--item').offsetWidth;
+        const scroll_bar_width = document.querySelector('#section--{{ section.id }} .scroll-bar').offsetWidth;
         const scroll_tumb_width = scroll_bar_width / {{ section.blocks.size }};
-        const scroll_tumb = document.querySelector('.scroll-tumb')
+        const scroll_tumb = document.querySelector('#section--{{ section.id }} .scroll-tumb')
         scroll_tumb.style.cssText += 'width: '+scroll_tumb_width+'px';
         scroll_content.on('scroll', event=> {
             scroll_position = scroll_content.scrollLeft;
