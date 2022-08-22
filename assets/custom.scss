@@ -192,7 +192,12 @@
                 justify-content: center;
                 margin-right: 24px;
                 border: 1px solid #000000;
-                border-radius: 70px/14px;
+                border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
+                &:hover {
+                    color: #F7EDEC !important;
+                    background-color: #F2A7A0 !important;
+                    border-color: #F2A7A0 !important;
+                }
             }
         }
         .hero__review--wrapper {
@@ -315,7 +320,12 @@
             align-items: center;
             justify-content: center;
             border: 1px solid #000000;
-            border-radius: 70px/14px;
+            border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
+            &:hover {
+                color: #F7EDEC;
+                background-color: #F2A7A0;
+                border-color: #F2A7A0;
+            }
         }
         .icon--wrapper {
             display: flex;
@@ -530,7 +540,7 @@
                         font-size: 16px;
                         align-items: center;
                         justify-content: center;
-                        border-radius: 70px/14px;
+                        border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
                         background-color: #000;
                         &:disabled {
                             background-color: #d2d2d2;
@@ -1007,3 +1017,174 @@
 }
 
 // testimonial style end................................................
+
+//featured blog section style...............................................
+
+.featured-blog--root {
+    padding: 0 65px;
+    @media (max-width: 767px) {
+        padding: 0 16px;
+    }
+    .featured-blog--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .featured-blog--heading {
+            margin: 0;
+            @media (max-width: 767px) {
+                font-size: 40px;
+            }
+        }
+        .btn {
+            width: 200px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000000;
+            border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
+            &:hover {
+                color: #F7EDEC;
+                background-color: #F2A7A0;
+                border-color: #F2A7A0;
+                div {
+                    color: #F7EDEC;
+                }
+            }
+            @media (max-width: 767px) {
+                display: none;
+            }
+            div {
+                background-color: transparent;
+                color: #000;
+            }
+        } 
+    }
+    .featured-blog--grid {
+        margin-top: 40px;
+        grid-column-gap: 20px;
+        &::-webkit-scrollbar-track
+        {
+            display: none;
+        }
+
+        &::-webkit-scrollbar
+        {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+            display: none;
+        }
+        @media (max-width: 767px) {
+            margin-top: 16px;
+            display: flex;
+            width: 100%;
+            overflow: auto;
+            justify-content: unset;
+        }
+        .article--item {
+            @media (max-width: 767px) {
+                min-width: 300px; 
+                width: 100%;
+            }
+            .article--item-info {
+                .article--item--date {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-family: "Proxima Nova";
+                }
+            }
+            .article--item--heading {
+                text-transform: uppercase;
+                font-size: 24px;
+                font-weight: 300;
+                font-family: 'Spectral';
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
+            }
+            .article--item--excerpt {
+                font-size: 18px;
+                font-weight: 300;
+                font-family: "Proxima Nova";
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
+            }
+            .article--item--read-more {
+                margin-top: 20px;
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+                @media (max-width: 767px) {
+                    margin-top: 10px;
+                }
+                .btn {
+                    width: 200px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #000000;
+                    border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 300;
+                    font-family: "Proxima Nova";
+                    &:hover {
+                        color: #F7EDEC;
+                        background-color: #F2A7A0;
+                        border-color: #F2A7A0;
+                    }
+                    @media (max-width: 767px) {
+                        width: 162px;
+                        height: 52px;
+                        font-size: 16px;
+                    }
+                    &::after {
+                        content: unset;
+                    }
+                }
+            }
+        }
+    }
+    .scroll-controller {
+        position: relative;
+        margin-top: 58px;
+        
+        .item--count {
+            position: absolute;
+            left: 0;
+            bottom: 14px;
+            color: #F2A7A0;
+            font-size: 18px;
+            font-weight: 300;
+            font-family: "Proxima Nova";
+        }
+        .scroll-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background-color: #fff;
+            .scroll-tumb {
+                height: 3px;
+                background-color: #F2A7A0;
+                transition: margin .2s ease-out;
+            }
+        }
+        .scroll-button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            gap: 24px;
+        }
+    }
+}
+
+//featured blog section style...............................................

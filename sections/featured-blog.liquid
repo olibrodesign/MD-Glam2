@@ -26,30 +26,31 @@
 
 {% comment %} View {% endcomment %}
 <featured-blog-root
-  class="featured-blog--root"
+  id="section--{{section.id}}"
+  class="featured-blog--root page-width"
   data-background-color="{{ bg_color }}"
-  data-container-width="{{ container_width }}"
   data-section-id="{{ section.id }}"
   data-light-text="{{ light_text }}"
   data-spacing-above="{{ spacing_above }}"
   data-spacing-below="{{ spacing_below }}"
   style="display:block;"
 >
-  <div class="featured-blog--wrapper" data-container="section">
+  <div class="featured-blog--wrapper">
     {% if blog_heading != blank %}
-      {% unless blog == blank %}
-        <a href="{{ blog.url }}">
-      {% endunless %}
+      
 
-      <div class="featured-blog--header" data-container="block">
-        <h2 class="featured-blog--heading" data-item="section-heading">
+      <div class="featured-blog--header">
+        <h2 class="featured-blog--heading uppercase ff-heading lg--f2" data-item="section-heading">
           {{ blog_heading }}
         </h2>
+        {% if view_more_text != blank %}
+            <a class="btn" data-item="{{ button_type }}" href="{{ blog.url }}">
+              <div>{{ view_more_text }}</div>
+            </a>
+          
+        {% endif %}
       </div>
 
-      {% unless blog == blank %}
-        </a>
-      {% endunless %}
     {% endif %}
 
     <div
@@ -92,21 +93,77 @@
         endif
       -%}
     </div>
-
-    {% if view_more_text != blank %}
-      <div class="featured-blog--footer" data-container="block">
-        <a data-item="{{ button_type }}" href="{{ blog.url }}">
-          <div>{{ view_more_text }}</div>
-        </a>
+    <div class="lg--hide scroll-controller">
+      <div class="item--count">
+          <span class="position">1</span>/<span>{{ blog.articles.size }}</span>
       </div>
-    {% endif %}
+      <div class="scroll-bar"><div class="scroll-tumb"></div></div>
+      <div class="scroll-button">
+          <img class="prev_btn" src="{{'prev_btn.png' | asset_url }}">
+          <img class="next_btn" src="{{'next_btn.png' | asset_url }}">
+      </div>
+    </div>
+    
   </div>
 </featured-blog-root>
 
 <script type="module">
   import "{{ 'featured-blog.js' | asset_url }}";
-</script>
+  var blogSlider = function() {
+    const prev_btn = document.querySelector('#section--{{ section.id }} .scroll-button .prev_btn');
+    const next_btn = document.querySelector('#section--{{ section.id }} .scroll-button .next_btn');
+    const scroll_content = document.querySelector('#section--{{ section.id }} .featured-blog--grid');
+    const scroll_content_width = scroll_content.offsetWidth;
+    const count = document.querySelector('#section--{{ section.id }} .item--count .position');
+    var scroll_position = 0;
+    const device_width = document.querySelector('body').offsetWidth;
+    const item_width = document.querySelector('#section--{{ section.id }} .article--item').offsetWidth;
+    const scroll_bar_width = document.querySelector('#section--{{ section.id }} .scroll-bar').offsetWidth;
+    const scroll_tumb_width = scroll_bar_width / {{ blog.articles.size }};
+    const scroll_tumb = document.querySelector('#section--{{ section.id }} .scroll-tumb')
+    scroll_tumb.style.cssText += 'width: '+scroll_tumb_width+'px';
+    scroll_content.on('scroll', event=> {
+        scroll_position = scroll_content.scrollLeft;
+        const num = Math.floor((scroll_position + item_width * 0.5) / item_width) + 1;
+        if (num > {{blog.articles.size}}) {
+            num = num - 1;
+        }
+        count.innerHTML = num;
+        var margin_tumb = (num-1) * scroll_tumb_width;
+        scroll_tumb.style.cssText += 'margin-left: '+margin_tumb+'px';
+        console.log(margin_tumb);
+    })
+    prev_btn.on('click', event=> {
+        scroll_content.scrollTo({
+          top: 0,
+          left: scroll_position - (item_width+20),
+          behavior: 'smooth'
+        });
+    })
+    next_btn.on('click', event=> {
+        scroll_content.scrollTo({
+          top: 0,
+          left: scroll_position + item_width+20,
+          behavior: 'smooth'
+        });  
+    })
+    
+}
 
+blogSlider();
+</script>
+<style>
+  #section--{{section.id}} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom}}px;
+  }
+  @media (max-width: 767px) {
+      #section--{{section.id}} {
+          padding-top: {{ section.settings.padding_top_mobile }}px;
+          padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+      }
+  }
+</style>
 {% schema %}
   {
    "name": "Blog posts",
@@ -185,6 +242,56 @@
         "label": "View more text",
         "type": "text",
         "default": "View more"
+      },
+      {
+        "type": "header",
+        "content": "Padding on desktop",
+        "info": "You can adjust the padding on desktop"
+      },
+      {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "unit": "px",
+          "label": "Top Padding",
+          "default": 50
+      },
+      {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "unit": "px",
+          "label": "Bottom Padding",
+          "default": 50
+      },
+      {
+          "type": "header",
+          "content": "Padding on mobile",
+          "info": "You can adjust the padding on mobile"
+      },
+      {
+          "type": "range",
+          "id": "padding_top_mobile",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "unit": "px",
+          "label": "Top Padding",
+          "default": 20
+      },
+      {
+          "type": "range",
+          "id": "padding_bottom_mobile",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "unit": "px",
+          "label": "Bottom Padding",
+          "default": 20
       }
    ],
    "presets": [
