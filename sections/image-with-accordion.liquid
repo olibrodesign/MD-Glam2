@@ -1,22 +1,25 @@
 <section id="section--{{section.id}}">
     <div class="image-accordion--wrapper page-width">
-        <div class="image--wrapper">
+        <div class="image--wrapper sm--hide">
             {% if section.settings.image != blank %}
                 <img src="{{ section.settings.image | img_url: '800x800'}}" alt="{{ section.settings.image.alt | escape }}">
             {% endif %}
         </div>
         <div class="accordion--wrapper">
             {% if section.settings.title !=blank %}
-                <h1 class="uppercase title lg--f2 ff-heading">{{ section.settings.title }}</h1>
+                <h1 class="uppercase title lg--f2 sm--f40 ff-heading">{{ section.settings.title }}</h1>
             {% endif %}
             <div class="accordions">
                 {% for block in section.blocks %}
                     <div class="accordion_item">
                         {% if block.settings.accordion_header != blank %}
-                            <div class="accordion_header ff-body lg--f16 uppercase">{{ block.settings.accordion_header }}</div>
+                            <div class="accordion_header ff-body lg--f16 sm--f16 uppercase">{{ block.settings.accordion_header }}</div>
                         {% endif %}
                         {% if block.settings.accordion_body != blank %}
-                            <div class="accordion_body ff-body fw-light lg--f18">{{ block.settings.accordion_body }}</div>
+                            <div class="accordion_body ff-body fw-light lg--f18 sm--f16">
+                                {{ block.settings.accordion_body }}
+                                <img class="lg--hide" src="{{ block.settings.image_mobile | img_url: '800x800'}}" alt="{{ section.settings.image.alt | escape }}">
+                            </div>
                         {% endif %}
                     </div>
                 {% endfor %}
@@ -203,6 +206,11 @@
                         "type": "html",
                         "id": "accordion_body",
                         "label": "Accordion body"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image_mobile",
+                        "label": "Mobile image"
                     }
                 ]
             }

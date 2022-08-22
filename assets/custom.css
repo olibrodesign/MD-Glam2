@@ -545,6 +545,9 @@ line-height: 120%;
   
 }
 }
+body {
+  background: var(--bg-color--light);
+}
 body.page--about-company.template--page{
   background:#F7EDEC
 }
