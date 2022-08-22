@@ -4,7 +4,7 @@
             {% if section.settings.image != blank %}
                 <img class="sm--hide" src="{{ section.settings.image | img_url: '800x800' }}" alt="{{ section.settings.image.alt | escape }}">
             {% endif %}
-            {% if section.settings.image != blank %}
+            {% if section.settings.image_mobile != blank %}
                 <img class="lg--hide" src="{{ section.settings.image_mobile | img_url: '800x800' }}" alt="{{ section.settings.image_mobile.alt | escape }}">
             {% endif %}
             {% if section.settings.image_2 != blank %}
@@ -15,14 +15,31 @@
             {% if section.settings.title != blank %}
                 <h1 class="uppercase title ff-heading lg--f2 sm--f40 ">{{ section.settings.title }}</h1>
             {% endif %}
+            {% if section.settings.text_image != blank %}
+                <img class="text_image lg--hide" src="{{ section.settings.text_image | img_url: '800x800' }}" alt="{{ section.settings.text_image.alt | escape }}">
+            {% endif %}
+            
             {% if section.settings.subtitle != blank %}
-                <h2 class="subtitle ff-body sm--f24 lg--f24">{{ section.settings.subtitle }}</h2>
+                <h2 class="subtitle {% if section.settings.uppercase_subtitle %}
+                    uppercase
+                {% endif %} ff-body  {% if section.settings.subtitle_size == 'normal' %}
+                    lg--f24 sm--f24
+                    {% else %}
+                        lg--f32 sm--f30
+                {% endif %}">{{ section.settings.subtitle }}</h2>
             {% endif %}
             {% if section.settings.text != blank %}
                 <div class="text lg--f18 ff-body sm--f16">{{ section.settings.text }}</div>
             {% endif %}
             {% if section.settings.btn_text != blank %}
                 <a class="btn bg-transparent lg--f16 sm--hide uppercase" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+            {% endif %}
+            {% if section.blocks.size > 0 %}
+                <div class="icon--wrapper">
+                    {% for block in section.blocks %}
+                        <img src="{{ block.settings.icon | img_url: '100x100'}}" alt="{{ block.settings.icon.alt | escape }}">
+                    {% endfor %}
+                </div>
             {% endif %}
         </div>
     </div>
@@ -54,6 +71,12 @@
             padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
         }
     }
+    #section--{{section.id}} .image-text--wrapper .text--wrapper .subtitle em::after {
+        background: url("{{ 'wave-icon.png' | asset_url }}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-repeat-x: repeat;
+    }
 </style>
 {% schema %}
     {
@@ -66,9 +89,38 @@
                 "label": "Title"
             },
             {
-                "type": "text",
+                "type": "image_picker",
+                "id": "text_image",
+                "label": "Title image"
+            },
+            {
+                "type": "richtext",
                 "id": "subtitle",
                 "label": "Subtitle"
+            },
+            {
+                "type": "checkbox",
+                "id": "uppercase_subtitle",
+                "label": "Subtitle uppercase",
+                "default": false
+            },
+            {
+                "type": "select",
+                "id": "subtitle_size",
+                "label": "Subtitle font size",
+                "options": [
+                    {
+                        "group": "size",
+                        "value": "normal",
+                        "label": "Normal"
+                    },
+                    {
+                        "group": "size",
+                        "value": "large",
+                        "label": "Large"
+                    }
+                ],
+                "default": "normal"
             },
             {
                 "type": "richtext",
@@ -167,6 +219,19 @@
                 "unit": "px",
                 "label": "Bottom Padding",
                 "default": 20
+            }
+        ],
+        "blocks": [
+            {
+                "type": "icon",
+                "name": "Icon",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "icon",
+                        "label": "Icon image"
+                    }
+                ]
             }
         ],
         "presets": [
