@@ -4,41 +4,41 @@
     }
     .lg--f1 {
         font-size: 7vw;
-        line-height: 1.1;
+        line-height: 1.3;
         @media (min-width: 1440px) {
             font-size: 110px;
         }
     } 
     .lg--f2 {
         font-size: 5vw;
-        line-height: 1.1;
+        line-height: 1.3;
         @media (min-width: 1440px) {
             font-size: 82px;
         }
     }
     .lg--f48 {
         font-size: 48px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .lg--f32 {
         font-size: 32px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .lg--f24 {
         font-size: 24px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .lg--f18 {
         font-size: 18px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .lg--f16 {
         font-size: 16px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .lg--f14 {
         font-size: 14px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
 }
 @media (max-width: 768px) {
@@ -47,43 +47,43 @@
     }
     .sm--f48 {
         font-size: 48px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .sm--f42 {
         font-size: 42px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .sm--f40 {
         font-size: 40px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .sm--f30 {
         font-size: 30px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .sm--f24 {
         font-size: 24px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .sm--f20 {
         font-size: 20px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .sm--f18 {
         font-size: 18px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .sm--f16 {
         font-size: 16px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .sm--f14 {
         font-size: 14px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
     .sm--f10 {
         font-size: 10px;
-        line-height: 1.1;
+        line-height: 1.3;
     }
 }
 
@@ -152,7 +152,7 @@
             margin-top: 20px;
             margin-bottom: 0;
             max-width: 70%;
-            line-height: 1.1;
+            line-height: 1.3;
             @media (max-width: 767px) { 
                 margin-top: 16px;
                 max-width: 100%;
@@ -348,55 +348,149 @@
 
 .logos--wrapper {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     padding: 16px 0;
-    @media (max-width: 767px) {
-        max-width: 1000px;
-        width: 1000px;
-        padding: 10px 0;
+    width: 4500px;
+    overflow: hidden;
+    
+    &:first-child {
+        animation: bannermove 25s linear infinite;
     }
+    .image--root {
+        display: inline-block;
+        margin-left: 138px;
+    }
+    @media (max-width: 767px) {
+        padding: 10px 0;
+        &:first-child {
+            animation: bannermove 25s linear infinite;
+        }
+        .image--root {
+            display: inline-block;
+            margin-left: 80px;
+        }
+    }
+        
+}
+@keyframes bannermove {
+    0% {
+       margin-left: 0px;
+    }
+    100% {
+       margin-left: -2125px;
+    }
+    
 }
 
 // logo style end............................................................
 
 // image and text style start................................................
 
-.women-product__wrapper {
-    display: flex;
-    justify-content: space-between;
+.product-skin-title {
     padding: 0 65px;
     @media (max-width: 767px) {
         padding: 0 16px;
     }
-    .women--wrapper {
+}
+.products--wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 65px;
+    margin-top: 38px;
+    @media (max-width: 767px) {
+        padding: 0 16px;
+        flex-direction: column;
+    }
+    .product-detail--wrapper {
         display: flex;
         flex-direction: column;
-        width: 47%;
-        @media (max-width: 767px) {
-            width: 100%;
+        max-width: 0%;
+        overflow: hidden;
+        visibility: hidden;
+        height: 0;
+        transition: .2s ease-out;
+        &.active {
+            max-width: 40%;
+            visibility: visible;
+            height: auto;
+            padding-left: 50px;
+            @media (max-width: 767px) {
+                max-width: 100%;
+                padding-left: 0px;
+                margin-top: 30px;
+            }
+            img {
+                height: auto;
+            }
+            .subtitle {
+                height: auto;
+            }
+            .text {
+                height: auto;
+            }
+        }
+        
+        img {
+            height: 0;
         }
         .subtitle {
             margin-top: 24px;
+            height: 0;
         }
         .text {
-            margin-top: 8px;
+            margin-top: 12px;
+            height: 0;
         }
     }
     .product--wrapper {
-        display: flex;
-        flex-direction: column;
-        width: 47%;
+        max-width: 868px;
+        width: 100%;
+        height: 600px;
+        position: relative;
         @media (max-width: 767px) {
             width: 100%;
+            height: 320px;
         }
-        .title {
-            line-height: 1.1;
-        }
-        img {
-            margin-top: 40px;
+        
+        .bg_image {
+            position: absolute;
+            bottom: 0;
+            left: 0;
             @media (max-width: 767px) {
-                margin-top: 16px;
+                max-width: 120%;
+                left: -16px;
+            }
+        }
+        .product_image--wrapper {
+            position: absolute;
+            filter: blur(2px);
+            &:hover {
+                filter: blur(0px);
+            }
+            &.active {
+                display: none;
+            }
+            @media (max-width: 767px) {
+                filter: blur(0px);
+            }
+        }
+        .zoom-products--wrapper {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            @media (max-width: 767px) {
+                width: 80%;
+            }
+            .zoom-product--wrapper {
+                display: none;
+                &.active {
+                    display: block;
+                    @media (max-width: 767px) {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -500,11 +594,11 @@
                 position: relative;
                 .product-price--original {
                     font-size: 48px;
-                    line-height: 1.1;
+                    line-height: 1.3;
                 }
                 .product-price--compare {
                     font-size: 32px;
-                    line-height: 1.1;
+                    line-height: 1.3;
                     color: gray;
                 }
                 @media (max-width: 767px) {
@@ -543,7 +637,9 @@
                         border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
                         background-color: #000;
                         &:disabled {
-                            background-color: #d2d2d2;
+                            background-color: transparent;
+                            color: #000;
+                            border: solid 1px #000;
                         }
                         @media (max-width: 767px) {
                             width: 164px;
@@ -594,12 +690,56 @@
                         .product--price {
                             font-family: "Proxima Nova";
                             font-size: 48px;
-                            line-height: 1.1;
+                            line-height: 1.3;
                             @media (max-width: 767px) {
                                 font-size: 32px;
                             }
                         }
                         
+                    }
+                }
+                .product--quick-add {
+                    padding: 0;
+                    &:hover {
+                        .btn {
+                        color: #F7EDEC;
+                        background-color: #F2A7A0;
+                        border-color: #F2A7A0;
+                        }
+                    }
+                    @media (max-width: 767px) {
+                        position: relative;
+                    }
+                    .btn {
+                        width: 200px;
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid #000000;
+                        background-color: #000;
+                        color: #fff;
+                        border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        font-weight: 300;
+                        font-family: "Proxima Nova";
+                        &:hover {
+                            color: #F7EDEC;
+                            background-color: #F2A7A0;
+                            border-color: #F2A7A0;
+                        }
+                        &:disabled {
+                            color: #000;
+                            background-color: transparent;
+                            border-color: #000;
+                        }
+                        @media (max-width: 767px) {
+                            width: 164px;
+                            height: 52px;
+                            font-size: 16px;
+                            margin-top: -20px;
+                        }
                     }
                 }
             }

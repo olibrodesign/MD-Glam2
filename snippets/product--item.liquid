@@ -245,37 +245,7 @@
         {{ hover_image }}
       {% endif %}
 
-      {% if quick_add_enable and product.available %}
-        <div
-          class="product--quick-add"
-          tabindex="0"
-          data-handle="{{ product.handle }}"
-          data-off-canvas--open="right-sidebar"
-          {% if product.has_only_default_variant %}
-            data-off-canvas--view="cart"
-            data-loading="false"
-          {% else %}
-            data-off-canvas--view="product-form"
-          {% endif %}
-          aria-haspopup="menu"
-        >
-          {%- liquid
-            if product.has_only_default_variant
-              echo '<div class="product--plus">'
-                render 'icons', icon: 'plus'
-              echo '</div>'
-
-              echo '<div class="product--spinner">'
-                render 'loading-spinner'
-              echo '</div>'
-            else
-              echo '<div class="product--ellipses">'
-                render 'icons', icon: 'ellipses'
-              echo '</div>'
-            endif
-          -%}
-        </div>
-      {% endif %}
+      
     </div>
 
     <div class="product--details-container">
@@ -334,6 +304,43 @@
             echo '</div>'
         endif
       -%}
+      {% if quick_add_enable  %}
+        <div
+          class="product--quick-add"
+          tabindex="0"
+          data-handle="{{ product.handle }}"
+          data-off-canvas--open="right-sidebar"
+          {% if product.has_only_default_variant %}
+            data-off-canvas--view="cart"
+            data-loading="false"
+          {% else %}
+            data-off-canvas--view="product-form"
+          {% endif %}
+          aria-haspopup="menu"
+        >
+          {% comment %} {%- liquid
+            if product.has_only_default_variant
+              echo '<div class="product--plus">'
+                render 'icons', icon: 'plus'
+              echo '</div>'
+
+              echo '<div class="product--spinner">'
+                render 'loading-spinner'
+              echo '</div>'
+            else
+              echo '<div class="product--ellipses">'
+                render 'icons', icon: 'ellipses'
+              echo '</div>'
+            endif
+          -%} {% endcomment %}
+          {% if product.available %}
+            <button class="btn">Add to bag</button>
+            {% else %}
+            <button disabled class="btn">Out of stock</button>
+          {% endif %}
+          
+        </div>
+      {% endif %}
     </div>
   </a>
 

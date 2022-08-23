@@ -1,13 +1,16 @@
-<section id="section--{{section.id}}" style="overflow: auto;">
+<section id="section--{{section.id}}" style="overflow: hidden;">
     <div class="logos--wrapper" style="background-color: {{ section.settings.bg_color }};">
-        {% for block in section.blocks %}
-            {% if block.settings.logo != blank %}
-                {%
-                    render "image",
-                    image: block.settings.logo
-                %}
-            {% endif %}
+        {% for I in (1..3) %}
+            {% for block in section.blocks %}
+                {% if block.settings.logo != blank %}
+                    {%
+                        render "image",
+                        image: block.settings.logo
+                    %}
+                {% endif %}
+            {% endfor %}
         {% endfor %}
+        
     </div>
 </section>
 {% schema %}

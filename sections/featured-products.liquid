@@ -94,7 +94,7 @@
 
         else
           for product in product_list limit: product_limit
-            render 'product--item', product: product, show_vendor: ture, unique_handle: unique_handle, section_id: section.id
+            render 'product--item', product: product, add_to_cart_button: true, show_vendor: ture, unique_handle: unique_handle, section_id: section.id
           endfor
         endif
       -%}
