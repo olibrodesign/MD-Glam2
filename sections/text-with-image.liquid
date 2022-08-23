@@ -7,8 +7,8 @@
             {% if section.settings.image_mobile != blank %}
                 <img class="lg--hide" src="{{ section.settings.image_mobile | img_url: '800x800' }}" alt="{{ section.settings.image_mobile.alt | escape }}">
             {% endif %}
-            {% if section.settings.image_2 != blank %}
-                <img class="overlay_image" src="{{ section.settings.image_2 | img_url: '120x120' }}" alt="{{ section.settings.image_2.alt | escape }}">
+            {% if section.settings.play_btn != blank %}
+                <img class="play_btn" src="{{ section.settings.play_btn | img_url: '100x100' }}" alt="{{ section.settings.play_btn.alt | escape }}">
             {% endif %}
         </div>
         <div class="text--wrapper">
@@ -43,7 +43,48 @@
             {% endif %}
         </div>
     </div>
+    {% if section.settings.video != blank %}
+        <div class="vimeo-shadowbox vimeo-shadowbox--hidden">
+            <div class="vimeo-shadowbox__video-wrapper">
+              <div class="vimeo-shadowbox__video">
+                  <iframe class="video" src="{{section.settings.video}}" width="868" height="490" frameborder="0" webkitallowfullscreen mozallowfullscreen allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+              </div>
+              <a class="vimeo-shadowbox__close-button" href="#">X</a>
+            </div>
+        </div>
+    {% endif %}
 </section>
+{% if section.settings.video != blank %}
+    
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script>
+        var iframe_twi = document.querySelector('#section--{{section.id}} .video');
+        var player_twi = new Vimeo.Player(iframe_twi);
+        var link_twi = document.querySelector('#section--{{section.id}} .play_btn');
+        var shadowbox_twi = document.querySelector('#section--{{section.id}} .vimeo-shadowbox');
+        var closeButton_twi = document.querySelector('#section--{{section.id}} .vimeo-shadowbox__close-button');
+        
+        function text_image_video () {
+            player_twi.on('ended', function() {
+                hidePopup();
+            });
+            link_twi.addEventListener('click', showPopup_twi);
+            shadowbox_twi.addEventListener('click', hidePopup_twi);
+            closeButton_twi.addEventListener('click', hidePopup_twi);
+        }
+        text_image_video();
+    
+        
+        function showPopup_twi() {
+            player_twi.play();
+            shadowbox_twi.classList.remove('vimeo-shadowbox--hidden');
+        }
+        function hidePopup_twi() {
+            player_twi.pause();
+            shadowbox_twi.classList.add('vimeo-shadowbox--hidden');
+        }
+    </script>
+{% endif %}
 <style>
     #section--{{section.id}} .image-text--wrapper {
         {% if section.settings.position == "left" %}
@@ -92,6 +133,12 @@
                 "type": "image_picker",
                 "id": "text_image",
                 "label": "Title image"
+            },
+            {
+                "type": "video_url",
+                "id": "video",
+                "label": "Video",
+                "accept": ["youtube", "vimeo"]
             },
             {
                 "type": "richtext",
@@ -149,8 +196,8 @@
             },
             {
                 "type": "image_picker",
-                "id": "image_2",
-                "label": "Overlay image"
+                "id": "play_btn",
+                "label": "Player button image"
             },
             {
                 "type": "select",

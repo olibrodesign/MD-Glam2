@@ -1,8 +1,16 @@
 <section id="section--{{section.id}}">
     <div class="hero__wrapper page-width">
         <div class="hero__image--wrapper">
-            <img class="sm--hide" src="{{section.settings.bg_desktop | img_url: '2000x2000'}}" alt="{{ section.settings.bg_desktop.alt | escape }}">
-            <img class="lg--hide" src="{{section.settings.bg_mobile | img_url: '600x600'}}" alt="{{ section.settings.bg_mobile.alt | escape }}">
+            {% if section.settings.bg_desktop != blank %}
+                <img class="sm--hide" src="{{section.settings.bg_desktop | img_url: '2000x2000'}}" alt="{{ section.settings.bg_desktop.alt | escape }}">
+            {% endif %}
+            {% if section.settings.bg_mobile != blank %}
+                <img class="lg--hide" src="{{section.settings.bg_mobile | img_url: '600x600'}}" alt="{{ section.settings.bg_mobile.alt | escape }}">
+            {% endif %}
+            {% if section.settings.play_btn != blank %}
+                <img class="play_btn" src="{{section.settings.play_btn | img_url: '100x100'}}" alt="{{ section.settings.play_btn.alt | escape }}">
+            {% endif %}
+
         </div>
         <div class="hero__text--wrapper">
             {% if section.settings.subtitle != blank %}
@@ -42,7 +50,49 @@
             </div>
         </div>
     </div>
+    {% if section.settings.video != blank %}
+        <div class="vimeo-shadowbox vimeo-shadowbox--hidden">
+            <div class="vimeo-shadowbox__video-wrapper">
+              <div class="vimeo-shadowbox__video">
+                  <iframe class="video" src="{{section.settings.video}}" width="868" height="490" frameborder="0" webkitallowfullscreen mozallowfullscreen allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+              </div>
+              <a class="vimeo-shadowbox__close-button" href="#">X</a>
+            </div>
+        </div>
+    {% endif %}
+    
 </section>
+{% if section.settings.video != blank %}
+    
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+    var iframe_hero = document.querySelector('#section--{{section.id}} .video');
+    var player_hero = new Vimeo.Player(iframe_hero);
+    var link_hero = document.querySelector('#section--{{section.id}} .play_btn');
+    var shadowbox_hero = document.querySelector('#section--{{section.id}} .vimeo-shadowbox');
+    var closeButton_hero = document.querySelector('#section--{{section.id}} .vimeo-shadowbox__close-button');
+    
+    function hero_video() {
+        player_hero.on('ended', function() {
+            hidePopup_hero();
+        });
+        link_hero.addEventListener('click', showPopup_hero);
+        shadowbox_hero.addEventListener('click', hidePopup_hero);
+        closeButton_hero.addEventListener('click', hidePopup_hero);
+    }
+    hero_video()
+
+    
+    function showPopup_hero() {
+        player_hero.play();
+        shadowbox_hero.classList.remove('vimeo-shadowbox--hidden');
+    }
+    function hidePopup_hero() {
+        player_hero.pause();
+        shadowbox_hero.classList.add('vimeo-shadowbox--hidden');
+    }
+</script>
+{% endif %}
 {% schema %}
     {
         "name": "Hero Banner",
@@ -109,6 +159,17 @@
                 "type": "image_picker",
                 "id": "bg_mobile",
                 "label": "Background Image On Mobile"
+            },
+            {
+                "type": "image_picker",
+                "id": "play_btn",
+                "label": "Player button image"
+            },
+            {
+                "type": "video_url",
+                "id": "video",
+                "label": "Video",
+                "accept": ["youtube", "vimeo"]
             }
         ],
         "presets": [
