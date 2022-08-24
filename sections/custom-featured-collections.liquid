@@ -1,0 +1,128 @@
+<section id="section--{{section.id}}">
+    <div class="custom-collections--content">
+        <div class="custom-collections--header__wrapper">
+            {% if section.settings.title != blank %}
+                <h2 class="title lg--f2 sm--40 ff-heading fw-light uppercase">{{ section.settings.title }}</h2>
+            {% endif %}       
+            <div class="button--wrapper">
+                {% if section.settings.btn_1 != blank %}
+                    <a href="{{ section.settings.btn_url_1 }}">{{ section.settings.btn_1 }}</a>
+                {% endif %}
+                {% if section.settings.btn_2 != blank %}
+                    <a href="{{ section.settings.btn_url_2 }}">{{ section.settings.btn_2 }}</a>
+                {% endif %}
+            </div> 
+        </div>
+        <div class="custom-collections--wrapper">
+            {% if section.settings.collections != blank %}
+                {% for collection in section.settings.collections limit: 3 %}
+                    <div class="custom-collection--wrapper">
+                        {%- if collection.image -%}
+                            {%- assign collection_image = collection.image -%}
+                        {%- elsif collection.products.first and collection.products.first.images != empty -%}
+                            {%- assign collection_image = collection.products.first.featured_image -%}
+                        {%- else -%}
+                            {%- assign collection_image = blank -%}
+                        {%- endif -%}
+                        <img src="{{ collection_image | img_url: '480x' }}" alt="{{ collection_image.alt | escape }}">
+                        <h5 class="title">{{ collection.title }}</h5>
+                        <a class="btn" href="{{ collection.url }}">
+                            Shop now
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+<style>
+    #section--{{section.id}} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom}}px;
+    }
+    @media (max-width: 1024px) {
+        #section--{{section.id}} {
+            padding-top: {{ section.settings.padding_top | times: 0.7 }}px;
+            padding-bottom: {{ section.settings.padding_bottom | times: 0.7}}px;
+        }
+    }
+    @media (max-width: 767px) {
+        #section--{{section.id}} {
+            padding-top: {{ section.settings.padding_top_mobile }}px;
+            padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+        }
+    }
+</style>
+{% schema %}
+    {
+        "name": "Custom collections",
+        "class": "custom-collections",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Collections",
+                "info": "You can add the collections"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Listen to your skin"
+            },
+            {
+                "type": "collection_list",
+                "id": "collections",
+                "label": "Collection"
+            },
+            {
+                "type": "text",
+                "id": "btn_1",
+                "label": "First button label"
+            },
+            {
+                "type": "url",
+                "id": "btn_url_1",
+                "label": "First button url"
+            },
+            {
+                "type": "text",
+                "id": "btn_2",
+                "label": "Second button label"
+            },
+            {
+                "type": "url",
+                "id": "btn_url_2",
+                "label": "Second button url"
+            },{
+                "type": "header",
+                "content": "Padding on mobile",
+                "info": "You can adjust the padding on mobile"
+            },
+            {
+                "type": "range",
+                "id": "padding_top_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Top Padding",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Bottom Padding",
+                "default": 20
+            }
+        ],
+        "presets": [
+            {
+                "name": "Custom collection"
+            }
+        ]
+    }
+{% endschema %}

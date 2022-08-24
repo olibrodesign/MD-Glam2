@@ -65,6 +65,12 @@
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom}}px;
     }
+    @media (max-width: 1024px) {
+        #section--{{section.id}} {
+            padding-top: {{ section.settings.padding_top | times: 0.7 }}px;
+            padding-bottom: {{ section.settings.padding_bottom | times: 0.7}}px;
+        }
+    }
     @media (max-width: 767px) {
         #section--{{section.id}} {
             padding-top: {{ section.settings.padding_top_mobile }}px;
@@ -81,7 +87,6 @@
             var id = btns[i].getAttribute('data-id');
             var description = document.querySelector('[data-id="'+id+'"] .description');
             var description_more = document.querySelector('[data-id="'+id+'"] .description_more');
-            console.log(description_more.classList.contains('active'))
             if (!description_more.classList.contains('active')) {
                 description.classList.remove('active');
                 description_more.classList.add('active');
@@ -116,7 +121,6 @@
             count.innerHTML = num;
             var margin_tumb = (num-1) * scroll_tumb_width;
             scroll_tumb.style.cssText += 'margin-left: '+margin_tumb+'px';
-            console.log(margin_tumb);
         })
         prev_btn.on('click', event=> {
             scroll_content.scrollTo({
