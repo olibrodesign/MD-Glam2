@@ -98,10 +98,11 @@
       {% endif %}
     <div class="featured-content--image">
       {% if section.settings.html5_video != blank %}
-              <video width="900px"
-
-            controls  >
+              <video class=Video-content  loop="true" autoplay="autoplay"  muted>
                 <source src="{{ section.settings.html5_video }}">
+              </video>
+          <video class=featured-video--play-mobile  loop="true" autoplay="autoplay"  muted>
+                <source src="{{ section.settings.html5_video_M }}">
               </video>
             
       {% elsif  image %}
@@ -129,7 +130,7 @@
       {% endif %}
       
     {% if video_icon  %}
-      <a href="{{ icon_link }}">
+      
     <div class="custom-vector">
      
      {% render 'video-vector' %} 
@@ -137,7 +138,7 @@
   
      {% render 'video-icon' %} 
          </div>
-    </div></a>
+    </div>
       {% endif %}
     </div>
 
