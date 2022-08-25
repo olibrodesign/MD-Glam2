@@ -22,6 +22,28 @@
         "mobile-heading": "SKINCARE PRODUCTS YOUR SKIN DESERVES",
         "overline": "SKINCARE PRODUCTS",
         "heading": "YOUR SKIN DESERVES",
+        "html5_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/86dad62a1d9e4beda529695f20b86b15.mp4?s=a01b2aeb4e1c0304ab64127d9a91f7cb&profile_id=113&",
+        "html5_video_M": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/345fab89f6914f1385d2f775e7423a17.mp4?s=a01b2aeb4e1c0304ab64127d9a91f7cb&profile_id=113",
+        "text": "",
+        "text-1": "",
+        "text-2": "",
+        "button-name": "",
+        "button-url": ""
+      }
+    },
+    "166081576367f36c96": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "light",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "mobile-heading": "",
+        "overline": "",
+        "heading": "",
+        "html5_video": "",
+        "html5_video_M": "",
         "text": "<p>\"Like many women, I always felt confused about which products to use and in what combination and I've always been skeptical of marketing claims.\"<\/p>",
         "text-1": "<p>Dr. Cat<\/p>",
         "text-2": "<p>(Board-Certified Plastic Surgeon,<br> Founder of MD GLAM)<\/p>",
@@ -47,36 +69,7 @@
         "button-url": ""
       }
     },
-    "1660123733ecf837b5": {
-      "type": "image-with-text",
-      "settings": {
-        "text-color": "auto",
-        "background-color": "light",
-        "container-width": 5,
-        "spacing-above": true,
-        "spacing-below": true,
-        "video-icon": true,
-        "html5_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/86dad62a1d9e4beda529695f20b86b15.mp4?s=a01b2aeb4e1c0304ab64127d9a91f7cb&profile_id=113&",
-        "html5_video_M": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/345fab89f6914f1385d2f775e7423a17.mp4?s=a01b2aeb4e1c0304ab64127d9a91f7cb&profile_id=113&loop=1",
-        "image-height": 1,
-        "darken-image": false,
-        "parallax-enabled": false,
-        "text-position": "center",
-        "text-width": "medium",
-        "overlap": false,
-        "box-around-text": false,
-        "mobile-overlay": false,
-        "overline": "",
-        "heading-mobile": "",
-        "title": "",
-        "title-sec": "",
-        "description": "",
-        "description-sec": "",
-        "description-third": "",
-        "link-url": "",
-        "link-text": ""
-      }
-    },
+
     "16601246718cb82e3a": {
       "type": "image-with-text",
       "settings": {
@@ -181,6 +174,8 @@
         "mobile-heading": "",
         "overline": "",
         "heading": "",
+        "html5_video": "",
+        "html5_video_M": "",
         "text": "<p>MD GLAM is an extension of myself and my way of reaching out and helping women take care of themselves, feel amazing, be the best possible version of who they are.<\/p>",
         "text-1": "",
         "text-2": "",
@@ -295,8 +290,8 @@
   "order": [
     "main",
     "166012342128eb4c5e",
+    "166081576367f36c96",
     "166074711258782bb2",
-    "1660123733ecf837b5",
     "16601246718cb82e3a",
     "16601278614e17a8a1",
     "16601278761386c26f",

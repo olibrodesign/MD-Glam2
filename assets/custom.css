@@ -25,6 +25,9 @@
 
 
 @media (max-width:767px){
+  video.Video-content{
+    display:none;
+  }
   .footer--subscribe .footer--form-container {
      margin: 0;
   }
@@ -165,7 +168,7 @@ text-transform: uppercase;
 .page--about-company  .product-page--header {
     margin-left: 16px;
 }
-    #shopify-section-template--16307266388222__1660123733ecf837b5 .custom-vector{
+    .custom-vector{
   position:absolute;
   top:40%;
   left:40%;}
@@ -253,7 +256,7 @@ text-transform: uppercase;
     text-align: left;
 }
  .page--about-company .featured-content--image {
-    height: 344px !important;
+    height: 390px !important;
 }
   #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--body {
     margin-top: 10px;
@@ -271,8 +274,11 @@ line-height: 120%;
 text-align:left;
 
 text-transform: uppercase;
-  } 
-  #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--body{
+
+  
+  } #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--body,
+ #shopify-section-template--16307266388222__166081576367f36c96 .featured-text--body{
+
   font-family: 'Proxima Nova' ;
 font-style: normal;
 font-weight: 300;
@@ -284,6 +290,9 @@ line-height: 130%;
 }
 }
 @media (min-width:768px){
+  .featured-video--play-mobile{
+    display:none;
+  }
   .footer--block[data-block-type=subscribe] {
     flex-basis: 50% !important;
 }
@@ -338,7 +347,8 @@ line-height: 130%;
 
    
     
-#shopify-section-template--16307266388222__166012342128eb4c5e div#featured-text-cat {
+#shopify-section-template--16307266388222__166012342128eb4c5e div#featured-text-cat,
+  #shopify-section-template--16307266388222__166081576367f36c96 div#featured-text-cat{
     margin-top: 16px;
     font-family: 'Proxima Nova';
 font-style: normal;
@@ -346,7 +356,8 @@ font-weight: 400;
 font-size: 16px;
 line-height: 130%;
 }
-#shopify-section-template--16307266388222__166012342128eb4c5e div#featured-text-text {
+#shopify-section-template--16307266388222__166012342128eb4c5e div#featured-text-text,
+ #shopify-section-template--16307266388222__166081576367f36c96 div#featured-text-text{
     font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 300;
@@ -384,7 +395,8 @@ line-height: 130%;
        
   }
   
- #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--body{
+ #shopify-section-template--16307266388222__166012342128eb4c5e .featured-text--body,
+  #shopify-section-template--16307266388222__166081576367f36c96 .featured-text--body{
 
 font-family:'Proxima Nova';
 font-size: 18px;
@@ -425,14 +437,14 @@ text-align: left;
     padding-left: 62px;
     padding-top: 10px;
 }
-#shopify-section-template--16307266388222__1660123733ecf837b5 .custom-vector{
+ .custom-vector{
   position:absolute;
-  top:50%;
-  left:50%;
-  
+  top:40%;
+  left:45%;
+  cursor:pointer
   
 }
- #shopify-section-template--16307266388222__1660123733ecf837b5 .custom-vector-icon {
+ .custom-vector-icon {
     position: absolute;
     top: 40%;
     left: 40%;
@@ -498,7 +510,8 @@ line-height: 120%;
     max-width: 535px;
     text-align: left;
 }
-  #shopify-section-template--16307266388222__166012342128eb4c5e .custom-text {
+  #shopify-section-template--16307266388222__166012342128eb4c5e .custom-text,
+    #shopify-section-template--16307266388222__166081576367f36c96 .custom-text {
     display: block;
     margin: 0 auto;
     margin-right: 125px;
@@ -567,7 +580,7 @@ line-height: 130%;
     
   }
 
- #shopify-section-template--16307266388222__1660123733ecf837b5 .custom-vector-icon {
+  .custom-vector-icon {
     position: absolute;
     top: 40%;
     left: 40%;
@@ -892,3 +905,36 @@ text-transform: uppercase;
 .ytp-chrome-top.ytp-show-cards-title {
     display: none;
 }
+video.Video-content {
+    max-width: 1140px;
+    width:inherit
+}
+.header--account-icon svg{
+  fill:none !important
+}
+.videomute img {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+}
+.videomute {
+  
+  display: block;
+  height: 25px;
+  width: 25px;
+ position: absolute;
+    right: 5%;
+    bottom: 5%;
+  z-index: 10;
+}
+
+.custom-video-with.head {
+    position: relative;
+}
+.custom-vector {
+    z-index: 99;
+}
+#shopify-section-template--16307266388222__166012342128eb4c5e .featured-video--play-mobile{
+  position:relative !important
+}
+ 
