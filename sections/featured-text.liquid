@@ -71,31 +71,47 @@
     {% if html5_video != blank %}
       <div class="custom-video-with head">
  <div class="featured-content--image">
-      
-              <video id="video_id" class="Video-content"  loop="true" autoplay="autoplay"  muted>
+              <video id="video_id_desktop" class="Video-content desktop" loop="true">
                 <source src="{{ html5_video }}">
               </video>
        
-          <video  id="video_id" class="featured-video--play-mobile"  loop="true" autoplay="autoplay"  muted>
+          <video  id="video_id_mobile" class="featured-video--play-mobile" loop="true">
                 <source src="{{ html5_video_M }}">
               </video>
      
   
       
-    <div class="custom-vector">
+    <div class="custom-vector desktop">
      
      {% render 'video-vector' %} 
-       <div class="custom-vector-icon">
+       <div class="custom-vector-icon play">
   
      {% render 'video-icon' %} 
+         </div>
+       <div class="custom-vector-icon pause">
+  
+     {% render 'pause-icon' %} 
+         </div>
+
+    </div>
+      <div class="custom-vector mobile">
+     
+     {% render 'video-vector' %} 
+       <div class="custom-vector-icon play">
+  
+     {% render 'video-icon' %} 
+         </div>
+       <div class="custom-vector-icon pause">
+  
+     {% render 'pause-icon' %} 
          </div>
 
     </div>
            
  </div>
-      <div class="videomute">
+      <!---div class="videomute">
        	<img id="video-mute" src="//cdn.shopify.com/s/files/1/0280/0035/4364/t/56/assets/mute.png?v=126087702582074586071658480708" class="mute">
-        </div>
+      </div--->
  </div>
       {% endif %}
  
