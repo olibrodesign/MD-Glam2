@@ -30,7 +30,7 @@
 -%}
 
 <featured-collection-root
-  class="featured-collection--root"
+  class="featured-collection--root page-width"
   data-section-id="{{ section.id }}"
   data-background-color="{{ bg_color }}"
   data-container="section"
@@ -42,9 +42,9 @@
   style="display:grid;"
 >
   {% if heading != blank %}
-    <div class="featured-collection--header" data-container="block">
+    <div class="featured-collection--header page-width" data-container="block">
       <div class="featured-collection--header-text">
-        <h2 class="featured-collection--title" data-item="section-heading">
+        <h2 class="featured-collection--title lg--f2 ff-heading uppercase sm--f40" data-item="section-heading">
           {{ heading }}
         </h2>
       </div>
@@ -94,7 +94,7 @@
 
         else
           for product in product_list limit: product_limit
-            render 'product--item', product: product, unique_handle: unique_handle, section_id: section.id
+            render 'product--item', product: product, add_to_cart_button: true, show_vendor: ture, unique_handle: unique_handle, section_id: section.id
           endfor
         endif
       -%}
@@ -176,6 +176,7 @@
       "id": "products-per-row--desktop",
       "type": "radio",
       "options": [
+        { "value": "2", "label": "2" },
         { "value": "3", "label": "3" },
         { "value": "4", "label": "4" }
       ],

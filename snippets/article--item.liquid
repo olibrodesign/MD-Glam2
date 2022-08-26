@@ -21,23 +21,16 @@
           </div>
         </a>
       {% endif %}
-
-      <h3 class="article--item--heading" data-item="block-heading">
-        <a href="{{ featured_article.url }}">
-          {{ featured_article.title }}
-        </a>
-      </h3>
-
       {% if show_date or show_author %}
         <div class="article--item-info">
           {% if show_date %}
             <div class="article--item--date" data-item="light-accent-text">
-              {% comment %} 'timesince' requires passing 'created_at' {% endcomment %}
-              {%
+              {% comment %} {%
                 render "utils",
                 utility: "timesince",
                 created_at: featured_article.published_at
-              %}
+              %} {% endcomment %}
+              {{ featured_article.published_at | date: "%b %d, %Y" }}
             </div>
           {% endif %}
 
@@ -52,6 +45,13 @@
           {% endif %}
         </div>
       {% endif %}
+      <h3 class="article--item--heading" data-item="block-heading">
+        <a href="{{ featured_article.url }}">
+          {{ featured_article.title }}
+        </a>
+      </h3>
+
+      
 
       {% if show_excerpt %}
         <div class="article--item--excerpt" data-item="paragraph">
@@ -64,7 +64,7 @@
       {% endif %}
 
       <div class="article--item--read-more" data-item="block-link">
-        <a href="{{ featured_article.url }}">{{ article_continue_reading_t }}</a>
+        <a class="btn" href="{{ featured_article.url }}">Read more</a>
       </div>
 
     {% when 'placeholder' %}

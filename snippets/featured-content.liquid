@@ -98,6 +98,7 @@
       {% endif %}
     <div class="featured-content--image">
       {% if section.settings.html5_video != blank %}
+
               <video id="video_id" class=Video-content  loop="true" autoplay="autoplay"  muted>
                 <source src="{{ section.settings.html5_video }}">
               </video>
@@ -105,6 +106,7 @@
        	<img id="video-mute" src="//cdn.shopify.com/s/files/1/0280/0035/4364/t/56/assets/mute.png?v=126087702582074586071658480708" class="mute">
         </div>
           <video  id="video_id" class=featured-video--play-mobile  loop="true" autoplay="autoplay"  muted>
+
                 <source src="{{ section.settings.html5_video_M }}">
               </video>
             

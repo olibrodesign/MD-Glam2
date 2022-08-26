@@ -1,0 +1,256 @@
+<section id="section--{{ section.id }}">
+    {% if section.settings.title != blank %}
+        <h1 class="product-skin-title page-width fw-light uppercase sm--f40 ff-heading lg--f2">{{ section.settings.title }}</h1>
+    {% endif %}
+    <div class="products--wrapper page-width">
+        <div class="product--wrapper">
+            {% if section.settings.bg_image != blank %}
+                <img class="bg_image sm--hide" src="{{ section.settings.bg_image | img_url: '800x800'}}" alt="{{ section.settings.bg_image.alt | escape }}">
+            {% endif %}
+            {% if section.settings.bg_image_mobile != blank %}
+                <img class="bg_image lg--hide" src="{{ section.settings.bg_image_mobile | img_url: '4500x450'}}" alt="{{ section.settings.bg_image_mobile.alt | escape }}">
+            {% endif %}
+            {% for block in section.blocks %}
+                <div class="product_image--wrapper" data-id="{{block.id}}">
+                    {% if block.settings.product_image != blank %}
+                        <img class="product_image sm--hide" src="{{ block.settings.product_image | img_url: '800x800'}}" alt="{{ block.settings.product_image.alt | escape }}">
+                    {% endif %}
+                    {% if block.settings.product_image_mobile != blank %}
+                        <img class="product_image lg--hide" src="{{ block.settings.product_image_mobile | img_url: '200x200'}}" alt="{{ block.settings.product_image_mobile.alt | escape }}">
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <div class="zoom-products--wrapper">
+                {% for block in section.blocks %}
+                    <div class="zoom-product--wrapper" data-id="{{block.id}}">
+                        {% if block.settings.zoom_image != blank %}
+                            <img class="zoom_image" src="{{ block.settings.zoom_image | img_url: '800x800'}}" alt="{{ block.settings.zoom_image.alt | escape }}">
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% for block in section.blocks %}
+            <div class="product-detail--wrapper" data-id="{{block.id}}">
+                {% if block.settings.detail_image != blank %}
+                    <img src="{{ block.settings.detail_image | img_url: '800x800'}}" alt="{{ block.settings.women_image.alt | escape }}">
+                {% endif %}
+                {% if block.settings.subtitle != blank %}
+                    <h2 class="subtitle uppercase lg--f24 ff-heading">{{ block.settings.subtitle }}</h2>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                    <div class="text lg--f18 ff-body">{{ block.settings.text }}</div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+<style>
+    {% for block in section.blocks %}
+        {% assign positions = block.settings.product_position | split: 'x' %}
+        {% assign position_x  = positions[0] %}
+        {% assign position_y  = positions[1] %}
+        .product_image--wrapper[data-id="{{block.id}}"] {
+            top: {{position_y}}px; left: {{position_x}}px;
+        }
+    {% endfor %}
+    {% for block in section.blocks %}
+        {% assign positions = block.settings.product_position_mobile | split: 'x' %}
+        {% assign position_x  = positions[0] %}
+        {% assign position_y  = positions[1] %}
+        @media (max-width: 767px) {
+            .product_image--wrapper[data-id="{{block.id}}"] {
+                top: {{position_y}}px; left: {{position_x}}px;
+            }
+        }
+        
+    {% endfor %}
+    #section--{{section.id}} .product_image--wrapper:hover {
+        cursor: url("{{ 'cursor.png' | asset_url }}"), auto;
+    }
+    #section--{{section.id}}  .zoom-product--wrapper:hover {
+        cursor: url("{{ 'cursor.png' | asset_url }}"), auto;
+    }
+    #section--{{section.id}} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom}}px;
+    }
+    @media (max-width: 1024px) {
+        #section--{{section.id}} {
+            padding-top: {{ section.settings.padding_top | times: 0.7 }}px;
+            padding-bottom: {{ section.settings.padding_bottom | times: 0.7}}px;
+        }
+    }
+    @media (max-width: 767px) {
+        #section--{{section.id}} {
+            padding-top: {{ section.settings.padding_top_mobile }}px;
+            padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+        }
+    }
+</style>
+<script>
+    var selectProduct = function() {
+        var products = document.getElementsByClassName('product_image--wrapper');
+        var products_zoom = document.getElementsByClassName('zoom-product--wrapper');
+        var products_detail = document.getElementsByClassName('product-detail--wrapper');
+        document.body.onclick = function (ev) {
+            if (ev.target.closest('.product_image--wrapper')) {
+                const product = ev.target.closest('.product_image--wrapper');
+                const id = product.getAttribute('data-id');
+                const product_zoom = document.querySelector('.zoom-product--wrapper[data-id="'+id+'"]');
+                const product_detail = document.querySelector('.product-detail--wrapper[data-id="'+id+'"]');
+                products.forEach((product) => {
+                    product.classList.remove('active');
+                });  
+                products_zoom.forEach((product_zoom) => {
+                    product_zoom.classList.remove('active');
+                });
+                products_detail.forEach((product_detail) => {
+                    product_detail.classList.remove('active');
+                });
+                product_detail.classList.add('active')   
+                product_zoom.classList.add('active');
+                product.classList.add('active');
+            } else {
+                products.forEach((product) => {
+                    product.classList.remove('active');
+                });
+                products_zoom.forEach((product_zoom) => {
+                    product_zoom.classList.remove('active');
+                });
+                products_detail.forEach((product_detail) => {
+                    product_detail.classList.remove('active');
+                });
+            }
+        };
+    }
+    selectProduct();
+</script>
+{% schema %}
+    {
+        "name": "Image and text",
+        "class": "image-and-text",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image",
+                "label": "Background image"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image_mobile",
+                "label": "Background image on mobile"
+            },
+            {
+                "type": "header",
+                "content": "Padding on desktop",
+                "info": "You can adjust the padding on desktop"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Top Padding",
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Bottom Padding",
+                "default": 50
+            },
+            {
+                "type": "header",
+                "content": "Padding on mobile",
+                "info": "You can adjust the padding on mobile"
+            },
+            {
+                "type": "range",
+                "id": "padding_top_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Top Padding",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Bottom Padding",
+                "default": 20
+            }
+        ],
+        "blocks": [
+            {
+                "type": "product",
+                "name": "Product",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "product_image",
+                        "label": "Product image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "product_image_mobile",
+                        "label": "Product image on mobile"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "zoom_image",
+                        "label": "Zoom image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "detail_image",
+                        "label": "Detail image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "subtitle",
+                        "label": "Subtitle"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text"
+                    },
+                    {
+                        "type": "text",
+                        "id": "product_position",
+                        "label": "Product position",
+                        "default": "300x300"
+                    },
+                    {
+                        "type": "text",
+                        "id": "product_position_mobile",
+                        "label": "Product position on mobile",
+                        "default": "300x300"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Image and text"
+            }
+        ]
+    }
+{% endschema %}

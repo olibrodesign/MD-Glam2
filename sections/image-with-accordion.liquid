@@ -1,0 +1,230 @@
+<section id="section--{{section.id}}">
+    <div class="image-accordion--wrapper page-width">
+        <div class="image--wrapper sm--hide">
+            {% if section.settings.image != blank %}
+                <img src="{{ section.settings.image | img_url: '800x800'}}" alt="{{ section.settings.image.alt | escape }}">
+            {% endif %}
+        </div>
+        <div class="accordion--wrapper">
+            {% if section.settings.title !=blank %}
+                <h1 class="uppercase title lg--f2 sm--f40 ff-heading">{{ section.settings.title }}</h1>
+            {% endif %}
+            <div class="accordions">
+                {% for block in section.blocks %}
+                    <div class="accordion_item">
+                        {% if block.settings.accordion_header != blank %}
+                            <div class="accordion_header ff-body lg--f16 sm--f16 uppercase">{{ block.settings.accordion_header }}</div>
+                        {% endif %}
+                        {% if block.settings.accordion_body != blank %}
+                            <div class="accordion_body ff-body fw-light lg--f18 sm--f16">
+                                {{ block.settings.accordion_body }}
+                                <img class="lg--hide" src="{{ block.settings.image_mobile | img_url: '800x800'}}" alt="{{ section.settings.image.alt | escape }}">
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    #section--{{section.id}} .image-accordion--wrapper {
+        {% if section.settings.position == "left" %}
+            flex-direction: row;
+            {% else %}
+            flex-direction: row-reverse;  
+        {% endif %}
+    }
+    @media (max-width: 767px) {
+        #section--{{section.id}} .image-accordion--wrapper {
+            {% if section.settings.position == "left" %}
+                flex-direction: column-reverse;
+                {% else %}
+                flex-direction: column;  
+            {% endif %}
+        }
+    }
+    #section--{{section.id}} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom}}px;
+    }
+    @media (max-width: 1024px) {
+        #section--{{section.id}} {
+            padding-top: {{ section.settings.padding_top | times: 0.7 }}px;
+            padding-bottom: {{ section.settings.padding_bottom | times: 0.7}}px;
+        }
+    }
+    @media (max-width: 767px) {
+        #section--{{section.id}} {
+            padding-top: {{ section.settings.padding_top_mobile }}px;
+            padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+        }
+    }
+    .accordion_header.active::after {
+        background-image: url("{{'arrow_down.png'| asset_url}}");
+    }
+    .accordion_header::after {
+        background-image: url("{{'arrow_left.png'| asset_url}}");
+    }
+    .accordion_body ul li::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background-image: url("{{'Icon.png' | asset_url}}");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+</style>
+<script>
+	//this is the button
+	var acc = document.getElementsByClassName("accordion_header");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		//when one of the buttons are clicked run this function
+	  acc[i].onclick = function() {
+		//variables
+		var panel = this.nextElementSibling;
+		var coursePanel = document.getElementsByClassName("accordion_body");
+		var courseAccordion = document.getElementsByClassName("accordion_header");
+		var courseAccordionActive = document.getElementsByClassName("accordion_header active");
+
+		/*if pannel is already open - minimize*/
+		if (panel.style.maxHeight){
+			//minifies current pannel if already open
+			panel.style.maxHeight = null;
+			//removes the 'active' class as toggle didnt work on browsers minus chrome
+			this.classList.remove("active");
+		} else { //pannel isnt open...
+			//goes through the buttons and removes the 'active' css (+ and -)
+			for (var ii = 0; ii < courseAccordionActive.length; ii++) {
+				courseAccordionActive[ii].classList.remove("active");
+			}
+			//Goes through and removes 'activ' from the css, also minifies any 'panels' that might be open
+			for (var iii = 0; iii < coursePanel.length; iii++) {
+			  this.classList.remove("active");
+			  coursePanel[iii].style.maxHeight = null;
+			}
+		  //opens the specified pannel
+		  panel.style.maxHeight = panel.scrollHeight + "px";
+		  //adds the 'active' addition to the css.
+		  this.classList.add("active");
+		} 
+	  }//closing to the acc onclick function
+	}//closing to the for loop.
+
+</script>
+{% schema %}
+    {
+        "name": "Image with accordion",
+        "class": "image-with-accordion",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "select",
+                "id": "position",
+                "label": "Image position",
+                "options": [
+                    {
+                        "group": "position",
+                        "value": "left",
+                        "label": "Left"
+                    },
+                    {
+                        "group": "position",
+                        "value": "right",
+                        "label": "Right"
+                    }
+                ],
+                "default": "left"
+            },
+            {
+                "type": "header",
+                "content": "Padding on desktop",
+                "info": "You can adjust the padding on desktop"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Top Padding",
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Bottom Padding",
+                "default": 50
+            },
+            {
+                "type": "header",
+                "content": "Padding on mobile",
+                "info": "You can adjust the padding on mobile"
+            },
+            {
+                "type": "range",
+                "id": "padding_top_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Top Padding",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Bottom Padding",
+                "default": 20
+            }
+        ],
+        "blocks": [
+            {
+                "type": "accordion",
+                "name": "Accordion",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "accordion_header",
+                        "label": "Accordion header"
+                    },
+                    {
+                        "type": "html",
+                        "id": "accordion_body",
+                        "label": "Accordion body"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image_mobile",
+                        "label": "Mobile image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Image with accordion"
+            }
+        ]
+    }
+{% endschema %}

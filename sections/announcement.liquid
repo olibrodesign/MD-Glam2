@@ -39,7 +39,7 @@
       {% endif %}
 
       {% if text != blank %}
-        <div class="announcement--text" data-item="accent-text">
+        <div class="announcement--text" data-item="accent-text" style="color: {{section.settings.text_color}};">
           {{ text | escape }}
         </div>
       {% endif %}
@@ -78,6 +78,11 @@
         { "label": "Accent", "value": "accent" }
       ],
       "default": "dark"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
     },
     {
       "id": "light-text",

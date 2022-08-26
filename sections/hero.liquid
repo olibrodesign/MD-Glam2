@@ -1,0 +1,182 @@
+<section id="section--{{section.id}}">
+    <div class="hero__wrapper page-width">
+        <div class="hero__image--wrapper">
+            {% if section.settings.bg_desktop != blank %}
+                <img class="sm--hide" src="{{section.settings.bg_desktop | img_url: '2000x2000'}}" alt="{{ section.settings.bg_desktop.alt | escape }}">
+            {% endif %}
+            {% if section.settings.bg_mobile != blank %}
+                <img class="lg--hide" src="{{section.settings.bg_mobile | img_url: '600x600'}}" alt="{{ section.settings.bg_mobile.alt | escape }}">
+            {% endif %}
+            {% if section.settings.play_btn != blank %}
+                <img class="play_btn" src="{{section.settings.play_btn | img_url: '100x100'}}" alt="{{ section.settings.play_btn.alt | escape }}">
+            {% endif %}
+
+        </div>
+        <div class="hero__text--wrapper">
+            {% if section.settings.subtitle != blank %}
+                <p class="uppercase sm--f14 ff-body subtitle lg--f16">{{ section.settings.subtitle }}</p>
+            {% endif %}
+            {% if section.settings.title != blank %}
+                <h1 class="uppercase sm--f42 fw-light ff-heading title lg--f1">{{ section.settings.title }}</h1>
+            {% endif %}
+            {% if section.settings.text != blank %}
+                <div class="text ff-body sm--f16 lg--f18">{{ section.settings.text }}</div>
+            {% endif %}
+            <div class="hero__button--wrapper">
+                {% if section.settings.btn_text_1 != blank %}
+                    <a class="btn ff-body lg--f18 sm--f16 uppercase bg-black color-white" href="{{ section.settings.btn_url_1 }}">{{ section.settings.btn_text_1 }}</a>
+                {% endif %}
+                {% if section.settings.btn_text_2 != blank %}
+                    <a class="btn ff-body lg--f18 sm--f16 uppercase bg-transpatent color-black" href="{{ section.settings.btn_url_2 }}">{{ section.settings.btn_text_2 }}</a>
+                {% endif %}
+            </div>
+            <div class="hero__review--wrapper">
+                <div class="star_content">
+                 {% for I in (1..5) %}
+                    {% if I > section.settings.star_count %}
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.1902 5.34434L10.3066 5.58005L10.5667 5.61786L15.4641 6.32953L11.92 9.7839L11.7318 9.96738L11.7762 10.2265L12.6129 15.1042L8.23266 12.8012L7.99999 12.6789L7.76731 12.8012L3.38694 15.1041L4.22336 10.2265L4.26778 9.96739L4.07957 9.78392L0.535916 6.32953L5.4332 5.61789L5.69332 5.58009L5.80966 5.34438L8.00001 0.906534L10.1902 5.34434ZM3.37625 15.1665C3.37624 15.1665 3.37624 15.1665 3.37624 15.1665L3.37625 15.1665ZM0.490573 6.28533C0.490588 6.28534 0.490603 6.28536 0.490619 6.28537L0.490573 6.28533ZM0.473357 6.33862C0.473318 6.33862 0.473279 6.33863 0.473239 6.33864L0.468754 6.30777L0.473241 6.33864L0.473357 6.33862Z" stroke="black"/>
+                        </svg>
+                        {% else %}
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.979 6.16358C15.9239 5.99384 15.7772 5.87017 15.6006 5.84451L10.6399 5.12364L8.4214 0.628501C8.34242 0.468481 8.17946 0.367188 8.001 0.367188C7.82257 0.367188 7.65959 0.468512 7.58061 0.628501L5.36196 5.12367L0.401389 5.84451C0.224805 5.87017 0.0780998 5.99387 0.0229681 6.16358C-0.0321949 6.33329 0.0138107 6.51959 0.141576 6.64414L3.73101 10.1432L2.88379 15.0839C2.85363 15.2597 2.92595 15.4375 3.07031 15.5423C3.21464 15.6472 3.40597 15.6611 3.56402 15.578L8.00097 13.2454L12.4378 15.5781C12.5064 15.6141 12.5813 15.6319 12.6559 15.6319C12.7531 15.6319 12.8499 15.6017 12.9315 15.5424C13.0759 15.4375 13.1482 15.2598 13.118 15.0839L12.2706 10.1432L15.8604 6.64417C15.9882 6.51959 16.0342 6.33329 15.979 6.16358Z" fill="black"/>
+                        </svg>
+                    {% endif %}
+                 {% endfor %}
+                </div>
+                {% if section.settings.reveiw_text != blank %}
+                    <p class="review_text fw-light ff-body sm--f14 lg--f14">{{ section.settings.reveiw_text }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% if section.settings.video != blank %}
+        <div class="vimeo-shadowbox vimeo-shadowbox--hidden">
+            <div class="vimeo-shadowbox__video-wrapper">
+              <div class="vimeo-shadowbox__video">
+                  <iframe class="video" src="{{section.settings.video}}" width="868" height="490" frameborder="0" webkitallowfullscreen mozallowfullscreen allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+              </div>
+              <a class="vimeo-shadowbox__close-button" href="#">X</a>
+            </div>
+        </div>
+    {% endif %}
+    
+</section>
+{% if section.settings.video != blank %}
+    
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+    var iframe_hero = document.querySelector('#section--{{section.id}} .video');
+    var player_hero = new Vimeo.Player(iframe_hero);
+    var link_hero = document.querySelector('#section--{{section.id}} .play_btn');
+    var shadowbox_hero = document.querySelector('#section--{{section.id}} .vimeo-shadowbox');
+    var closeButton_hero = document.querySelector('#section--{{section.id}} .vimeo-shadowbox__close-button');
+    
+    function hero_video() {
+        player_hero.on('ended', function() {
+            hidePopup_hero();
+        });
+        link_hero.addEventListener('click', showPopup_hero);
+        shadowbox_hero.addEventListener('click', hidePopup_hero);
+        closeButton_hero.addEventListener('click', hidePopup_hero);
+    }
+    hero_video()
+
+    
+    function showPopup_hero() {
+        player_hero.play();
+        shadowbox_hero.classList.remove('vimeo-shadowbox--hidden');
+    }
+    function hidePopup_hero() {
+        player_hero.pause();
+        shadowbox_hero.classList.add('vimeo-shadowbox--hidden');
+    }
+</script>
+{% endif %}
+{% schema %}
+    {
+        "name": "Hero Banner",
+        "class": "hero-banner",
+        "settings": [
+            {
+                "type": "text",
+                "id": "subtitle",
+                "label": "Subtitle",
+                "default": "THE WORLD'S #1 SELLING  anti-aging regimen"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "Text"
+            },
+            {
+                "type": "text",
+                "id": "btn_text_1",
+                "label": "Button 1"
+            },
+            {
+                "type": "url",
+                "id": "btn_url_1",
+                "label": "Button url 1"
+            },
+            {
+                "type": "text",
+                "id": "btn_text_2",
+                "label": "Button 2"
+            },
+            {
+                "type": "url",
+                "id": "btn_url_2",
+                "label": "Button url 2"
+            },
+            {
+                "type": "range",
+                "id": "star_count",
+                "min": 0,
+                "max": 5,
+                "step": 1,
+                "unit": "n",
+                "label": "Star count",
+                "default": 5
+            },
+            {
+                "type": "text",
+                "id": "reveiw_text",
+                "label": "Review text",
+                "default": "4.9/5 based on 1,000+ reviews"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_desktop",
+                "label": "Background Image On Desktop"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_mobile",
+                "label": "Background Image On Mobile"
+            },
+            {
+                "type": "image_picker",
+                "id": "play_btn",
+                "label": "Player button image"
+            },
+            {
+                "type": "video_url",
+                "id": "video",
+                "label": "Video",
+                "accept": ["youtube", "vimeo"]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Hero Banner"
+            }
+        ]
+    }
+{% endschema %}
+

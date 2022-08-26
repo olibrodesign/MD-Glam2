@@ -1,7 +1,501 @@
 {
   "sections": {
+    "1660762024bfb708fc": {
+      "type": "hero",
+      "settings": {
+        "subtitle": "THE WORLD'S #1 SELLING  anti-aging regimen",
+        "title": "Your best skin in 2 weeks",
+        "text": "<p>Discover your best skin yet with our medical-grade, luxury skincare. <\/p><p>Formulated & created by a world-renowned plastic surgeon Dr. Cat<\/p>",
+        "btn_text_1": "shop now",
+        "btn_url_1": "",
+        "btn_text_2": "get skin quiz",
+        "btn_url_2": "",
+        "star_count": 5,
+        "reveiw_text": "4.9\/5 based on 1,000+ reviews",
+        "bg_desktop": "shopify:\/\/shop_images\/Untitled_3.png",
+        "bg_mobile": "shopify:\/\/shop_images\/Untitled_eb58a0e7-42c3-461b-8452-3bc7979ca297.png",
+        "play_btn": "shopify:\/\/shop_images\/Watch_video_icon_aabdef71-49ed-440f-b484-81666678b7c0.png",
+        "video": "https:\/\/player.vimeo.com\/video\/513970522"
+      }
+    },
+    "1660785703f2ab5638": {
+      "type": "logos",
+      "blocks": {
+        "2bca5a59-f1cb-4368-a526-19641323580b": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/allure-logo.png"
+          }
+        },
+        "ccf8be65-2615-44c5-9c3c-69b827db1b73": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/nbc-logo.png"
+          }
+        },
+        "d3842083-a781-43b5-9f05-1e2ecf32a2dc": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/newbeauty-logo.png"
+          }
+        },
+        "b718e32d-1d82-4dfb-94e7-fb1f71cec4b5": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/e-logo.png"
+          }
+        },
+        "e89b5ec9-a964-4791-a397-8b5bb074f3e7": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Frame_51.png"
+          }
+        },
+        "7cc495dd-2db4-40a6-bfb4-a2499c8dd9d4": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/cdnlogo.com_people-magazine_1.png"
+          }
+        },
+        "37f973f9-d703-4cc0-a349-a50fd9415919": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/huff-post-logo.png"
+          }
+        }
+      },
+      "block_order": [
+        "2bca5a59-f1cb-4368-a526-19641323580b",
+        "ccf8be65-2615-44c5-9c3c-69b827db1b73",
+        "d3842083-a781-43b5-9f05-1e2ecf32a2dc",
+        "b718e32d-1d82-4dfb-94e7-fb1f71cec4b5",
+        "e89b5ec9-a964-4791-a397-8b5bb074f3e7",
+        "7cc495dd-2db4-40a6-bfb4-a2499c8dd9d4",
+        "37f973f9-d703-4cc0-a349-a50fd9415919"
+      ],
+      "settings": {
+        "bg_color": "#f2a7a0"
+      }
+    },
+    "16607754620e16371b": {
+      "type": "text-with-image",
+      "settings": {
+        "title": "Did you know",
+        "video": "",
+        "subtitle": "<p>By the time you hit 50 you will have lost half of your natural collagen?<\/p>",
+        "uppercase_subtitle": false,
+        "subtitle_size": "normal",
+        "text": "<p>Collagen production starts to dip in most people's bodies from the time they're in their late teens or early 20s and decreases about 1% a year. This collagen attenuation picks up pace during and after menopause.<\/p><p>Skincare products also protect from daily environmental exposures and replenish the skin of its natural protectants that are depleted from the environmental toxins. <\/p>",
+        "btn_text": "",
+        "btn_url": "",
+        "image": "shopify:\/\/shop_images\/Graphic.png",
+        "image_mobile": "shopify:\/\/shop_images\/Graphik.png",
+        "position": "left",
+        "padding_top": 170,
+        "padding_bottom": 90,
+        "padding_top_mobile": 80,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "1660777035c35bcd51": {
+      "type": "text-with-image",
+      "settings": {
+        "title": "Dr. Cat",
+        "video": "https:\/\/player.vimeo.com\/video\/513970522",
+        "subtitle": "<p>Beverly Hills Plastic Surgeon & MD GLAM Skincare Creator<\/p>",
+        "uppercase_subtitle": false,
+        "subtitle_size": "normal",
+        "text": "<p>Dr.Cat was tired of trying different products that didn't work or that she didn't like. Also, patients and friends always asked her what products they should use and she could never recommend anything because she needed to believe in them 100% and know that they were effective.<\/p><p>Since Dr. Cat is a scientist with a background in molecular biology, she cares about the actual scientific data. <\/p>",
+        "btn_text": "Read more",
+        "btn_url": "",
+        "image": "shopify:\/\/shop_images\/Image_4_8201b4d7-e3ad-4da4-a233-edbeeaeccdc8.png",
+        "image_mobile": "shopify:\/\/shop_images\/Image_1.png",
+        "play_btn": "shopify:\/\/shop_images\/Watch_video_icon_aabdef71-49ed-440f-b484-81666678b7c0.png",
+        "position": "right",
+        "padding_top": 60,
+        "padding_bottom": 30,
+        "padding_top_mobile": 70,
+        "padding_bottom_mobile": 10
+      }
+    },
+    "1660847051723d4e9d": {
+      "type": "image-and-text",
+      "blocks": {
+        "b841daf4-b47d-4248-9fe8-e667d89d9eeb": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/MdGlam_set_1.png",
+            "product_image_mobile": "shopify:\/\/shop_images\/MdGlam_set_5c813a87-4f56-4070-ad7e-ccdf756c0318.png",
+            "zoom_image": "shopify:\/\/shop_images\/MdGlam_set.png",
+            "detail_image": "shopify:\/\/shop_images\/Image_4.png",
+            "subtitle": "SUNSHOUT SUNSCREEN SPF 50",
+            "text": "<p>Powerful and effective broad-spectrum UVA\/UVB sun protection prevents sunburn, sun spots, laxity, rough texture, and other not-so-sunny side effects of UV overexposure. <\/p><p>Infused with an innovative blend of powerful antioxidants and skin-soothing, essential extracts, this exclusive, supercharged sunscreen preserves, perfects, AND protects from the sands to the street. Weightless, non-greasy, fast absorbing formula effortlessly vanishes into skin, leaving an undetectable, flawless finish.<\/p>",
+            "product_position": "300x10",
+            "product_position_mobile": "120x15"
+          }
+        },
+        "5ca08677-cab9-4782-9d13-0ca03b200089": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/SPF_image.png",
+            "product_image_mobile": "shopify:\/\/shop_images\/SPF_image_7e1698a0-6541-45b6-9a00-777c38254211.png",
+            "zoom_image": "shopify:\/\/shop_images\/Image_day.png",
+            "detail_image": "shopify:\/\/shop_images\/Image_4.png",
+            "subtitle": "SUNSHOUT SUNSCREEN SPF 50",
+            "text": "<p>Powerful and effective broad-spectrum UVA\/UVB sun protection prevents sunburn, sun spots, laxity, rough texture, and other not-so-sunny side effects of UV overexposure. <\/p><p>Infused with an innovative blend of powerful antioxidants and skin-soothing, essential extracts, this exclusive, supercharged sunscreen preserves, perfects, AND protects from the sands to the street. Weightless, non-greasy, fast absorbing formula effortlessly vanishes into skin, leaving an undetectable, flawless finish.<\/p>",
+            "product_position": "550x290",
+            "product_position_mobile": "240x150"
+          }
+        },
+        "3edb2333-7b11-46a6-adad-d4463962adf0": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/Image_night.png",
+            "product_image_mobile": "shopify:\/\/shop_images\/Image_night_7ce52a12-de43-4d8c-a78d-4642a3715741.png",
+            "zoom_image": "shopify:\/\/shop_images\/Image_day_1.png",
+            "detail_image": "shopify:\/\/shop_images\/Image_5.png",
+            "subtitle": "Hyaluronic acid night c-complex",
+            "text": "<p>Glow-getting glycolic acid refines and renews texture for a bright, beautiful, luminous complexion. Low molecular weight hyaluronic acid deeply penetrates the skin to significantly hydrate and heal the skin for a firm, more rejuvenated appearance. Exquisitely rich and undeniably luxurious, this sumptuous night cream is a dream-come-true essential for your beauty sleep.<\/p>",
+            "product_position": "450x300",
+            "product_position_mobile": "180x155"
+          }
+        },
+        "e6021046-c227-4c11-9adf-cc32fcc74de2": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/Image_day_3.png",
+            "product_image_mobile": "shopify:\/\/shop_images\/Image_day_64747964-29f8-43d3-be52-917268af594c.png",
+            "zoom_image": "shopify:\/\/shop_images\/Image_day_2.png",
+            "detail_image": "shopify:\/\/shop_images\/Image_6_7910c110-e6d1-4eb6-aa10-89fc5c382a90.png",
+            "subtitle": "DMAE Antioxidant day moisturizer",
+            "text": "<p>DMAE Antioxidant Day Moisturizer is an antioxidant-packed Day Cream fortified with Vitamin C and E that counters free radicals from UV exposure and other toxins in the environment. <\/p><p>DMAE has been shown to increase skin firmness and hydration. It should be used every day as a daytime anti-aging moisturizer. This day cream feels light on the skin and can be worn under makeup.<\/p>",
+            "product_position": "340x310",
+            "product_position_mobile": "120x160"
+          }
+        },
+        "0b6b68fa-a21b-45b1-a76b-e3f1a4e05056": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/Image_serum_1.png",
+            "product_image_mobile": "shopify:\/\/shop_images\/Image_serum_17078d00-1155-403a-b5cf-cd7d9f15700e.png",
+            "zoom_image": "shopify:\/\/shop_images\/Image_serum.png",
+            "detail_image": "shopify:\/\/shop_images\/Image_7.png",
+            "subtitle": "RETINOL-C INTENSE EYE SERUM",
+            "text": "<p>Glow-getting glycolic acid refines and renews texture for a bright, beautiful, luminous complexion. Low molecular weight hyaluronic acid deeply penetrates the skin to significantly hydrate and heal the skin for a firm, more rejuvenated appearance. Exquisitely rich and undeniably luxurious, this sumptuous night cream is a dream-come-true essential for your beauty sleep.<\/p>",
+            "product_position": "90x200",
+            "product_position_mobile": "10x100"
+          }
+        },
+        "80b34325-9094-4cd4-bd32-c659af95758d": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/Image_scrub_1.png",
+            "product_image_mobile": "shopify:\/\/shop_images\/Image_scrub_2b3beeb5-11ad-46a6-b4fb-46f125c87a11.png",
+            "zoom_image": "shopify:\/\/shop_images\/Image_scrub.png",
+            "detail_image": "shopify:\/\/shop_images\/Image_8.png",
+            "subtitle": "Exfoliating enzyme scrub",
+            "text": "<p>Specially formulated by Dr. Cat with extra-fine exfoliating particles to ensure a gentle, complexion polishing treatment, your skin is left irresistibly satin-smooth and prepped for your MD Glam Hyaluronic Acid Night C-Complex. Before bed – or breakfast – be sure to get in the buff with this beauty.<\/p>",
+            "product_position": "120x40",
+            "product_position_mobile": "20x30"
+          }
+        },
+        "e24d4757-2946-4ae3-994f-ecf8d7da7667": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/Image_Cleanser_1.png",
+            "product_image_mobile": "shopify:\/\/shop_images\/Image_Cleanser_39f26dee-68b2-47b7-86d6-6cb70f503cb4.png",
+            "zoom_image": "shopify:\/\/shop_images\/Image_Cleanser.png",
+            "detail_image": "shopify:\/\/shop_images\/Image_9.png",
+            "subtitle": "Deep poor foaming cleanser",
+            "text": "<p>Minerals from the Dead Sea deeply moisturize and hydrate the complexion for a refreshing and smooth feel post-cleanse. The luxurious, fresh, foaming lather soothes and softens without stripping skin of its vital moisture. In fact, washing with this cleanser will leave your skin feeling soft, supple, and clean. <br\/>You can’t help but say “aaaaahhhh” when using this extraordinary cleanser. Yes, it’s that good.<\/p>",
+            "product_position": "190x70",
+            "product_position_mobile": "50x35"
+          }
+        }
+      },
+      "block_order": [
+        "b841daf4-b47d-4248-9fe8-e667d89d9eeb",
+        "5ca08677-cab9-4782-9d13-0ca03b200089",
+        "3edb2333-7b11-46a6-adad-d4463962adf0",
+        "e6021046-c227-4c11-9adf-cc32fcc74de2",
+        "0b6b68fa-a21b-45b1-a76b-e3f1a4e05056",
+        "80b34325-9094-4cd4-bd32-c659af95758d",
+        "e24d4757-2946-4ae3-994f-ecf8d7da7667"
+      ],
+      "settings": {
+        "title": "It’s time to change your skin!",
+        "bg_image": "shopify:\/\/shop_images\/Stand_illustration.png",
+        "bg_image_mobile": "shopify:\/\/shop_images\/Stand_illustration_c09a793b-841e-41b1-af80-fbe19ddb32ec.png",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "1640181507ee260ca6": {
+      "type": "featured-product",
+      "blocks": {
+        "164018150735c4d43c-0": {
+          "type": "overline",
+          "settings": {
+            "text": "What’s inside our best seller"
+          }
+        },
+        "164018150735c4d43c-2": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "164018150735c4d43c-1": {
+          "type": "heading",
+          "settings": {}
+        },
+        "16825238-51e1-4131-9bb0-5dbfb7da40dc": {
+          "type": "description",
+          "settings": {}
+        },
+        "5accbd0e-d14a-45ea-9456-848c59dcf7b5": {
+          "type": "rating",
+          "settings": {}
+        },
+        "164018150735c4d43c-3": {
+          "type": "price",
+          "settings": {}
+        },
+        "164018150735c4d43c-4": {
+          "type": "options",
+          "disabled": true,
+          "settings": {
+            "variant-style": "buttons",
+            "swatches-enabled": true,
+            "size-chart-enabled": true,
+            "size-chart-option": "size",
+            "size-chart-content": ""
+          }
+        },
+        "164018150735c4d43c-5": {
+          "type": "buy-buttons",
+          "settings": {
+            "smart-payment-enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "164018150735c4d43c-0",
+        "164018150735c4d43c-2",
+        "164018150735c4d43c-1",
+        "16825238-51e1-4131-9bb0-5dbfb7da40dc",
+        "5accbd0e-d14a-45ea-9456-848c59dcf7b5",
+        "164018150735c4d43c-3",
+        "164018150735c4d43c-4",
+        "164018150735c4d43c-5"
+      ],
+      "settings": {
+        "background-color": "light",
+        "container-width": 5,
+        "spacing-above": true,
+        "spacing-below": true,
+        "featured_product": "the-ultimate-anti-aging-kit",
+        "loop-enabled": false
+      }
+    },
+    "1660875395251086fb": {
+      "type": "featured-products",
+      "settings": {
+        "product-list": [
+          "retinol-c-intense-eye-serum",
+          "sunshout-sunscreen-50-spf"
+        ],
+        "background-color": "light",
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true,
+        "display-type": "grid",
+        "products-per-row--desktop": "2",
+        "products-per-row--mobile": "2",
+        "heading": "Professional cosmetics",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "166087916346dbba2a": {
+      "type": "text-with-image",
+      "settings": {
+        "title": "WHICH SKIN TYPE IS GOOD FOR?",
+        "video": "",
+        "subtitle": "<p>Normal \/ Oily \/ Dry \/ Combination \/ Sensitive<\/p>",
+        "uppercase_subtitle": false,
+        "subtitle_size": "normal",
+        "text": "<p>We’re here to help! Take this one-minute skin quiz to find your perfect skincare routine.<\/p>",
+        "btn_text": "take a quiz",
+        "btn_url": "",
+        "image": "shopify:\/\/shop_images\/Image_colage.png",
+        "image_mobile": "shopify:\/\/shop_images\/Image_colage.png",
+        "position": "right",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "16609851618168eacc": {
+      "type": "image-with-accordion",
+      "blocks": {
+        "768e64f5-05f5-47a1-9af0-6d0e911fa2b4": {
+          "type": "accordion",
+          "settings": {
+            "accordion_header": "Anti-aging",
+            "accordion_body": "<p>Slowing down the aging process Anti-aging - slowing down the clock by building collagen, protecting against environmental toxins that injure the skin causing fine lines and wrinkles, sagging skin, hyperpigmen tation, lack of elasticity, and large pores. <\/p>\n<p>\nCollagen production starts to decrease in most people's bodies from the time they're in their late teens or early 20s and decreases about 1% each year. This collagen attenuation picks up pace during and after menopause.<\/p>\n<ul>\n<li>Increases hydration and suppleness<\/li>\n<li>Improved texture<\/li>\n<li>Evening the pigmentation<\/li>\n<li>Improved overall skin appearance <\/li>\n<\/ul>",
+            "image_mobile": "shopify:\/\/shop_images\/ezgif_4.png"
+          }
+        },
+        "381933df-2ca6-4414-9a17-b8234abe1aa0": {
+          "type": "accordion",
+          "settings": {
+            "accordion_header": "Nourishing",
+            "accordion_body": "<p>Slowing down the aging process Anti-aging - slowing down the clock by building collagen, protecting against environmental toxins that injure the skin causing fine lines and wrinkles, sagging skin, hyperpigmen tation, lack of elasticity, and large pores. <\/p>\n<p>\nCollagen production starts to decrease in most people's bodies from the time they're in their late teens or early 20s and decreases about 1% each year. This collagen attenuation picks up pace during and after menopause.<\/p>\n<ul>\n<li>Increases hydration and suppleness<\/li>\n<li>Improved texture<\/li>\n<li>Evening the pigmentation<\/li>\n<li>Improved overall skin appearance <\/li>\n<\/ul>",
+            "image_mobile": "shopify:\/\/shop_images\/ezgif_4.png"
+          }
+        },
+        "6bbb676d-e3bd-4f56-9ec9-1148f7710c12": {
+          "type": "accordion",
+          "settings": {
+            "accordion_header": "Preventative & Protective",
+            "accordion_body": "<p>Slowing down the aging process Anti-aging - slowing down the clock by building collagen, protecting against environmental toxins that injure the skin causing fine lines and wrinkles, sagging skin, hyperpigmen tation, lack of elasticity, and large pores. <\/p>\n<p>\nCollagen production starts to decrease in most people's bodies from the time they're in their late teens or early 20s and decreases about 1% each year. This collagen attenuation picks up pace during and after menopause.<\/p>\n<ul>\n<li>Increases hydration and suppleness<\/li>\n<li>Improved texture<\/li>\n<li>Evening the pigmentation<\/li>\n<li>Improved overall skin appearance <\/li>\n<\/ul>",
+            "image_mobile": "shopify:\/\/shop_images\/ezgif_4.png"
+          }
+        }
+      },
+      "block_order": [
+        "768e64f5-05f5-47a1-9af0-6d0e911fa2b4",
+        "381933df-2ca6-4414-9a17-b8234abe1aa0",
+        "6bbb676d-e3bd-4f56-9ec9-1148f7710c12"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ezgif_4.png",
+        "title": "3-ways  MD GLAM helps",
+        "position": "left",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "16611039312082caaf": {
+      "type": "review-slider",
+      "blocks": {
+        "2a804f74-59b1-415b-afe3-15c918d4af8e": {
+          "type": "review",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/Frame_65.png",
+            "after_image": "shopify:\/\/shop_images\/Now.png",
+            "reviewer": "Kaleigh M.",
+            "star_count": 4,
+            "date": "Jun 15, 2022",
+            "age": "40s",
+            "skin_type": "Combination",
+            "skin_concerns": "Fine lines & wrinkles, uneven skin tone, dark spots, pores",
+            "description": "<p>“Absolutely love all the products! Started using the kit 5 years ago when my face was at its worst, this has transformed my skin and the ONLY products that keep my face blemish free, texture free, and blemish free. Definitely worth the investment!”<\/p>"
+          }
+        },
+        "47965721-80d4-4a52-99d3-2c81aeaebda2": {
+          "type": "review",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/Frame_65.png",
+            "after_image": "shopify:\/\/shop_images\/Now.png",
+            "reviewer": "Kaleigh M.",
+            "star_count": 5,
+            "date": "Jun 15, 2022",
+            "age": "40s",
+            "skin_type": "Combination",
+            "skin_concerns": "Fine lines & wrinkles, uneven skin tone, dark spots, pores",
+            "description": "<p>“Absolutely love all the products! Started using the kit 5 years ago when my face was at its worst, this has transformed my skin and the ONLY products that keep my face blemish free, texture free, and blemish free. Definitely worth the investment!”<\/p>"
+          }
+        },
+        "e1878941-eb35-46a0-a710-15b05917af8d": {
+          "type": "review",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/Frame_65.png",
+            "after_image": "shopify:\/\/shop_images\/Now.png",
+            "reviewer": "Kaleigh M.",
+            "star_count": 5,
+            "date": "Jun 15, 2022",
+            "age": "40s",
+            "skin_type": "Combination",
+            "skin_concerns": "Fine lines & wrinkles, uneven skin tone, dark spots, pores",
+            "description": "<p>“Absolutely love all the products! Started using the kit 5 years ago when my face was at its worst, this has transformed my skin and the ONLY products that keep my face blemish free, texture free, and blemish free. Definitely worth the investment!”<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "2a804f74-59b1-415b-afe3-15c918d4af8e",
+        "47965721-80d4-4a52-99d3-2c81aeaebda2",
+        "e1878941-eb35-46a0-a710-15b05917af8d"
+      ],
+      "settings": {
+        "title_firstline": "Suitable for",
+        "title_secondline": "ages 20-65+",
+        "subtitle": "<p>Before & after photos by real MD GLAM users. Results may vary.  <\/p>",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "1661148303de44f237": {
+      "type": "text-with-image",
+      "blocks": {
+        "9fdf0576-f416-44c8-a7c6-dfd4234fc519": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_11833.png"
+          }
+        },
+        "c9e0eb3d-2bb2-4219-a61d-c8d49c7bd889": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/TESTING.png"
+          }
+        },
+        "920cda09-793e-4702-8b75-9411e0b4fc05": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/PARABEN.png"
+          }
+        },
+        "993b9afd-bbab-481f-8844-5a897c0877c0": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/SULFATE.png"
+          }
+        }
+      },
+      "block_order": [
+        "9fdf0576-f416-44c8-a7c6-dfd4234fc519",
+        "c9e0eb3d-2bb2-4219-a61d-c8d49c7bd889",
+        "920cda09-793e-4702-8b75-9411e0b4fc05",
+        "993b9afd-bbab-481f-8844-5a897c0877c0"
+      ],
+      "settings": {
+        "title": "Our Promise",
+        "text_image": "shopify:\/\/shop_images\/Photo.png",
+        "video": "",
+        "subtitle": "<p>Risk free - Money <em>back guarantee<\/em><\/p><p><em>free shipping<\/em><\/p><p>Award winning <em>customer service<\/em><\/p>",
+        "uppercase_subtitle": true,
+        "subtitle_size": "large",
+        "text": "<p>“I know you'll love MD GLAM as much as I do, but if for any reason you're not completely satisfied, just return the containers within 60 days of receipt, and you'll get a full refund of the purchase price (minus shipping and handling).”<\/p><p><\/p><p><strong>Dr. Cat<\/strong><\/p><p><em>(Board-Certified Plastic Surgeon,<\/em><\/p><p><em> Founder of MD GLAM)<\/em><\/p>",
+        "btn_text": "",
+        "btn_url": "",
+        "image": "shopify:\/\/shop_images\/Image_3.png",
+        "position": "left",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "slideshow": {
       "type": "slideshow",
+      "disabled": true,
       "blocks": {
         "slide-0": {
           "type": "image",
@@ -37,105 +531,18 @@
         "transition_type": "slide"
       }
     },
-    "1659994106306e5a0d": {
-      "type": "Logo-Section",
-      "blocks": {
-        "1659994106fd8dd083-0": {
-          "type": "image",
-          "settings": {
-            "show-image": true,
-            "title": "",
-            "description": "",
-            "link-url": "",
-            "link-text": ""
-          }
-        },
-        "1659994106fd8dd083-1": {
-          "type": "image",
-          "settings": {
-            "show-image": true,
-            "title": "",
-            "description": "",
-            "link-url": "",
-            "link-text": ""
-          }
-        },
-        "1659994106fd8dd083-2": {
-          "type": "image",
-          "settings": {
-            "show-image": true,
-            "title": "",
-            "description": "",
-            "link-url": "",
-            "link-text": ""
-          }
-        },
-        "1659994106fd8dd083-3": {
-          "type": "image",
-          "settings": {
-            "show-image": true,
-            "title": "",
-            "description": "",
-            "link-url": "",
-            "link-text": ""
-          }
-        },
-        "370dfba4-76f2-4a05-a17e-d6599671130a": {
-          "type": "image",
-          "settings": {
-            "show-image": true,
-            "title": "",
-            "description": "",
-            "link-url": "",
-            "link-text": ""
-          }
-        },
-        "db8c9349-21f8-4ffe-aecd-ddaf0e5a7bf4": {
-          "type": "image",
-          "settings": {
-            "show-image": true,
-            "title": "",
-            "description": "",
-            "link-url": "",
-            "link-text": ""
-          }
-        }
-      },
-      "block_order": [
-        "1659994106fd8dd083-0",
-        "1659994106fd8dd083-1",
-        "1659994106fd8dd083-2",
-        "1659994106fd8dd083-3",
-        "370dfba4-76f2-4a05-a17e-d6599671130a",
-        "db8c9349-21f8-4ffe-aecd-ddaf0e5a7bf4"
-      ],
-      "settings": {
-        "background-color": "none",
-        "light-text": false,
-        "block-spacing": true,
-        "container-width": 4,
-        "spacing-above": true,
-        "spacing-below": true,
-        "width": 4,
-        "image-width": 0,
-        "mobile-width": "2",
-        "text-alignment": "center",
-        "heading": "",
-        "subtitle": "",
-        "link-url": "",
-        "link-text": ""
-      }
-    },
     "164016757166a86406": {
       "type": "image-with-text",
+      "disabled": true,
       "settings": {
         "text-color": "auto",
-        "background-color": "light",
+        "background-color": "none",
         "container-width": 5,
         "spacing-above": false,
         "spacing-below": false,
         "video-icon": false,
-        "icon-link": "",
+        "html5_video": "",
+        "html5_video_M": "",
         "image-height": 3,
         "darken-image": false,
         "parallax-enabled": false,
@@ -144,14 +551,14 @@
         "overlap": false,
         "box-around-text": false,
         "mobile-overlay": false,
-        "image": "shopify:\/\/shop_images\/Dr_90213_ce1ccc55-3603-4f55-9246-f08f326b6497.png",
-        "overline": "Overline text",
-        "heading-mobile": "This heading will work only on mobile",
-        "title": "Image with text",
-        "title-sec": "Image with text",
-        "description": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.<\/p>",
-        "description-sec": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.<\/p>",
-        "description-third": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.<\/p>",
+        "image": "shopify:\/\/shop_images\/Logo_company.jpg",
+        "overline": "",
+        "heading-mobile": "",
+        "title": "",
+        "title-sec": "",
+        "description": "",
+        "description-sec": "",
+        "description-third": "",
         "link-url": "",
         "link-text": ""
       }
@@ -175,68 +582,12 @@
         "button-url": ""
       }
     },
-    "1640181507ee260ca6": {
-      "type": "featured-product",
-      "blocks": {
-        "164018150735c4d43c-0": {
-          "type": "overline",
-          "settings": {
-            "text": "Overline text"
-          }
-        },
-        "164018150735c4d43c-1": {
-          "type": "heading",
-          "settings": {
-          }
-        },
-        "164018150735c4d43c-2": {
-          "type": "vendor",
-          "settings": {
-          }
-        },
-        "164018150735c4d43c-3": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "164018150735c4d43c-4": {
-          "type": "options",
-          "settings": {
-            "variant-style": "buttons",
-            "swatches-enabled": true,
-            "size-chart-enabled": true,
-            "size-chart-option": "size",
-            "size-chart-content": ""
-          }
-        },
-        "164018150735c4d43c-5": {
-          "type": "buy-buttons",
-          "settings": {
-            "smart-payment-enabled": true
-          }
-        }
-      },
-      "block_order": [
-        "164018150735c4d43c-0",
-        "164018150735c4d43c-1",
-        "164018150735c4d43c-2",
-        "164018150735c4d43c-3",
-        "164018150735c4d43c-4",
-        "164018150735c4d43c-5"
-      ],
-      "settings": {
-        "background-color": "none",
-        "container-width": 4,
-        "spacing-above": true,
-        "spacing-below": true,
-        "featured_product": "the-ultimate-anti-aging-kit",
-        "loop-enabled": false
-      }
-    },
     "featured-video": {
       "type": "featured-video",
+      "disabled": true,
       "settings": {
         "video-url": "https:\/\/player.vimeo.com\/video\/513970522",
+        "html5_video": "",
         "full-width": false,
         "background-color": "none",
         "section-height": "regular",
@@ -250,6 +601,7 @@
     },
     "1659972793dadad74d": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "background-color": "none",
         "light-text": false,
@@ -261,17 +613,102 @@
         "tag-select": "pinned",
         "show-date": true,
         "show-excerpt": true,
-        "view-more-text": "View more"
+        "view-more-text": "View more",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "1661155104d6d4c851": {
+      "type": "testmimonials",
+      "blocks": {
+        "200c88e2-c444-4da3-b508-5b8562b88fc9": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_81.png",
+            "title": "Nina l.",
+            "subtitle": "@Ninal L.",
+            "star_count": 3,
+            "date": "Jun 15, 2022",
+            "description": "<p>I have used many products before, but this eye serum is amazing, I think it works over night to make me look younger … just one time and I notified my age decrease 😄<\/p>"
+          }
+        },
+        "e31fc84c-d55e-4404-81ea-c90f19fe1033": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_81_1.png",
+            "title": "Nina l.",
+            "subtitle": "@Ninal L.",
+            "star_count": 2,
+            "date": "Jun 15, 2022",
+            "description": "<p>I have used many products before, but this eye serum is amazing, I think it works over night to make me look younger … just one time and I notified my age decrease 😄<\/p>"
+          }
+        },
+        "2ef17fca-f135-465a-963b-2bce8fc5bead": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_81_2.png",
+            "title": "Nina l.",
+            "subtitle": "@Ninal L.",
+            "star_count": 4,
+            "date": "Jun 15, 2022",
+            "description": "<p>I have used many products before, but this eye serum is amazing, I think it works over night to make me look younger … just one time and I notified my age decrease 😄<\/p><p>think it works over night to make me look younger … just one time and I notified my age decrease 😄<\/p><p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "200c88e2-c444-4da3-b508-5b8562b88fc9",
+        "e31fc84c-d55e-4404-81ea-c90f19fe1033",
+        "2ef17fca-f135-465a-963b-2bce8fc5bead"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "16611800537bded43a": {
+      "type": "featured-blog",
+      "settings": {
+        "background-color": "light",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "blog-heading": "Blog",
+        "blog": "news",
+        "tag-select": "pinned",
+        "show-date": true,
+        "show-excerpt": true,
+        "view-more-text": "View all post",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
       }
     }
   },
   "order": [
+    "1660762024bfb708fc",
+    "1660785703f2ab5638",
+    "16607754620e16371b",
+    "1660777035c35bcd51",
+    "1660847051723d4e9d",
+    "1640181507ee260ca6",
+    "1660875395251086fb",
+    "166087916346dbba2a",
+    "16609851618168eacc",
+    "16611039312082caaf",
+    "1661148303de44f237",
     "slideshow",
-    "1659994106306e5a0d",
     "164016757166a86406",
     "featured-text",
-    "1640181507ee260ca6",
     "featured-video",
-    "1659972793dadad74d"
+    "1659972793dadad74d",
+    "1661155104d6d4c851",
+    "16611800537bded43a"
   ]
 }
