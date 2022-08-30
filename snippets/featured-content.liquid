@@ -57,7 +57,7 @@
 %}
 
 <div
-  class="featured-content--root"
+  class="featured-content--root sm-page-width"
   data-background-color="{{ bg_color }}"
   data-banner-promo="{{ banner_promo }}"
   data-box-around-text="{{ box_around_text }}"
@@ -156,17 +156,17 @@
             </h2>
           {% endif %}
           {% if title != blank %}
-            <h3 class="featured-content--title" data-item="{{ heading_type }} {{ mobile_heading_type }}">
+            <h3 class="featured-content--title ff-heading uppercase lg--f46" data-item="{{ heading_type }} {{ mobile_heading_type }}">
               {{ title | escape }}
             </h3>
           {% endif %}
       {% if title_sec != blank %}
-            <h3 class="featured-content--title" data-item="{{ heading_type }} {{ mobile_heading_type }}">
+            <h3 class="featured-content--title ff-heading uppercase lg--f46" data-item="{{ heading_type }} {{ mobile_heading_type }}">
               {{ title_sec | escape }}
             </h3>
           {% endif %}
 {% if description != blank %}
-            <div class="featured-content--description" id="Featured-content-desc" data-item="rte-content">
+            <div class="featured-content--description ff-body lg--f18" id="Featured-content-desc" data-item="rte-content">
               {{ description }}
             </div>
           {% endif %}

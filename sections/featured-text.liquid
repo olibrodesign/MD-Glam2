@@ -22,7 +22,8 @@
 
 {% comment %} View {% endcomment %}
 <div
-  class="featured-text--root"
+  id="section--{{section.id}}"
+  class="featured-text--root sm-page-width"
   data-section-id="{{ section.id }}"
   data-background-color="{{ bg_color }}"
   data-container-width="{{ container_width }}"
@@ -32,32 +33,32 @@
 >
   <div class="featured-text--wrapper">
   {% if mobile_heading!=blank %}
-    <h2 class="featured-text--heading-mobile" data-item="section-heading">
+    <h2 class="featured-text--heading-mobile uppercase sm--f40 ff-heading" data-item="section-heading">
         {{ mobile_heading }}
       </h2>
     {% endif %}
     {% if overline != blank %}
-      <h3 class="featured-text--overline" data-item="overline">
+      <h3 class="featured-text--overline uppercase ff-heading sm--hide lg--f2 fw-light " data-item="overline">
         {{ overline | escape }}
       </h3>
     {% endif %}
 
     {% if heading != blank %}
-      <h2 class="featured-text--heading" data-item="section-heading">
+      <h2 class="featured-text--heading uppercase ff-heading sm--hide lg--f2 fw-light " data-item="section-heading">
         {{ heading }}
       </h2>
     {% endif %}
     <div class="custom-text">
-    <div class="featured-text--body" data-item="rte-content">
+    <div class="featured-text--body ff-body sm--f16 lg--f18" data-item="rte-content">
       {{ text }}
     </div>
     {% if text_1 !=blank %}
-    <div class="featured-text--body" id="featured-text-cat"data-item="rte-content">
+    <div class="featured-text--body uppercase ff-body sm--f16 lg--f16" id="featured-text-cat"data-item="rte-content">
       {{ text_1 }}
     </div>
       {% endif %}
       {% if text_2 !=blank %}
-    <div class="featured-text--body" id="featured-text-text" data-item="rte-content">
+    <div class="featured-text--body ff-body lg--f14 sm--f16 fw-light" id="featured-text-text" data-item="rte-content">
       {{ text_2 }}
     </div>
         {% endif %}
@@ -70,15 +71,14 @@
     </div>
     {% if html5_video != blank %}
       <div class="custom-video-with head">
- <div class="featured-content--image">
-              <video id="video_id_desktop" class="Video-content desktop" loop="true">
-                <source src="{{ html5_video }}">
-              </video>
+        <div class="featured-content--image">
+          <video id="video_id_desktop" class="Video-content desktop" loop="true" playsinline="playsinline"> 
+            <source src="{{ html5_video }}">
+          </video>
        
-          <video  id="video_id_mobile" class="featured-video--play-mobile" loop="true">
-                <source src="{{ html5_video_M }}">
-              </video>
-     
+          
+          <iframe id="video_id_mobile"  class="featured-video--play-mobile" src="{{html5_video_M}}" width="352" height="390" frameborder="0" allow="autoplay; encrypted-media"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  
+
   
       
     <div class="custom-vector desktop">
@@ -117,6 +117,37 @@
  
   </div>
 </div>
+{% if html5_video_M != blank %}
+  <script>
+  var iframe_video = document.querySelector('#video_id_mobile');
+  
+  var player_video = new Vimeo.Player(iframe_video);
+  var play_btn = document.querySelector('.custom-vector.mobile .play');
+  var stop_btn = document.querySelector('.custom-vector.mobile .pause');
+
+  player_video.on('ended', function() {
+    player_video.pause();
+  });
+  play_btn.addEventListener('click', function(){
+    console.log('play video')
+    player_video.play();
+    play_btn.style.display = "none";
+    stop_btn.style.display = "block";
+  })
+  stop_btn.addEventListener('click', function(){
+    player_video.pause();
+    play_btn.style.display = "block";
+    stop_btn.style.display = "none";
+  })
+</script>
+{% endif %}
+
+<style>
+  #video_id_mobile {
+    pointer-events: none !important;
+  }
+</style>
+
 
 {% schema %}
   {

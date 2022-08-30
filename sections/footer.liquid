@@ -107,6 +107,7 @@
                 {% endif %}
               </div>
             </div>
+        
           </div>
         
              <div class="footer--block" data-block-type="menu" {{ block.shopify_attributes }}>
@@ -136,15 +137,16 @@
                 {% endif %}
               </div>
             </div>
+        
           </div>
-        {% if block.settings.contact-info !=blank  %}
+         {% if block.settings.contact-info !=blank  %}
         <div class="footer-phone">
-       <a href="tel:"> {{ block.settings.contact-info }}</a>
+       <a href="tel:{{ block.settings.contact-info }}"> {{ block.settings.contact-info }}</a>
         </div>
           {% endif %}
          {% if block.settings.email-info !=blank  %}
-        <div class="footer-phone">
-       <a href="mailto:"> {{ block.settings.email-info }}</a>
+        <div class="footer-phone email">
+       <a href="mailto:{{ block.settings.email-info }}"> {{ block.settings.email-info }}</a>
         </div>
           {% endif %}
         </div>
@@ -259,7 +261,7 @@
 
     {% assign powered_check = powered_by_link | split: '>' %}
     {% if powered_check[1] != ' </a' %}
-      <div class="footer--sub--block" data-type="powered-by">
+      <div class="footer--sub--block powered-by" data-type="powered-by">
         <div class="footer--sub--container" data-item="paragraph">
           <span class="footer--sub--shopify-link">{{ powered_by_link }}</span>
         </div>
@@ -268,13 +270,23 @@
 
     {% unless shop.enabled_payment_types == empty %}
       {% if section.settings.show-payment-icons %}
-        <div class="footer--sub--block" data-type="payment-icons">
+        <div class="footer--sub--block payment-icons" data-type="payment-icons">
           <div class="footer--sub--container">
             {% render 'payment-icons' %}
           </div>
         </div>
       {% endif %}
     {% endunless %}
+    {% if section.settings.contact-info !=blank  %}
+        <div class="footer-phone footer--sub--block">
+       <a href="tel:{{ section.settings.contact-info }}"> {{ section.settings.contact-info }}</a>
+        </div>
+          {% endif %}
+         {% if section.settings.email-info !=blank  %}
+        <div class="footer-phone email footer--sub--block">
+       <a href="mailto:{{ section.settings.email-info }}"> {{ section.settings.email-info }}</a>
+        </div>
+          {% endif %}
   </div>
 </footer>
 
@@ -315,7 +327,19 @@
       "id": "show-payment-icons",
       "label": "Enable",
       "default": true
-    }
+    },
+    {
+          "type": "text",
+          "id": "contact-info",
+          "label": "Enter phone no"
+          
+        },
+        {
+          "type": "text",
+          "id": "email-info",
+          "label": "Enter email "
+          
+        }
   ],
   "blocks": [
     {
@@ -341,6 +365,8 @@
           "label": "Show social icons",
           "default": true
         }
+        
+        
       ]
     },
     {
@@ -366,7 +392,15 @@
           "label": "Title Second Menu",
           "default": "Quick links"
         },
-         {
+         
+        {
+          "type": "link_list",
+          "id": "menu-sec",
+          "label": "Second Menu",
+          "default": "footer",
+          "info": "This menu won't show submenu items."
+        },
+        {
           "type": "text",
           "id": "contact-info",
           "label": "Enter phone no"
@@ -377,13 +411,6 @@
           "id": "email-info",
           "label": "Enter email "
           
-        },
-        {
-          "type": "link_list",
-          "id": "menu-sec",
-          "label": "Second Menu",
-          "default": "footer",
-          "info": "This menu won't show submenu items."
         }
       ]
     },

@@ -2,6 +2,41 @@
 .footer--block[data-block-type=subscribe] .footer--block--container {
     width: 535px !important;
 }}
+footer.footer--root {max-width: 1440px;margin: 0px auto;}	
+ul.payment-icons--list .payment-icons--item img {width: 44px;height: 28px;}	
+div#featured-text-text {text-transform: none;}	
+div#featured-text-cat p{font-weight:700;}	
+span.footer--sub--shopify-link a{ font-size: 18px;}	
+#shopify-section-template--16307266388222__166081576367f36c96 .featured-text--body{font-family: 'Proxima Nova Lt' !important;}	
+.footer--sub {width: 100%;float: left;flex-wrap: nowrap; display: flex;
+  align-items: center;
+  justify-content: start;}	
+.footer-phone.email.footer--sub--block {padding-left: 39px;}	
+.footer--sub--block {width: 18%;float: left; flex:none;}	
+.footer--sub--block.payment-icons{width: 40%;}	
+@media(min-width:768px) and ( max-width:1024px){	
+  main#main-content{margin:inherit !important; padding:0px 15px;}	
+  div#shopify-section-announcement .announcement--text{padding:3px 0px !important;}	
+  div#shopify-section-template--16307266388222__166081576367f36c96{padding:20px 10px;}	
+  div#shopify-section-template--16307266388222__16603036182e9617bf{margin-top:40px;}	
+  .rowm{margin-left:8px !important; margin-right:-8px !important;}	
+  .featured-content--root[data-text-position=left][data-container-width="5"] .featured-content--container{padding-left:10px;}	
+  .page--about-company ul.breadcrumbs--root{padding-top:22px !important;}	
+  header-root.header--root {padding: 0px 15px !important;}	
+  .x-menu--overlap-icon{top:5px;}	
+  .footer--form-submit {padding-top: 15px;}	
+  #shopify-section-template--16307266388222__166081576367f36c96 .featured-text--body{font-size:17px !important;}	
+  .footer--block:nth-of-type(2) .footer--block--container{margin:inherit;}	
+ div#shopify-section-template--16307266388222__166081576367f36c96 {	
+    padding-left: 26px;	
+}	
+.footer--sub--block.powered-by{width:35%;}	
+  .footer--sub--block.payment-icons{width:65%;}	
+  .footer-phone.footer--sub--block{display:none;}	
+  .custom-footer .footer-phone{display: block !important; top:98% !important; padding-left:15px;}	
+.footer--sub{padding-top:40px;}	
+}
+
 @media(min-width:1024px)
 {.footer--block:nth-of-type(2) .footer--block--container {
      margin: 0 ; 
@@ -23,17 +58,20 @@
     margin-top:20px}
 }
 
-
+span.footer--sub--shopify-link a{ font-size: 16px;}
 @media (max-width:767px){
   video.Video-content, div.custom-vector.desktop{
     display:none !important;
   }
- 
+  ul.payment-icons--list .payment-icons--item{width:23%; margin-bottom:15px;}
+
   .custom-vector.mobile{display:block !important; left:35%; top:36%;}
   .custom-vector-icon.play{top:36%; left:43%;}
   .custom-vector-icon.pause{left:29%;top:29%;}
   .footer--subscribe .footer--form-container {
      margin: 0;
+     max-width: 400px;
+    flex-direction: column;
   }
   .footer--blocks {
     justify-content: flex-start;
@@ -68,6 +106,9 @@
     text-align:left
 }
   
+.footer-phone.footer--sub--block {display: none;}	
+  .footer--sub--block.powered-by, .footer--sub--block.payment-icons{width:100%;}	
+  span.footer--sub--shopify-link a{ font-size: 16px;}
  .rowm .twoImage:first-child {
         display: none;
     }
@@ -114,19 +155,22 @@
   .footer--form-submit {
     text-align: right;
 }
-  .footer--form-submit button{
-     width: 164px;
-    height: 40px;
-    font-family: 'Proxima Nova';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 100%;
-/* identical to box height, or 16px */
-
-text-align: center;  
-    max-width: 400px;
-    flex-direction: column;
+.custom-footer  .footer-phone {position: absolute; display: none;}
+.footer--form-submit button {	
+  width: 164px;	
+  height: 40px;	
+  font-family: "Proxima Nova";	
+  font-style: normal;	
+  font-weight: 400;	
+  font-size: 16px;	
+  line-height: 100%;	
+  text-align: center;	
+  letter-spacing: .04em;	
+  text-transform: uppercase;	
+  color: #000;	
+  background: #F7EDEC;	
+  border-radius: 120px/20px;	
+  border: 1px solid black;	
 }
   .footer--subscribe--info {
     text-align: left;
@@ -222,7 +266,7 @@ text-transform: uppercase;
     font-family: 'Proxima Nova';
 font-style: normal;
 font-weight: 300;
-font-size: 16px;
+font-size: 18px;
 line-height: 130%;
      margin-top: 10px;
     
@@ -292,7 +336,6 @@ line-height: 130%;
 }
   .footer-phone {
    
-    position: absolute;
     top: 86%;
     font-family: 'Proxima Nova';
 font-style: normal;
@@ -302,7 +345,6 @@ line-height: 130%;
 }
 
 .page--about-company .announcement--text {
-  padding:0 !important;
   color:white;
 }
 
@@ -364,9 +406,7 @@ line-height: 130%;
   #shopify-section-template--16307266388222__16601278614e17a8a1 .image-with-text--root {
     padding-top: 28px;
 }
-  .payment-icons--root {
-    display: none;
-}
+  
   .featured-content--root[data-text-position=right][data-container-width="5"] .featured-content--container{
  padding-right:0px;
 }
@@ -409,7 +449,7 @@ text-align: left;
     height:550px;
     width:600px;
     background: linear-gradient(197.14deg, #ECA29B -62.11%, #FFFFFF 108.54%);
-    min-width:40%
+    min-width:40%;
     cursor: pointer;
   }
  .page--about-company H2.featured-content--overline,
@@ -498,7 +538,6 @@ font-style: normal;
 font-weight: 275;
 font-size: 24px;
 line-height: 120%;
-    text-transform: uppercase;
 
     max-width: 535px;
     text-align: left;
@@ -753,7 +792,7 @@ text-transform: uppercase;
   ,#shopify-section-template--16307266388222__166012342128eb4c5e h3.featured-text--overline {
     
     font-size: 82px !important;}.custom-footer {
-    margin-right: 75px;
+    width: 20%;
 }
   .footer--subscribe--info {
     padding-bottom: 34px !important;
@@ -763,6 +802,7 @@ text-transform: uppercase;
 }
   .footer--block[data-block-type=subscribe] {
     flex-basis: 50% !important;
+    width: 60%;
 }
   .footer--block[data-block-type=subscribe] .footer--block--container {
     width: 750px !important;
@@ -824,7 +864,7 @@ text-transform: uppercase;
 }.page--about-company ul.breadcrumbs--root{
       padding-left: 10px;}
   [data-section-id]{
-    padding:0
+    padding:32px;
   }
   #shopify-section-template--16307266388222__166012342128eb4c5e .custom-text {
    

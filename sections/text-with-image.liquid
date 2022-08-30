@@ -56,7 +56,6 @@
 </section>
 {% if section.settings.video != blank %}
     
-    <script src="https://player.vimeo.com/api/player.js"></script>
     <script>
         var iframe_twi = document.querySelector('#section--{{section.id}} .video');
         var player_twi = new Vimeo.Player(iframe_twi);

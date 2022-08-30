@@ -1,15 +1,15 @@
 <section id="section--{{section.id}}">
-    <div class="custom-collections--content">
+    <div class="custom-collections--content page-width">
         <div class="custom-collections--header__wrapper">
             {% if section.settings.title != blank %}
-                <h2 class="title lg--f2 sm--40 ff-heading fw-light uppercase">{{ section.settings.title }}</h2>
+                <h2 class="title lg--f2 sm--f40 ff-heading fw-light uppercase">{{ section.settings.title }}</h2>
             {% endif %}       
             <div class="button--wrapper">
                 {% if section.settings.btn_1 != blank %}
-                    <a href="{{ section.settings.btn_url_1 }}">{{ section.settings.btn_1 }}</a>
+                    <a class="btn uppercase ff-body sm--f14 lg--f16" href="{{ section.settings.btn_url_1 }}">{{ section.settings.btn_1 }}</a>
                 {% endif %}
                 {% if section.settings.btn_2 != blank %}
-                    <a href="{{ section.settings.btn_url_2 }}">{{ section.settings.btn_2 }}</a>
+                    <a class="btn uppercase ff-body sm--f14 lg--f16" href="{{ section.settings.btn_url_2 }}">{{ section.settings.btn_2 }}</a>
                 {% endif %}
             </div> 
         </div>
@@ -25,8 +25,11 @@
                             {%- assign collection_image = blank -%}
                         {%- endif -%}
                         <img src="{{ collection_image | img_url: '480x' }}" alt="{{ collection_image.alt | escape }}">
-                        <h5 class="title">{{ collection.title }}</h5>
-                        <a class="btn" href="{{ collection.url }}">
+                        <div class="title-count--wrapper">
+                            <h5 class="title ff-heading lg--f32 sm--f30 uppercase">{{ collection.title }}</h5>
+                            <div class="product--count ff-heading lg--f14 sm--f14">({{collection.products.size}})</div>
+                        </div>
+                        <a class="btn uppercase ff-body sm--f16 lg--f16" href="{{ collection.url }}">
                             Shop now
                         </a>
                     </div>
@@ -93,7 +96,33 @@
                 "type": "url",
                 "id": "btn_url_2",
                 "label": "Second button url"
-            },{
+            },
+            {
+                "type": "header",
+                "content": "Padding on desktop",
+                "info": "You can adjust the padding on desktop"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Top Padding",
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Bottom Padding",
+                "default": 50
+            },
+            {
                 "type": "header",
                 "content": "Padding on mobile",
                 "info": "You can adjust the padding on mobile"

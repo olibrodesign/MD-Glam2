@@ -59,9 +59,9 @@
               "menu-title": "ABOUT",
               "menu": "about",
               "menu-title-sec": "SERVICE",
+              "menu-sec": "service",
               "contact-info": "1 (855) 768-0555",
-              "email-info": "",
-              "menu-sec": "service"
+              "email-info": ""
             }
           },
           "94d0b62b-38a8-4bb5-b722-d3fe3aaaf224": {
@@ -70,9 +70,9 @@
               "menu-title": "SHOP",
               "menu": "shop",
               "menu-title-sec": "FOLLOW US",
+              "menu-sec": "follow-us",
               "contact-info": "",
-              "email-info": "help@mdglam.com",
-              "menu-sec": "follow-us"
+              "email-info": "help@mdglam.com"
             }
           }
         },
@@ -84,7 +84,9 @@
         "settings": {
           "show-region-selector": false,
           "show-locale-selector": false,
-          "show-payment-icons": true
+          "show-payment-icons": true,
+          "contact-info": "1 (855) 768-0555",
+          "email-info": "help@mdglam.com"
         }
       },
       "product": {

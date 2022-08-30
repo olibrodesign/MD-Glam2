@@ -29,20 +29,25 @@
           jQuery(".custom-vector-icon.pause").hide();
         }
         });
-   jQuery(".custom-vector.mobile").click(function() {
-        
-        if (jQuery("#video_id_mobile").get(0).paused) {
-          jQuery("#video_id_mobile").trigger('play');
-          jQuery(".custom-vector-icon.play").hide();
-          jQuery(".custom-vector-icon.pause").show();
-        }
+        // if($(window).width() < 768) {
+        //   setTimeout(() => {
+        //     jQuery(".custom-vector.mobile").click();
+        //     console.log('play click')  
+        //   }, 1000);
           
-        else {
-          jQuery("#video_id_mobile").trigger('pause');
-          jQuery(".custom-vector-icon.play").show();
-          jQuery(".custom-vector-icon.pause").hide();
-        }
-        });
+        // }
+  //       var iframe_video = document.querySelector('#video_id_mobile');
+  //       var player_video = new Vimeo.Player(iframe_video);
+  //       player_video.on('ended', function() {
+  //         player_video.pause();
+  //       });
+  //  jQuery(".custom-vector.mobile .play").click(function() {
+  //   console.log('play video')
+    
+  //     player_video.play();
+  //     jQuery(".custom-vector-icon.play").hide();
+  //     jQuery(".custom-vector-icon.pause").show();
+  //   });
 });
       
     

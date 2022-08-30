@@ -11,7 +11,7 @@
     } 
     .lg--f2 {
         font-size: 5vw;
-        line-height: 1.3;
+        line-height: 1.1;
         @media (min-width: 1440px) {
             font-size: 82px;
         }
@@ -47,15 +47,15 @@
     }
     .sm--f48 {
         font-size: 48px;
-        line-height: 1.3;
+        line-height: 1.2;
     }
     .sm--f42 {
         font-size: 42px;
-        line-height: 1.3;
+        line-height: 1.2;
     }
     .sm--f40 {
         font-size: 40px;
-        line-height: 1.3;
+        line-height: 1.2;
     }
     .sm--f30 {
         font-size: 30px;
@@ -89,6 +89,11 @@
 
 .page-width {
     max-width: 1440px;
+    width: 100%;
+    margin: auto;
+}
+.sm-page-width {
+    max-width: 1170px;
     width: 100%;
     margin: auto;
 }
@@ -143,7 +148,7 @@
             width: auto;
             top: 250px;
             right: 0;
-            z-index: 1;
+            z-index: 2;
             @media (max-width: 767px) {
                 top: unset;
                 left: 16px;
@@ -1324,7 +1329,7 @@
 
 // testimonial style end................................................
 
-//featured blog section style...............................................
+//featured blog section style start...............................................
 
 .featured-blog--root {
     padding: 0 65px;
@@ -1496,4 +1501,271 @@
     }
 }
 
-//featured blog section style...............................................
+//featured blog section style end...............................................
+
+// featured text style start.......................................................
+.featured-text--root {
+    padding-bottom: 0;
+    
+    .featured-text--wrapper {
+        .featured-text--overline {
+            text-align: left;
+            margin: 0;
+        }
+        .featured-text--heading-mobile {
+            text-align: left;
+        }
+        .featured-text--heading {
+            text-align: right;
+            margin: 0;
+        }
+        .custom-text {
+            max-width: 900px;
+            margin: auto;
+            .featured-text--body {
+                max-width: 900px;
+                font-family: 'Proxima Nova Lt';
+
+                @media (max-width: 767px) {
+                    text-align: left;
+                }
+                &#featured-text-cat {
+                    text-align: right;
+                    margin-top: 16px;
+                    
+                }
+                &#featured-text-text {
+                    text-align: right;
+                    text-transform: none;
+                    
+                }
+            }
+            .Richtext-button {
+                margin-top: 40px;
+                text-align: left;
+                @media (max-width: 767px) {
+                    text-align: center;
+                }
+                .custom-button {
+                    width: 202px;
+                    height: 60px;
+                    font-family: "Proxima Nova";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 100%;
+                    text-align: center;
+                    letter-spacing: .04em;
+                    text-transform: uppercase;
+                    color: #f7edec;
+                    background: black;
+                    border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
+                    &:hover {
+                        color: #F7EDEC !important;
+                        background-color: #F2A7A0 !important;
+                        border-color: #F2A7A0 !important;
+                    } 
+                }
+            }
+            
+        }
+        
+    }
+}
+
+
+// featured text style end.......................................................
+
+// featured content style start..................................................
+
+.featured-content--root {
+    .featured-content--container {
+        display: flex;
+        justify-content: space-between;
+        .featured-content--image {
+            width: 600px;
+            height: 500px;
+            background: linear-gradient(197.14deg,#ECA29B -62.11%,#FFFFFF 108.54%);
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+        .featured-content--text {
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+            .featured-content--description {
+                margin-top: 5px;
+                font-family: 'Proxima Nova Lt';
+                
+                &#Featured-content-desc {
+                    margin-top: 20px;
+                    font-size: 18px;
+                    font-family: 'Proxima Nova';
+                    .custom-text-order {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// featured content style end....................................................
+
+// custom collections style start................................................
+
+.custom-collections--content {
+    padding: 0 65px;
+    @media (max-width: 767px) {
+        padding: 0 16px;
+    }
+    .custom-collections--header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .title {
+            margin: 0;
+            max-width: 40%;
+            @media (max-width: 767px) {
+                max-width: 100%;
+            }
+        }
+        .button--wrapper {
+            display: flex;
+            gap: 20px;
+            @media (max-width: 767px) {
+                gap: 16px;
+                justify-content: center;
+            }
+            .btn {
+                width: 202px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #000000;
+                border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
+                @media (max-width: 767px) {
+                    width: 162px;
+                    height: 52px;
+                }
+                &:hover {
+                    color: #F7EDEC !important;
+                    background-color: #F2A7A0 !important;
+                    border-color: #F2A7A0 !important;
+                }
+            }
+        }
+    }
+    .custom-collections--wrapper {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+        }
+        .custom-collection--wrapper {
+            width: 100%;
+            position: relative;
+            .title-count--wrapper {
+                position: absolute;
+                top: 32px;
+                left: 32px;
+                display: flex;
+                @media (max-width: 767px) { 
+                    top: 24px;
+                    left: 24px;
+                }
+                .title {
+                    color:  #F7EDEC;
+                    max-width: 258px;
+                    margin: 0;
+                    @media (max-width: 767px) { 
+                        max-width: 245px;
+                    }
+    
+                }
+                .product--count {
+                    color: #F7EDEC;
+                }
+            }
+            
+            .btn {
+                position: absolute;
+                bottom: 43px;
+                right: 32px;
+                width: 160px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #F7EDEC;
+                border: 1px solid  #F7EDEC;
+                border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
+                @media (max-width: 767px) { 
+                    bottom: 24px;
+                    right: 24px;
+                    width: 140px;
+                    height: 40px;
+                }
+                &:hover {
+                    color: #F7EDEC !important;
+                    background-color: #F2A7A0 !important;
+                    border-color: #F2A7A0 !important;
+                }
+            }
+        }
+    }
+}
+
+// custom collections style end..................................................
+
+
+
+@media (max-width: 767px) {
+    .footer--sub {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#shopify-section-template--16368851517694__16601280622ca469f4
+.custom-text{
+    max-width: 535px;
+    .featured-text--body {
+        font-family: 'spectral';
+        font-size: 24px;
+        line-height: 1.2;
+    }
+} 
+
+#shopify-section-template--16368851517694__16601280622ca469f4 .featured-text--root {
+    padding-bottom: 72px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+.footer--sub--block.powered-by {
+    flex-basis: 35%;
+}
+#shopify-section-template--16368851517694__166081576367f36c96 {
+    .featured-text--wrapper {
+        padding-left: 20px;
+    }
+}
+}
+@media (min-width: 1024px) {
+    .custom-footer .footer-phone {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-footer .footer-phone{display: block !important; top:85% !important; margin-left: 16px;}	
+}
