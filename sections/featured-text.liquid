@@ -77,7 +77,7 @@
           </video>
        
           
-          <iframe id="video_id_mobile"  class="featured-video--play-mobile" src="{{html5_video_M}}" width="352" height="390" frameborder="0" allow="autoplay; encrypted-media"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  
+          <iframe id="video_id_mobile"  class="featured-video--play-mobile lg--hide" src="{{html5_video_M}}" width="352" height="390" frameborder="0" allow="autoplay; encrypted-media"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  
 
   
       
@@ -94,19 +94,7 @@
          </div>
 
     </div>
-      <div class="custom-vector mobile">
-     
-     {% render 'video-vector' %} 
-       <div class="custom-vector-icon play">
-  
-     {% render 'video-icon' %} 
-         </div>
-       <div class="custom-vector-icon pause">
-  
-     {% render 'pause-icon' %} 
-         </div>
-
-    </div>
+      
            
  </div>
       <!---div class="videomute">
@@ -117,36 +105,9 @@
  
   </div>
 </div>
-{% if html5_video_M != blank %}
-  <script>
-  var iframe_video = document.querySelector('#video_id_mobile');
-  
-  var player_video = new Vimeo.Player(iframe_video);
-  var play_btn = document.querySelector('.custom-vector.mobile .play');
-  var stop_btn = document.querySelector('.custom-vector.mobile .pause');
 
-  player_video.on('ended', function() {
-    player_video.pause();
-  });
-  play_btn.addEventListener('click', function(){
-    console.log('play video')
-    player_video.play();
-    play_btn.style.display = "none";
-    stop_btn.style.display = "block";
-  })
-  stop_btn.addEventListener('click', function(){
-    player_video.pause();
-    play_btn.style.display = "block";
-    stop_btn.style.display = "none";
-  })
-</script>
-{% endif %}
 
-<style>
-  #video_id_mobile {
-    pointer-events: none !important;
-  }
-</style>
+
 
 
 {% schema %}
