@@ -226,6 +226,9 @@
         "title": "It’s time to change your skin!",
         "bg_image": "shopify:\/\/shop_images\/Stand_illustration.png",
         "bg_image_mobile": "shopify:\/\/shop_images\/Stand_illustration_c09a793b-841e-41b1-af80-fbe19ddb32ec.png",
+        "detail_image": "shopify:\/\/shop_images\/Image_6_3e5827ba-60b1-4210-868c-d32bcd95452d.png",
+        "subtitle": "Deep poor foaming cleanser",
+        "text": "<p>Minerals from the Dead Sea deeply moisturize and hydrate the complexion for a refreshing and smooth feel post-cleanse. The luxurious, fresh, foaming lather soothes and softens without stripping skin of its vital moisture. In fact, washing with this cleanser will leave your skin feeling soft, supple, and clean. You can’t help but say “aaaaahhhh” when using this extraordinary cleanser. Yes, it’s that good.<\/p>",
         "padding_top": 50,
         "padding_bottom": 50,
         "padding_top_mobile": 20,
@@ -493,6 +496,25 @@
         "padding_bottom_mobile": 20
       }
     },
+    "166180561442fb65a1": {
+      "type": "custom-featured-collections",
+      "settings": {
+        "title": "Listen to your skin",
+        "collections": [
+          "anti-aging",
+          "nourushung-hydrating",
+          "preventative-protective"
+        ],
+        "btn_1": "Shop all products",
+        "btn_url_1": "shopify:\/\/collections\/all",
+        "btn_2": "Get skin quiz",
+        "btn_url_2": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "disabled": true,
@@ -575,6 +597,8 @@
         "mobile-heading": "Mobile heading",
         "overline": "Overline text",
         "heading": "Introduce your brand",
+        "html5_video": "",
+        "html5_video_M": "",
         "text": "<p>Introduce your brand, products and vision statement and welcome customers to your store.<\/p>",
         "text-1": "<p>Introduce your brand, products and vision statement and welcome customers to your store.<\/p>",
         "text-2": "<p>Introduce your brand, products and vision statement and welcome customers to your store.<\/p>",
@@ -703,6 +727,7 @@
     "16609851618168eacc",
     "16611039312082caaf",
     "1661148303de44f237",
+    "166180561442fb65a1",
     "slideshow",
     "164016757166a86406",
     "featured-text",

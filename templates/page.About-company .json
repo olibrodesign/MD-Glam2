@@ -23,7 +23,7 @@
         "overline": "SKINCARE PRODUCTS",
         "heading": "YOUR SKIN DESERVES",
         "html5_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/86dad62a1d9e4beda529695f20b86b15.mp4?s=a01b2aeb4e1c0304ab64127d9a91f7cb&profile_id=113&",
-        "html5_video_M": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/345fab89f6914f1385d2f775e7423a17.mp4?s=a01b2aeb4e1c0304ab64127d9a91f7cb&profile_id=113",
+        "html5_video_M": "https:\/\/player.vimeo.com\/video\/744348779?api=1&player_id=vimeo_id_0",
         "text": "",
         "text-1": "",
         "text-2": "",
@@ -69,7 +69,6 @@
         "button-url": ""
       }
     },
-
     "16601246718cb82e3a": {
       "type": "image-with-text",
       "settings": {

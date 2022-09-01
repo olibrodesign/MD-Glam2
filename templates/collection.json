@@ -3,23 +3,30 @@
     "collection-header": {
       "type": "collection--header",
       "settings": {
-      }
-    },
-    "header-promo": {
-      "type": "image-with-text",
-      "settings": {
-        "background-color": "light",
-        "container-width": 5,
-        "spacing-above": true,
-        "spacing-below": true,
-        "image-height": 2,
-        "title": "Collection Promotion",
-        "description": "<p>A collection-wide promotion for sales, product announcements and more.<\/p>"
+        "enable-header": true,
+        "show-title": true,
+        "title-alignment": "center",
+        "show-description": true,
+        "show-image": true,
+        "use-image-fallback": true,
+        "image-height": "medium",
+        "alt-color": true,
+        "apply-overlay": true
       }
     },
     "navigation": {
       "type": "collection--navigation",
       "settings": {
+        "show-browse-button": true,
+        "show-sort-button": true,
+        "show-refine-button": true,
+        "show-layout-buttons": true,
+        "show-collections-list": true,
+        "custom-list-collections": "",
+        "show-sort-list": true,
+        "show-refine-list": true,
+        "swatches-enabled": false,
+        "show-search-link": true
       }
     },
     "main": {
@@ -47,32 +54,69 @@
         "grid-promo-1"
       ],
       "settings": {
+        "products-per-row--desktop": 4,
+        "products-per-row--mobile": "1",
+        "number-of-rows": 4
       }
     },
-    "recent-products": {
-      "type": "recent-products",
+    "1661990530be790045": {
+      "type": "text-with-image",
+      "blocks": {
+        "498bc11d-c262-496e-a639-57bfb0536b5d": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_11833.png"
+          }
+        },
+        "455c4ca0-1512-49fc-8509-83d2fb219ca8": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/TESTING.png"
+          }
+        },
+        "9ce01548-6d04-4933-b16e-29d8007e0be6": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/PARABEN.png"
+          }
+        },
+        "bce23d98-f1db-447d-9c98-6049f56d752a": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/SULFATE.png"
+          }
+        }
+      },
+      "block_order": [
+        "498bc11d-c262-496e-a639-57bfb0536b5d",
+        "455c4ca0-1512-49fc-8509-83d2fb219ca8",
+        "9ce01548-6d04-4933-b16e-29d8007e0be6",
+        "bce23d98-f1db-447d-9c98-6049f56d752a"
+      ],
       "settings": {
-        "spacing-above": false
-      }
-    },
-    "footer-promo": {
-      "type": "image-with-text",
-      "settings": {
-        "container-width": 6,
-        "spacing-above": false,
-        "spacing-below": false,
-        "image-height": 2,
-        "title": "Collection Promotion",
-        "description": "<p>A collection-wide promotion for sales, product announcements and more.<\/p>"
+        "title": "Our Promise",
+        "text_image": "shopify:\/\/shop_images\/Photo.png",
+        "video": "",
+        "subtitle": "<p>Risk free - Money <em>back guarantee<\/em><\/p><p><em>free shipping<\/em><\/p><p>Award winning <em>customer service<\/em><\/p>",
+        "uppercase_subtitle": true,
+        "subtitle_size": "large",
+        "text": "<p>“I know you'll love MD GLAM as much as I do, but if for any reason you're not completely satisfied, just return the containers within 60 days of receipt, and you'll get a full refund of the purchase price (minus shipping and handling).”<\/p><p><\/p><p><strong>Dr. Cat<\/strong><\/p><p><em>(Board-Certified Plastic Surgeon,<\/em><\/p><p><em> Founder of MD GLAM)<\/em><\/p>",
+        "btn_text": "",
+        "btn_url": "",
+        "image": "shopify:\/\/shop_images\/Photo.png",
+        "image_mobile": "shopify:\/\/shop_images\/Photo.png",
+        "position": "left",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
       }
     }
   },
   "order": [
     "collection-header",
-    "header-promo",
     "navigation",
     "main",
-    "recent-products",
-    "footer-promo"
+    "1661990530be790045"
   ]
 }
