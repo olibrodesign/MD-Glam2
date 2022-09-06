@@ -1,0 +1,57 @@
+<section id="section--{{section.id}}">
+    <div class="custom-navigation--wrapper page-width">
+        <div class="custom-navigation--header">
+            {% if section.settings.show_collections == true %}
+                <div class="collection">All category</div>
+            {% endif %}
+            {% if section.settings.show_concerns == true %}
+                <div class="concern">Filter by concern</div>
+            {% endif %}
+        </div>
+        <div class="custom-navigation--body">
+            {% if section.settings.show_collections == true %}
+                <div class="collections">
+                    {%- assign total_product_counts = 0 -%}
+                    {% for collection in collections %}
+                        <div class="collection" data-collection-url="{{collection.url}}" data-collection-title="{{collection.title}}" data-collection-description="{{collection.description}}" data-product-counts="{{collection.all_products_count}}">{{collection.title}}<span class="product_count">({{collection.all_products_count }})</span></div>
+                        {%- assign total_product_counts = total_product_counts | plus: collection.all_products_count -%}
+                    {% endfor %}
+                    <div class="collection" data-collection-url="/collections/all">All category<span class="product_count">({{total_product_counts}})</span></div>
+                </div>
+            {% endif %}
+            {% if section.settings.show_concerns == true %}
+                <div class="concerns">
+                    <div class="concern">Normal</div>
+                    <div class="concern">Oily day</div>
+                    <div class="concern">Combination</div>
+                    <div class="concern">Sensitive</div>
+                    <div class="concern">All concern</div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% schema %}
+    {
+        "name": "Custom navigation",
+        "class": "custom-navigation",
+        "settings": [
+            {
+                "type": "header",
+                "content": "QUICK LINKS"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_collections",
+                "label": "Show Collections filter",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "show_concerns",
+                "label": "Show Concern filter",
+                "default": true
+            }
+        ]
+    }
+{% endschema %}

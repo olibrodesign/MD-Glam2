@@ -103,15 +103,20 @@
       else
         render "placeholder", type: 'product', aspect_ratio: 0.714, placeholder_index: placeholder_index
       endif
+      if quick_view
+        echo '<a class="quick_view" href="'
+          echo product.url
+        echo '">View product</a>'
+      endif
     endcapture
 
     assign title = product.title
     assign url = product.url | within: collection
     assign vendor = product.vendor
-    assign price = product.price | money
+    assign price = product.price | money_without_trailing_zeros
 
     if product.compare_at_price > product.price and product.available
-      assign compare_price = product.compare_at_price | money
+      assign compare_price = product.compare_at_price | money_without_trailing_zeros
     else
       assign compare_price = false
     endif
@@ -195,7 +200,7 @@
         endif
 
         echo '<span class="product--price money" data-item="accent-text">'
-          echo price
+          echo price 
         echo '</span>'
       echo '</div>'
 
@@ -244,7 +249,9 @@
       {% if hover_image_enabled and hover_image %}
         {{ hover_image }}
       {% endif %}
-
+      {% if quick_view == true %}
+        <a class="quick_view" href="{{product.url}}">View product</a>
+      {% endif %}
       
     </div>
 
@@ -261,7 +268,9 @@
             echo '<p class="product--title ff-heading lg--f32 sm--f16 fw-light uppercase" data-item="paragraph">'
               echo title
             echo '</p>'
-
+            if product_description
+              echo '<p class="product--description">Reverse the ravages of time with this MD Glam Ultimate Anti-Aging Set sure to have a permanent place in your anti-aging arsenal. </p>'
+            endif
             if rating_enabled
               echo '<div class="product--rating">'
                 render 'product-rating', product: product

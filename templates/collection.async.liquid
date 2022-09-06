@@ -1,0 +1,6 @@
+{% layout none %}
+{%- liquid
+    for product in collection.products 
+        render 'product--item', product: product, unique_handle: 'filter', add_to_cart_button: true, quick_view: true,product_description: true, section_id: section.id
+    endfor
+-%}

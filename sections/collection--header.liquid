@@ -65,6 +65,10 @@
       </div>
     {% endif %}
   </div>
+  {% else %}
+  {% if section.settings.show_breadcrumbs == true %}
+    {% render 'breadcrumbs' %}
+  {% endif %}
 {% endif %}
 
 {% schema %}
@@ -75,6 +79,12 @@
       "id": "enable-header",
       "label": "Enable",
       "type": "checkbox",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "label": "Show breadcrumbs",
       "default": true
     },
     {

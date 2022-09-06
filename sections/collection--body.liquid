@@ -113,7 +113,7 @@
 -%}
 
 <collection-root
-  class="collection--body--root"
+  class="collection--body--root page-width"
   id="collection-root"
   data-section-id="{{ section.id }}"
   data-section-type="collection"
@@ -138,7 +138,13 @@
         {{ skip_link_t }}
       </a>
     {% endif %}
-
+    <div class="collection--header-content">
+      <div class="collection--title ff-heading uppercase lg--f32" data-collection-title>Anti - aging<span>(6)</span></div>
+      <div class="collection--description-wrapper">
+        <div class="collection--description ff-body lg--f16">Slow down the clock by building collagen, protecting against environmental toxins that injure the skin causing fine lines and wrinkles, sagging skin, hyperpigmentation, lack of elasticity, and large pores. </div>
+        <a class="btn " href="javascript:;">Get skin quiz</a>
+      </div>
+    </div>
     <div
       class="collection--body--grid"
       data-body-grid
@@ -218,7 +224,7 @@
                     echo pending_products_to_render | append: '|'
                   endunless
 
-                  render 'product--item', product: product, unique_handle: 'filter', section_id: section.id
+                  render 'product--item', product: product, unique_handle: 'filter', add_to_cart_button: true, quick_view: true,product_description: true, section_id: section.id
                 endcapture
 
                 continue
@@ -239,7 +245,7 @@
               assign pending_products_to_render = blank
             endunless
 
-            render 'product--item', product: product, unique_handle: 'filter', section_id: section.id
+            render 'product--item', product: product, unique_handle: 'filter',add_to_cart_button: true,quick_view: true, product_description: true, section_id: section.id
 
             assign current_block_num = current_block_num | plus: 1
             assign indexes_accessed_arr = indexes_accessed | split: ","
