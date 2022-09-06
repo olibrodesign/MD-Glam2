@@ -2037,7 +2037,19 @@
 }
 // collection body style end......................................................
 
+.header--root {
+    transition: all 0.5s ease-out !important;
+    &.active {
+        position: fixed !important;
+        top: 0 !important;
+    }
+}
 
+// header new style start.......................
+
+
+
+// header new style end.........................
 
 
 

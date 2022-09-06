@@ -1,19 +1,5 @@
  $(document).ready(function(){
 
-   
-    /*  $(".videomute").click(function(){
-        
-                     jQuery("#video_id").prop('muted', !jQuery("#video_id").prop('muted'));
-                  
-                    if (jQuery(this).html() == ' <img src="//cdn.shopify.com/s/files/1/0280/0035/4364/t/56/assets/unmute.png?v=71497788011133582291658480708" class="unmute">') {
-                      jQuery(this).html(' <img src="//cdn.shopify.com/s/files/1/0280/0035/4364/t/56/assets/mute.png?v=126087702582074586071658480708" class="mute">');
-                    } 
-                    
-                    else {
-                      jQuery(this).html(' <img src="//cdn.shopify.com/s/files/1/0280/0035/4364/t/56/assets/unmute.png?v=71497788011133582291658480708" class="unmute">');
-                         }
-        
-      });*/
    jQuery(".custom-vector-icon.pause, .custom-vector.mobile").hide();
       jQuery(".custom-vector.desktop").click(function() {
         
@@ -48,11 +34,12 @@
             $('.custom-navigation--body').removeClass('active')
           }
         })
-        
+
         var collection_url = "/collections/all";
         var tag = "";
 
         $('.custom-navigation--body .collection').on('click', function(){
+          $('.custom-navigation--header .collection').text($(this).data('collection-title'))
           if ($(this).data('collection-url')) {
             collection_url = $(this).data('collection-url');
           }
@@ -65,6 +52,7 @@
         })
 
         $('.custom-navigation--body .concern').on('click', function(){
+          $('.custom-navigation--header .concern').text($(this).text())
           if($(this).data('tag')) {
             tag = $(this).data('tag')
           }
@@ -107,29 +95,19 @@
               console.warn('Could not load collection');
           });
         }
-        
-        
+        if($(window).scrollTop() > 34) {
+          $('.header--root').addClass('active');
+        } else {
+          $('.header--root').removeClass('active');
+        }
+        $(window).on("scroll", function(event){
+          if($(this).scrollTop() > 34) {
+            $('.header--root').addClass('active');
+          } else {
+            $('.header--root').removeClass('active');
+          }
+        })
 
-      
-        // if($(window).width() < 768) {
-        //   setTimeout(() => {
-        //     jQuery(".custom-vector.mobile").click();
-        //     console.log('play click')  
-        //   }, 1000);
-          
-        // }
-  //       var iframe_video = document.querySelector('#video_id_mobile');
-  //       var player_video = new Vimeo.Player(iframe_video);
-  //       player_video.on('ended', function() {
-  //         player_video.pause();
-  //       });
-  //  jQuery(".custom-vector.mobile .play").click(function() {
-  //   console.log('play video')
-    
-  //     player_video.play();
-  //     jQuery(".custom-vector-icon.play").hide();
-  //     jQuery(".custom-vector-icon.pause").show();
-  //   });
 });
       
     
