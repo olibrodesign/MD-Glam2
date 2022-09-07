@@ -191,7 +191,7 @@
 
 {% comment %} View {% endcomment %}
 <product-root
-  class="product-page--root"
+  class="product-page--root page-width"
   data-section-id="{{ section.id }}"
   data-section-type="product_page"
   data-product-id="{{ product_id }}"
@@ -212,10 +212,6 @@
       itemtype="https://schema.org/Product"
     >
       <div class="product-page--left-column">
-        {{ left_column_blocks }}
-      </div>
-
-      <div class="product-page--center">
         <div class="product-media--wrapper" data-media-type="{{ current_variant.featured_media.media_type }}">
           {% if product.media.size > 0 %}
             <modal-root class="modal--root" data-modal-view="product-media">
@@ -227,7 +223,11 @@
                 </div>
               {% endif %}
             </modal-root>
-
+            <div class="btn_group">
+              <img class="prev_btn" src="{{'prev_btn.png' | asset_url }}">
+              <img class="next_btn" src="{{'next_btn.png' | asset_url }}">
+            </div>
+            <div class="custom_scroll--bar"><div class="scroll--thumb" style="width: {{100 | divided_by: product.media.size}}%;"></div></div>
           {% else %}
             {% render 'placeholder', type: 'product', aspect_ratio: 1, placeholder_index: 1 %}
 
@@ -246,10 +246,12 @@
           </div>
         {% endif %}
       </div>
-
-      <div class="product-page--right-column">
+      <div class="product-page--center">
+        {{ left_column_blocks }}
         {{ right_column_blocks }}
       </div>
+      {% comment %} <div class="product-page--right-column">
+      </div> {% endcomment %}
     </div>
   </div>
 </product-root>

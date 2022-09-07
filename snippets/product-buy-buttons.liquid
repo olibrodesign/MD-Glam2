@@ -28,7 +28,7 @@
             disabled
           {%- endunless -%}
         >
-          <span class="product-buy-buttons--cta-text">
+          <span class="product-buy-buttons--cta-text" data-price="{{product.price | divided_by: 100}}">
             {%- liquid
               if current_variant.available
                 echo add_to_cart_t

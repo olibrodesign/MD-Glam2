@@ -4,13 +4,18 @@
   <label for="{{ id }}--quantity">
     {{ quantity_t }}
   </label>
-  <input
-    class="product-quantity--input"
-    id="{{ id }}--quantity"
-    type="number"
-    form="{{ id }}"
-    name="quantity"
-    min="1"
-    value="1"
-  />
+  <div class="quantity-wrapper border-radius-slightly_rounded">
+    <a href="javascript:;" data-quantity="down">−</a>
+    <input
+      class="product-quantity--input"
+      id="{{ id }}--quantity"
+      type="number"
+      form="{{ id }}"
+      name="quantity"
+      min="1"
+      value="1"
+    />
+    <a href="javascript:;" data-quantity="up">+</a>
+  </div>
+  
 </div>
