@@ -1,0 +1,230 @@
+<section id="section--{{section.id}}">
+    <div class="text-image-blocks--wrapper page-width">
+        <div class="text--wrapper">
+            {% if section.settings.heading_line_1 != blank %}
+                <h2 class="ff-heading uppercase lg--f2 sm--f48 {% if section.settings.heading_line_1_right %}
+                    text-align-right
+                {% endif %}">{{ section.settings.heading_line_1 }}</h2>
+            {% endif %}
+            {% if section.settings.heading_line_2 != blank %}
+                <h2 class="ff-heading uppercase lg--f2  sm--f48 {% if section.settings.heading_line_2_right %}
+                    text-align-right
+                {% endif %}">{{ section.settings.heading_line_2 }}</h2>
+            {% endif %}
+            {% if section.settings.heading_line_3 != blank %}
+                <h2 class="ff-heading uppercase lg--f2  sm--f48 {% if section.settings.heading_line_3_right %}
+                    text-align-right
+                {% endif %}">{{ section.settings.heading_line_3 }}</h2>
+            {% endif %}
+            {% if section.settings.subheading != blank %}
+                <h3 class="ff-heading uppercase lg--f46 {% if section.settings.subheading_align %}
+                    text-align-right
+                {% endif %}">{{ section.settings.subheading }}</h2>
+            {% endif %}
+            {% if section.settings.text != blank %}
+                <div class="text">{{ section.settings.text }}</div>
+            {% endif %}
+        </div>
+        <div class="image--wrapper">
+            {% for block in section.blocks %}
+                {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | img_url: '700x'}}" alt="{{ block.settings.image.alt | escape }}">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<style>
+    #section--{{section.id}} .text-image-blocks--wrapper {
+        {% if section.settings.text_position == "left" %}
+            flex-direction: row;
+            {% else %}
+            flex-direction: row-reverse;  
+        {% endif %}
+    }
+    @media (max-width: 767px) {
+        #section--{{section.id}} .text-image-blocks--wrapper {
+            {% if section.settings.text_position == "left" %}
+                flex-direction: column-reverse;
+                {% else %}
+                flex-direction: column;  
+            {% endif %}
+        }
+    }
+    #section--{{section.id}} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom}}px;
+    }
+    @media (max-width: 1024px) {
+        #section--{{section.id}} {
+            padding-top: {{ section.settings.padding_top | times: 0.7 }}px;
+            padding-bottom: {{ section.settings.padding_bottom | times: 0.7}}px;
+        }
+    }
+    @media (max-width: 767px) {
+        #section--{{section.id}} {
+            padding-top: {{ section.settings.padding_top_mobile }}px;
+            padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+        }
+    }
+    #section--{{section.id}} .text--wrapper{
+        {% if section.settings.text_position == "left" %}
+            padding-right: 9%;
+        {% endif %}
+    }
+    #section--{{section.id}} .image--wrapper{
+        {% if section.settings.text_position == "left" %}
+            padding-left: 20px;
+            {% else %}
+            padding-right: 20px; 
+        {% endif %}
+    }
+</style>
+{% schema %}
+    {
+        "name": "Text with image blocks",
+        "class": "text-image-blocks",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Title style"
+            },
+            {
+                "type": "text",
+                "id": "heading_line_1",
+                "label": "First line heading"
+            },
+            {
+                "type": "checkbox",
+                "id": "heading_line_1_right",
+                "label": "First line heading align right",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "heading_line_2",
+                "label": "Second line heading"
+            },
+            {
+                "type": "checkbox",
+                "id": "heading_line_2_right",
+                "label": "Second line heading align right",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "heading_line_3",
+                "label": "Third line heading"
+            },
+            {
+                "type": "checkbox",
+                "id": "heading_line_3_right",
+                "label": "Third line heading align right",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "subheading",
+                "label": "Subheading"
+            },
+            {
+                "type": "checkbox",
+                "id": "subheading_align",
+                "label": "Subheading align right",
+                "default": false
+            },
+            {
+                "type": "html",
+                "id": "text",
+                "label": "Text"
+            },
+            {
+                "type": "select",
+                "id": "text_position",
+                "label": "Text position",
+                "options": [
+                    {
+                        "group": "position",
+                        "value": "left",
+                        "label": "Left"
+                    },
+                    {
+                        "group": "position",
+                        "value": "right",
+                        "label": "Right"
+                    }
+                ],
+                "default": "left"
+            },
+            {
+                "type": "header",
+                "content": "Padding on desktop",
+                "info": "You can adjust the padding on desktop"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Top Padding",
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Bottom Padding",
+                "default": 50
+            },
+            {
+                "type": "header",
+                "content": "Padding on mobile",
+                "info": "You can adjust the padding on mobile"
+            },
+            {
+                "type": "range",
+                "id": "padding_top_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Top Padding",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_mobile",
+                "min": 0,
+                "max": 200,
+                "step": 10,
+                "unit": "px",
+                "label": "Bottom Padding",
+                "default": 20
+            }
+        ],
+        "blocks": [
+            {
+                "type": "image",
+                "name": "Image",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Text with image blocks"
+            }
+        ]
+        
+    }
+{% endschema %}

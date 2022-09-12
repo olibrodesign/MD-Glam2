@@ -344,7 +344,9 @@
               endif
             -%} {% endcomment %}
             {% if product.available %}
-              <button class="btn">Add to bag</button>
+              <button class="btn {% if add_to_cart_btn_type == 'stroke' %}
+                stroke_btn
+              {% endif %}">Add to bag</button>
               {% else %}
               <button disabled class="btn">Out of stock</button>
             {% endif %}

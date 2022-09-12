@@ -1,4 +1,6 @@
-<section id="section--{{ section.id }}">
+<section id="section--{{ section.id }}" {% if section.settings.bg_img != blank %}
+    style="background-image: url('{{section.settings.bg_img | img_url: 'master'}}')"
+{% endif %}>
     <div class="review-slider--wrapper page-width">
         {% if section.settings.title_firstline != blank %}
             <h1 class="title lg--f2 ff-heading sm--f40 uppercase">{{ section.settings.title_firstline }}</h1>
@@ -167,6 +169,11 @@
                 "type": "richtext",
                 "id": "subtitle",
                 "label": "Subtitle"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_img",
+                "label": "Background image"
             },
             {
                 "type": "header",

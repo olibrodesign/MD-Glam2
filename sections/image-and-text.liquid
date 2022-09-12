@@ -2,6 +2,9 @@
     {% if section.settings.title != blank %}
         <h1 class="product-skin-title page-width fw-light uppercase sm--f40 ff-heading lg--f2">{{ section.settings.title }}</h1>
     {% endif %}
+    {% if section.settings.subheading != blank %}
+        <h2 class="product-skin-subheading lg--f32 sm--f24 ff-heading page-width">{{ section.settings.subheading }}</h2>
+    {% endif %}
     <div class="products--wrapper page-width">
         <div class="product-detail--wrapper active" data-id="{{block.id}}">
             {% if section.settings.detail_image != blank %}
@@ -146,6 +149,12 @@
                 "type": "text",
                 "id": "title",
                 "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "subheading",
+                "label": "Sub heading",
+                "default": "Meet our products"
             },
             {
                 "type": "image_picker",

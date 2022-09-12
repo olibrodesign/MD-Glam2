@@ -1,4 +1,6 @@
-<section id="section--{{section.id}}">
+<section id="section--{{section.id}}" {% if section.settings.bg_img != blank %}
+    style="background-image: url('{{section.settings.bg_img | img_url: 'master'}}')"
+{% endif %}>
     <div class="custom-collections--content page-width">
         <div class="custom-collections--header__wrapper">
             {% if section.settings.title != blank %}
@@ -96,6 +98,11 @@
                 "type": "url",
                 "id": "btn_url_2",
                 "label": "Second button url"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_img",
+                "label": "Background image"
             },
             {
                 "type": "header",

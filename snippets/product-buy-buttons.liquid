@@ -22,6 +22,7 @@
           data-item='button'
         {% endif %}
       >
+        
         <button
           class="product-buy-buttons--cta"
           {%- unless current_variant.available -%}
@@ -41,6 +42,9 @@
             {% render 'loading-spinner', size: '41px' %}
           </span>
         </button>
+        {% if view_set_link != blank %}
+          <a href="{{view_set_link}}" class="view_set_btn">View sets</a>
+        {% endif %}
       </div>
 
       {% if smart_payment_enabled and product.available and product.selling_plan_groups == empty %}

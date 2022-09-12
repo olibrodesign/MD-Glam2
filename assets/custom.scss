@@ -16,6 +16,10 @@
             font-size: 82px;
         }
     }
+    .lg--f56 {
+        font-size: 56px;
+        line-height: 1.3;
+    }
     .lg--f48 {
         font-size: 48px;
         line-height: 1.3;
@@ -86,6 +90,12 @@
         line-height: 1.3;
     }
 }
+
+section, .featured-blog--root, .featured-product--root {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 .page-width {
     max-width: 1440px;
@@ -351,7 +361,7 @@
             width: 100%;
         }
         .title {
-            margin-bottom: 16px;
+            margin-bottom: 40px;
             letter-spacing: 0;
         }
         .text_image {
@@ -359,10 +369,10 @@
             margin-bottom: 16px;
         }
         .subtitle {
-            margin-bottom: 40px;
+            margin-bottom: 34px;
             margin-top: 0;
             p {
-                margin-bottom: 21px;
+                margin-bottom: 18px;
                 @media (max-width: 767px) {
                     margin-bottom: 37px;
                 }
@@ -375,7 +385,7 @@
                         content: "";
                         width: 100%;
                         height: 5px;
-                        bottom: -10px;
+                        bottom: 0px;
                         left: 0;
                         @media (max-width: 767px) {
                             bottom: -20px;
@@ -387,14 +397,15 @@
             @media (max-width: 767px) {
                 margin-bottom: 16px;
                 max-width: 100%;
+                margin-top: 10px;
             }
         }
         .text {
-            margin-bottom: 40px;
+            margin-bottom: 65px;
             max-width: 555px;
             line-height: 1.3; 
             p {
-                margin-bottom: 10px;
+                margin-bottom: 0px;
                 strong {
                     display: block;
                     margin-top: 16px;
@@ -408,12 +419,10 @@
                 }
             }
             @media (max-width: 767px) {
-                margin-bottom: 16px;
+                margin-bottom: 24px;
                 max-width: 100%;
             }
-            p {
-                margin-bottom: 8px;
-            }
+            
         }
         .btn {
             width: 202px;
@@ -488,7 +497,7 @@
 
 // image and text style start................................................
 
-.product-skin-title {
+.product-skin-title, .product-skin-subheading {
     padding: 0 65px;
     @media (max-width: 1024px) {
         padding: 0 30px;
@@ -544,6 +553,9 @@
         
         img {
             height: 0;
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
         .subtitle {
             margin-top: 24px;
@@ -709,6 +721,21 @@
             }
             .featured-product--block {
                 position: relative;
+                &[data-block-type="liquid"] {
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    /* identical to box height, or 21px */
+                    color: #000;
+                    letter-spacing: 0.04em;
+                    
+                    p {
+                        text-transform: uppercase;
+                        color: #515151;
+                    }
+                }
                 .product-price--original {
                     font-size: 48px;
                     line-height: 1.3;
@@ -746,7 +773,45 @@
                         right: 0;
                         top: -65px;
                     }
-    
+                    @media (max-width: 475px) {
+                        
+                        top: -15px;
+                    }
+                    .product-buy-buttons--primary {
+                        display: flex;
+                        gap: 10px;
+                        @media (max-width: 1400px) {
+                            flex-direction: column;
+                        }
+                        @media (max-width: 1024px) {
+                            flex-direction: row;
+                        }
+                       
+                        .view_set_btn {
+                            font-family: var(--p-font-weight-regular);
+                            text-transform: uppercase;
+                            width: 200px;
+                            height: 60px;
+                            display: flex;
+                            font-size: 16px;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 300% 300% 300% 300% / 200% 200% 200% 200%;
+                            background-color: transparent;
+                            border: solid 1px #000;
+                            color: #000;
+                            &:hover {
+                                color: #F7EDEC;
+                                background-color: #F2A7A0;
+                                border-color: #F2A7A0;
+                            }
+                            
+                            @media (max-width: 767px) {
+                                width: 164px;
+                                height: 40px;
+                            }
+                        }
+                    }
                     .product-buy-buttons--cta {
                         font-family: var(--p-font-weight-regular);
                         text-transform: uppercase;
@@ -785,15 +850,18 @@
 
 .featured-collection--root {
     padding: 72px 65px;
-    @media (max-width: 71024px) {
+    @media (max-width: 1024px) {
         padding:52px 30px;
     }
     @media (max-width: 767px) {
         padding:32px 16px;
     }
     .featured-collection--header {
-        justify-content: flex-start;
-        max-width: 645px;
+        justify-content: space-between;
+        align-items: flex-end;
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
         .featured-collection--header-text {
             .featured-collection--title {
                 text-align: left;
@@ -802,8 +870,23 @@
                 }
             }
         }
+        .view_all_btn {
+            width: 202px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000000;
+            border-radius: 300%/200%;
+            &:hover {
+                color: #f7edec;
+                background-color: #f2a7a0;
+                border-color: #f2a7a0;
+            }
+        }
     }
     .featured-collection--grid {
+        grid-column-gap: 20px;
         .product--root {
             .product--label-container {
                 display: none;
@@ -813,6 +896,11 @@
                     flex-direction: column;
                     .product--title {
                         margin-top: 0;
+                    }
+                    .product--description {
+                        font-family: "Proxima Nova";
+                        font-size: 14px;
+                        line-height: 1.3;
                     }
                     .product--price-wrapper {
                         margin-top: 20px;
@@ -853,6 +941,11 @@
                         font-size: 18px;
                         font-weight: 300;
                         font-family: "Proxima Nova";
+                        &.stroke_btn {
+                            color: #000;
+                            background-color: transparent;
+                            border-color: #000;
+                        }
                         &:hover {
                             color: #F7EDEC;
                             background-color: #F2A7A0;
@@ -1769,7 +1862,7 @@
         display: flex;
         gap: 50px;
         width: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
         border-bottom: solid 1px #000;
         @media (max-width: 767px) {
             gap: 45px;
@@ -1854,9 +1947,9 @@
 // collection body style start....................................................
 
 .collection--body--root {
-    padding: 16px 64px;
+    padding: 44px 64px;
     @media (max-width: 767px) {
-        padding: 16px 16px;
+        padding: 32px 16px;
     }
     .collection--body--grid {
         grid-column-gap: 20px;
@@ -1896,6 +1989,7 @@
             }
             .product--details-container {
                 margin-bottom: 80px;
+                padding-top: 0;
                 @media (max-width: 1180px) {
                     margin-bottom: 0px;
                     flex-grow: 1;
@@ -1915,6 +2009,7 @@
                             line-height: 1.2;
                             @media (max-width: 767px) {
                                 font-size: 14px;
+                                margin: 0;
                             }
                         }
                         .product--description {
@@ -2161,6 +2256,9 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
+            @media (max-width: 767px) {
+                padding-left: 0;
+            }
             .product-page--block {
                 margin-bottom: 30px;
                 margin-top: 0;
@@ -2178,6 +2276,9 @@
                     line-height: 1.1;
                     text-align: left;
                     text-transform: uppercase;
+                    @media (max-width: 767px) {
+                        font-size: 30px;
+                    }
                 }
             }
             [data-block-type="description"] {
@@ -2189,6 +2290,9 @@
                         font-size: 18px;
                         line-height: 130%;
                         text-align: left;
+                        @media (max-width: 767px) {
+                            font-size: 16px;
+                        }
                     }
                 }
             }
@@ -2202,16 +2306,23 @@
                     text-align: left;
                     .title {
                         text-transform: uppercase;
+                        font-family: 'Proxima Nova' !important;
                     }
                     .icon--content {
                         margin-top: 17px;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+                        @media (max-width: 767px) {
+                            flex-wrap: wrap;
+                        }
                         .icon--item {
                             display: flex;
                             align-items: center;
                             gap: 5px;
+                            @media (max-width: 767px) {
+                                width: 50%;
+                            }
                         }
                     }
                 }
@@ -2246,16 +2357,29 @@
                             font-size: 16px;
                             line-height: 130%;
                             color: #000000;
+                            align-items: flex-start;
+                            svg {
+                                max-width: 24px;
+                                width: 100%;
+                            }
                         }
                     }
                 }
             }
             [data-block-type="price"] {
+                @media (max-width: 767px) {
+                    text-align: left;
+                    .product-price--root {
+                        align-items: flex-start;
+                    }
+                }
                 .product-price--wrapper {
                     .product-price--original {
                         font-size: 48px;
                         line-height: 100%;
-                        
+                        @media (max-width: 767px) {
+                            text-align: left;
+                        }
                     }
                 }
             }
@@ -2280,6 +2404,9 @@
                             font-weight: 300;
                             font-size: 32px;
                             line-height: 130%;
+                            @media (max-width: 767px) {
+                                font-size: 18px;
+                            }
                         }
                         input {
                             background-color: transparent;
@@ -2291,6 +2418,9 @@
                             line-height: 130%;
                             text-align: center;
                             padding: 10px 0;
+                            @media (max-width: 767px) {
+                                font-size: 18px;
+                            }
                             &::-webkit-outer-spin-button,
                             &::-webkit-inner-spin-button {
                                 -webkit-appearance: none;
@@ -2323,6 +2453,11 @@
                         font-weight: 400;
                         font-size: 16px;
                         line-height: 100%;
+                        @media (max-width: 767px) {
+                            font-size: 14px;
+                            padding: 0;
+                            letter-spacing: 0;
+                        }
                         &:hover {
                             color: #F7EDEC !important;
                             background-color: #F2A7A0 !important;
@@ -2420,6 +2555,102 @@
 }
 
 // featured video style end...................................................
+
+
+// text with image blocks style start.........................................
+
+.text-image-blocks--wrapper {
+    padding: 0 64px;
+    display: flex;
+
+    @media (max-width: 767px) {
+        padding: 0 16px;
+        gap: 24px;
+    }
+    .text--wrapper {
+        width: 50%;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+        h2 {
+            margin: 0;
+            letter-spacing: 0;
+            &.text-align-right {
+                margin-left: 20%;
+                @media (max-width: 767px) {
+                    margin: 0;
+                }
+            }
+        }
+        h3 {
+            font-size: 46px;
+            margin-left: 20%;
+            font-family: 'Spectral';
+            font-style: normal;
+            font-weight: 275;
+            font-size: 46px;
+            line-height: 110%;
+            letter-spacing: 0;
+            p {
+                margin-bottom: 5px;
+            }
+        }
+        .text {
+            margin-left: 20%;
+            margin-top: 40px;
+            font-family: "Proxima Nova";
+            font-size: 18px;
+            line-height: 1.3;
+            @media (max-width: 767px) {
+                margin-left: 0%;
+                margin-top: 16px;
+            }
+            ul {
+                margin-top: 24px;
+                li {
+                    display: flex;
+                    gap: 4px;
+                    align-items: flex-start;
+                    margin-bottom: 16px;
+                    svg {
+                        height: 100%;
+                        width: 100%;
+                        max-width: 24px;
+                    }
+                }
+            }
+            .solution {
+                h5 {
+                    font-family: 'Spectral';
+                    font-style: normal;
+                    font-weight: 275;
+                    font-size: 32px;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                    margin-top: 24px;
+                }
+                ul {
+                    column-count: 2;
+                }
+            }
+            
+        }
+    }
+    .image--wrapper {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        @media (max-width: 767px) {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+// text with image blocks style end.........................................
+
+
 
 @media (max-width: 767px) {
     .footer--sub {

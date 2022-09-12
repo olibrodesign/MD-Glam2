@@ -44,10 +44,17 @@
   {% if heading != blank %}
     <div class="featured-collection--header page-width" data-container="block">
       <div class="featured-collection--header-text">
-        <h2 class="featured-collection--title lg--f2 ff-heading uppercase sm--f40" data-item="section-heading">
+        <h2 class="featured-collection--title {% if section.settings.heading_size == 'large' %}
+          lg--f2
+          {% else %}
+            lg--f56
+        {% endif %}  sm--f40 ff-heading uppercase " data-item="section-heading">
           {{ heading }}
         </h2>
       </div>
+      {% if section.settings.view_all_btn_text != blank %}
+        <a class="view_all_btn lg--f16 sm--f16 ff-body uppercase" href="{{ section.settings.view_all_btn_url }}">{{ section.settings.view_all_btn_text }}</a>   
+      {% endif %}
     </div>
   {% endif %}
 
@@ -94,7 +101,7 @@
 
         else
           for product in product_list limit: product_limit
-            render 'product--item', product: product, add_to_cart_button: true, show_vendor: ture, unique_handle: unique_handle, section_id: section.id
+            render 'product--item', product: product, add_to_cart_button: true, add_to_cart_btn_type: section.settings.add_to_cart_btn_type, show_vendor: ture, unique_handle: unique_handle, product_description: true, section_id: section.id
           endfor
         endif
       -%}
@@ -195,6 +202,23 @@
       "info": "Applies to grid display only"
     },
     {
+      "type": "select",
+      "id": "add_to_cart_btn_type",
+      "label": "Add to cart button type",
+      "options": [
+        {
+          "group": "type",
+          "value": "default",
+          "label": "Default"
+        },{
+          "group": "type",
+          "value": "stroke",
+          "label": "Stroke"
+        }
+      ],
+      "default": "default"
+    },
+    {
       "type": "header",
       "content": "Content"
     },
@@ -205,6 +229,23 @@
       "default": "Featured products"
     },
     {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading font size",
+      "options": [
+        {
+          "group": "size",
+          "value": "large",
+          "label": "Large"
+        },{
+          "group": "size",
+          "value": "normal",
+          "label": "Normal"
+        }
+      ],
+      "default": "large"
+    },
+    {
       "type": "url",
       "id": "link-url",
       "label": "Link"
@@ -213,6 +254,17 @@
       "type": "text",
       "id": "link-text",
       "label": "Link text"
+    },
+    {
+      "type": "text",
+      "id": "view_all_btn_text",
+      "label": "Button text",
+      "default": "View all"
+    },
+    {
+      "type": "url",
+      "id": "view_all_btn_url",
+      "label": "Button url"
     }
   ],
   "presets": [

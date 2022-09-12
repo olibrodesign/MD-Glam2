@@ -27,15 +27,17 @@
 {% comment %} View {% endcomment %}
 <featured-blog-root
   id="section--{{section.id}}"
-  class="featured-blog--root page-width"
+  class="featured-blog--root"
   data-background-color="{{ bg_color }}"
   data-section-id="{{ section.id }}"
   data-light-text="{{ light_text }}"
   data-spacing-above="{{ spacing_above }}"
   data-spacing-below="{{ spacing_below }}"
-  style="display:block;"
+  style="display:block; {% if section.settings.bg_img != blank %}
+    background-image: url('{{section.settings.bg_img | img_url: 'master'}}')
+{% endif %}"
 >
-  <div class="featured-blog--wrapper">
+  <div class="featured-blog--wrapper  page-width">
     {% if blog_heading != blank %}
       
 
@@ -241,6 +243,11 @@ blogSlider();
         "label": "View more text",
         "type": "text",
         "default": "View more"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_img",
+        "label": "Background image"
       },
       {
         "type": "header",
