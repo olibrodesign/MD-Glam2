@@ -297,7 +297,7 @@
     "sort_by": "sort by"
   },
   "products": {
-    "add_to_cart": "Add to Cart",
+    "add_to_cart": "Add to Bag",
     "color": "color",
     "empty_page_content_html": "You haven't linked a page yet. To configure this you'll need to go to your {{ size_chart_path }} section.",
     "from": "From",
@@ -307,6 +307,7 @@
     },
     "n_items_left": "There are only [num_items] items left to add to the cart",
     "new": "New",
+    "best_seller": "Best seller",
     "no_items_left": "The max number of items have already been added",
     "off": "Off",
     "one_item_left": "There is only one item left to add to the cart",

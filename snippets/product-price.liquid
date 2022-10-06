@@ -24,7 +24,7 @@
       {% endunless %}
     >
       {% if compare_enabled %}
-        {{ current_variant.compare_at_price | money }}
+        {{ current_variant.compare_at_price | money_without_trailing_zeros }}
       {% endif %}
     </div>
   </div>

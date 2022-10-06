@@ -40,23 +40,29 @@
   data-spacing-above="{{ spacing_above }}"
   data-spacing-below="{{ spacing_below }}"
 >
-  <div class="contact--wrapper">
-    {% unless heading == blank %}
-      <div class="contact--header">
-        <h2 class="contact--title" data-item="section-heading">
-          {{ heading }}
-        </h2>
-      </div>
-    {% endunless %}
 
-    {%
-      render 'contact-form',
-      store_address: store_address,
-      store_hours: store_hours,
-      form_id: form_id,
-      button_type: button_type,
-      show_social_sharing: show_social_sharing
-    %}
+  <div class="contact--wrapper">
+    <div class="grid" >
+      <div class="grid-item" >
+        {% unless heading == blank %}
+          <div class="contact--header">
+            <h2 class="contact--title" data-item="section-heading">
+              {{ heading }}
+            </h2>
+          </div>
+        {% endunless %}
+      </div>
+      <div class="grid-item" >
+        {%
+          render 'contact-form',
+          store_address: store_address,
+          store_hours: store_hours,
+          form_id: form_id,
+          button_type: button_type,
+          show_social_sharing: show_social_sharing
+        %}
+      </div>
+    </div>
   </div>
 </div>
 

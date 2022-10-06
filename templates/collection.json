@@ -17,6 +17,7 @@
     },
     "navigation": {
       "type": "collection--custom__navigation",
+      "disabled": true,
       "settings": {
         "show_collections": true,
         "show_concerns": true
@@ -36,25 +37,25 @@
         "498bc11d-c262-496e-a639-57bfb0536b5d": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Frame_11833.png"
+            "icon": "shopify:\/\/shop_images\/Frame_11833_1.png"
           }
         },
         "455c4ca0-1512-49fc-8509-83d2fb219ca8": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/TESTING.png"
+            "icon": "shopify:\/\/shop_images\/TESTING_1.png"
           }
         },
         "9ce01548-6d04-4933-b16e-29d8007e0be6": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/PARABEN.png"
+            "icon": "shopify:\/\/shop_images\/PARABEN_1.png"
           }
         },
         "bce23d98-f1db-447d-9c98-6049f56d752a": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/SULFATE.png"
+            "icon": "shopify:\/\/shop_images\/SULFATE_1.png"
           }
         }
       },
@@ -66,7 +67,9 @@
       ],
       "settings": {
         "title": "Our Promise",
-        "text_image": "shopify:\/\/shop_images\/Photo.png",
+        "align_center": true,
+        "uppercase": false,
+        "text_image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1.png",
         "video": "",
         "subtitle": "<p>Risk free - Money <em>back guarantee<\/em><\/p><p><em>free shipping<\/em><\/p><p>Award winning <em>customer service<\/em><\/p>",
         "uppercase_subtitle": true,
@@ -74,13 +77,13 @@
         "text": "<p>“I know you'll love MD GLAM as much as I do, but if for any reason you're not completely satisfied, just return the containers within 60 days of receipt, and you'll get a full refund of the purchase price (minus shipping and handling).”<\/p><p><\/p><p><strong>Dr. Cat<\/strong><\/p><p><em>(Board-Certified Plastic Surgeon,<\/em><\/p><p><em> Founder of MD GLAM)<\/em><\/p>",
         "btn_text": "",
         "btn_url": "",
-        "image": "shopify:\/\/shop_images\/Photo.png",
-        "image_mobile": "shopify:\/\/shop_images\/Photo.png",
+        "image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1.png",
+        "bg_gradiant": true,
         "position": "left",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "padding_top": 120,
+        "padding_bottom": 130,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 60
       }
     }
   },

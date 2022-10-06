@@ -36,7 +36,8 @@
   data-section-type="footer"
   data-alt-link-hover="{{ alt_link_hover }}"
 >
-  <div class="footer--blocks">
+
+  <div class="footer--blocks page-width">
     {% for block in section.blocks limit: block_count %}
 
       {% case block.type %}
@@ -157,7 +158,11 @@
 
                 {% if block.settings.subscribe--show-newsletter or show_social %}
                   {% if block.settings.newsletter--heading != blank %}
-                    <div class="footer--block--heading" data-item="block-heading">
+                    <div class="footer--block--heading" data-item="block-heading"  style="{% unless block.settings.uppercase %}
+                      text-transform: unset !important;
+                      {% else %}
+                      text-transform: uppercase !important;
+                  {% endunless %}">
                       {{ block.settings.newsletter--heading }}
                     </div>
                   {% endif %}
@@ -245,7 +250,7 @@
     {% endif %}
   </div>
 
-  <div class="footer--sub">
+  <div class="footer--sub page-width">
     {% if locale_enabled or region_enabled %}
       <div class="footer--sub--block" data-type="localization">
         <div class="footer--sub--container">
@@ -423,6 +428,12 @@
           "label": "Newsletter heading",
           "type": "text",
           "default": "Newsletter"
+        },
+        {
+          "type": "checkbox",
+          "id": "uppercase",
+          "label": "Text uppercase",
+          "default": true
         },
         {
           "id": "newsletter--info",

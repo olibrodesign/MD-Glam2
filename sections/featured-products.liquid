@@ -30,7 +30,7 @@
 -%}
 
 <featured-collection-root
-  class="featured-collection--root page-width"
+  class="featured-collection--root"
   data-section-id="{{ section.id }}"
   data-background-color="{{ bg_color }}"
   data-container="section"
@@ -39,7 +39,9 @@
   data-section-type="index_featured_products"
   data-spacing-above="{{ spacing_above }}"
   data-spacing-below="{{ spacing_below }}"
-  style="display:grid;"
+  style="display:grid; {% if section.settings.bg_img != blank %}
+    background-image: url('{{section.settings.bg_img | img_url: 'master'}}');
+{% endif %}"
 >
   {% if heading != blank %}
     <div class="featured-collection--header page-width" data-container="block">
@@ -48,7 +50,9 @@
           lg--f2
           {% else %}
             lg--f56
-        {% endif %}  sm--f40 ff-heading uppercase " data-item="section-heading">
+        {% endif %}  sm--f40 ff-heading uppercase " data-item="section-heading" style="{% unless section.settings.uppercase %}
+          text-transform: unset !important;
+        {% endunless %}">
           {{ heading }}
         </h2>
       </div>
@@ -83,7 +87,7 @@
 
   {% else %}
     <div
-      class="featured-collection--grid"
+      class="featured-collection--grid page-width"
       data-container="panel"
       data-columns="{{ product_per_row_desktop }}"
       data-mobile-columns="{{ product_per_row_mobile }}"
@@ -149,6 +153,11 @@
         { "label": "Accent", "value": "accent" }
       ],
       "default": "none"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "Background image"
     },
     {
       "id": "light-text",
@@ -227,6 +236,12 @@
       "label": "Heading",
       "type": "text",
       "default": "Featured products"
+    },
+    {
+      "type": "checkbox",
+      "id": "uppercase",
+      "label": "Text uppercase",
+      "default": true
     },
     {
       "type": "select",

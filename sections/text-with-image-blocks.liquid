@@ -1,28 +1,51 @@
 <section id="section--{{section.id}}">
     <div class="text-image-blocks--wrapper page-width">
-        <div class="text--wrapper">
+        <div class="text--wrapper {% if section.blocks.size > 1 %}
+            sticky--wrapper
+        {% endif %}">
+            {% if section.settings.section_no != blank %}
+                <div class="section_no">{{ section.settings.section_no }}</div>
+            {% endif %}
             {% if section.settings.heading_line_1 != blank %}
-                <h2 class="ff-heading uppercase lg--f2 sm--f48 {% if section.settings.heading_line_1_right %}
+                <h2 class="ff-heading uppercase lg--f2 sm--f40 {% if section.settings.heading_line_1_right == true %}
                     text-align-right
-                {% endif %}">{{ section.settings.heading_line_1 }}</h2>
+                {% endif %}" style="text-transform: {% unless section.settings.uppercase %}
+                    unset !important;
+                    {% else %}
+                      uppercase;
+                  {% endunless %}">{{ section.settings.heading_line_1 }}</h2>
             {% endif %}
             {% if section.settings.heading_line_2 != blank %}
-                <h2 class="ff-heading uppercase lg--f2  sm--f48 {% if section.settings.heading_line_2_right %}
+                <h2 class="ff-heading uppercase lg--f2  sm--f40 {% if section.settings.heading_line_2_right == true %}
                     text-align-right
-                {% endif %}">{{ section.settings.heading_line_2 }}</h2>
+                {% endif %}" style="text-transform: {% unless section.settings.uppercase %}
+                    unset !important;
+                    {% else %}
+                      uppercase;
+                  {% endunless %}">{{ section.settings.heading_line_2 }}</h2>
             {% endif %}
             {% if section.settings.heading_line_3 != blank %}
-                <h2 class="ff-heading uppercase lg--f2  sm--f48 {% if section.settings.heading_line_3_right %}
+                <h2 class="ff-heading uppercase lg--f2  sm--f40 {% if section.settings.heading_line_3_right == true %}
                     text-align-right
-                {% endif %}">{{ section.settings.heading_line_3 }}</h2>
+                {% endif %}" style="text-transform: {% unless section.settings.uppercase %}
+                    unset !important;
+                    {% else %}
+                      uppercase;
+                  {% endunless %}">{{ section.settings.heading_line_3 }}</h2>
             {% endif %}
             {% if section.settings.subheading != blank %}
-                <h3 class="ff-heading uppercase lg--f46 {% if section.settings.subheading_align %}
+                <h3 class="ff-heading uppercase lg--f46 sm--f40{% if section.settings.subheading_align_right == true %}
                     text-align-right
-                {% endif %}">{{ section.settings.subheading }}</h2>
+                {% endif %}" style="text-transform: {% unless section.settings.uppercase %}
+                    unset !important;
+                    {% else %}
+                      uppercase;
+                  {% endunless %}">{{ section.settings.subheading }}</h2>
             {% endif %}
             {% if section.settings.text != blank %}
-                <div class="text">{{ section.settings.text }}</div>
+                <div class="text {% if section.settings.text_align_right == true %}
+                    text-align-right
+                {% endif %}">{{ section.settings.text }}</div>
             {% endif %}
         </div>
         <div class="image--wrapper">
@@ -32,7 +55,9 @@
                 {% endif %}
             {% endfor %}
         </div>
+       
     </div>
+    
 </section>
 <style>
     #section--{{section.id}} .text-image-blocks--wrapper {
@@ -42,6 +67,7 @@
             flex-direction: row-reverse;  
         {% endif %}
     }
+    {% comment %} 
     @media (max-width: 767px) {
         #section--{{section.id}} .text-image-blocks--wrapper {
             {% if section.settings.text_position == "left" %}
@@ -50,7 +76,25 @@
                 flex-direction: column;  
             {% endif %}
         }
-    }
+    } {% endcomment %}
+    {% if section.settings.section_no != blank %}
+        #section--{{section.id}} .text-image-blocks--wrapper .text--wrapper{
+            padding-left: 18px;
+            padding-top: 18px;
+            position: relative;
+        }
+        #section--{{section.id}} .text-image-blocks--wrapper .section_no{
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: 'Spectral';
+            font-style: normal;
+            font-weight: 275;
+            font-size: 16px;
+            line-height: 130%;
+        }
+        
+    {% endif %}
     #section--{{section.id}} {
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom}}px;
@@ -76,7 +120,7 @@
         {% if section.settings.text_position == "left" %}
             padding-left: 20px;
             {% else %}
-            padding-right: 20px; 
+            padding-right: 9%; 
         {% endif %}
     }
 </style>
@@ -88,6 +132,11 @@
             {
                 "type": "header",
                 "content": "Title style"
+            },
+            {
+                "type": "text",
+                "id": "section_no",
+                "label": "Section number"
             },
             {
                 "type": "text",
@@ -129,14 +178,26 @@
             },
             {
                 "type": "checkbox",
-                "id": "subheading_align",
+                "id": "subheading_align_right",
                 "label": "Subheading align right",
-                "default": false
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "uppercase",
+                "label": "Uppercase title",
+                "default": true
             },
             {
                 "type": "html",
                 "id": "text",
                 "label": "Text"
+            },
+            {
+                "type": "checkbox",
+                "id": "text_align_right",
+                "label": "Text align right",
+                "default": true
             },
             {
                 "type": "select",

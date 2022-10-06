@@ -1,4 +1,6 @@
-<section id="section--{{section.id}}">
+<section id="section--{{section.id}}" {% if section.settings.bg_img != blank %}
+    style="background-image: url('{{section.settings.bg_img | img_url: 'master'}}')"
+{% endif %}>
     <div class="image-accordion--wrapper page-width">
         <div class="image--wrapper sm--hide">
             {% if section.settings.image != blank %}
@@ -7,7 +9,9 @@
         </div>
         <div class="accordion--wrapper">
             {% if section.settings.title !=blank %}
-                <h1 class="uppercase title lg--f2 sm--f40 ff-heading">{{ section.settings.title }}</h1>
+                <h1 class="uppercase title lg--f2 sm--f40 ff-heading" style="{% unless section.settings.uppercase %}
+                    text-transform: unset!important;
+                {% endunless %}">{{ section.settings.title }}</h1>
             {% endif %}
             <div class="accordions">
                 {% for block in section.blocks %}
@@ -125,9 +129,20 @@
                 "label": "Image"
             },
             {
+                "type": "image_picker",
+                "id": "bg_img",
+                "label": "Background image"
+            },
+            {
                 "type": "text",
                 "id": "title",
                 "label": "Title"
+            },
+            {
+                "type": "checkbox",
+                "id": "uppercase",
+                "label": "Text uppercase",
+                "default": true
             },
             {
                 "type": "select",

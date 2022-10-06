@@ -3,11 +3,15 @@
 {% endif %}>
     <div class="review-slider--wrapper page-width">
         {% if section.settings.title_firstline != blank %}
-            <h1 class="title lg--f2 ff-heading sm--f40 uppercase">{{ section.settings.title_firstline }}</h1>
+            <h1 class="title lg--f2 ff-heading sm--f40 uppercase" style="{% unless section.settings.uppercase %}
+                text-transform: unset!important;
+            {% endunless %}">{{ section.settings.title_firstline }}</h1>
         {% endif %}
         <div class="title_content">
             {% if section.settings.title_secondline %}
-                <h1 class="title lg--f2 sm--f40 ff-heading uppercase">{{ section.settings.title_secondline }}</h1>
+                <h1 class="title lg--f2 sm--f40 ff-heading uppercase" style="{% unless section.settings.uppercase %}
+                    text-transform: unset!important;
+                {% endunless %}">{{ section.settings.title_secondline }}</h1>
             {% endif %}
             {% if section.settings.subtitle != blank %}
                 <div class="subtitle fw-light ff-body lg--f18 sm--f16">{{ section.settings.subtitle }}</div>
@@ -21,11 +25,13 @@
                             {% if block.settings.before_image != blank %}
                                 <div class="before_image">
                                     <img src="{{ block.settings.before_image | img_url: '400x400'}}" alt="{{ block.settings.before_image.alt | escape }}">
+                                    <span>Before</span>
                                 </div>
                             {% endif %}
                             {% if block.settings.after_image != blank %}
                                 <div class="after_image">
                                     <img src="{{ block.settings.after_image | img_url: '400x400'}}" alt="{{ block.settings.after_image.alt | escape }}">
+                                    <span>Now</span>
                                 </div>
                             {% endif %}
                         </div>
@@ -164,6 +170,12 @@
                 "type": "text",
                 "id": "title_secondline",
                 "label": "Second line title"
+            },
+            {
+                "type": "checkbox",
+                "id": "uppercase",
+                "label": "Text uppercase",
+                "default": true
             },
             {
                 "type": "richtext",

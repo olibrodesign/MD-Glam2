@@ -1,7 +1,11 @@
-<section id="section--{{section.id}}">
+<section id="section--{{section.id}}"  {% if section.settings.bg_img != blank %}
+    style="background-image: url('{{section.settings.bg_img | img_url: 'master'}}')"
+{% endif %}>
     <div class="testimonials--wrapper page-width">
         {% if section.settings.title != blank %}
-            <h1 class="title uppercase ff-heading lg--f2 sm--f40 fw-light">{{ section.settings.title }}</h1>
+            <h1 class="title uppercase ff-heading lg--f2 sm--f40 fw-light" style="{% unless section.settings.uppercase %}
+                text-transform: unset !important;
+            {% endunless %}">{{ section.settings.title }}</h1>
         {% endif %}
         <div class="testimonials--content">
             {% for block in section.blocks %}
@@ -152,6 +156,17 @@
                 "id": "title",
                 "label": "Title",
                 "default": "Testimonials"
+            },
+            {
+                "type": "checkbox",
+                "id": "uppercase",
+                "label": "Text uppercase",
+                "default": true
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_img",
+                "label": "Background image"
             },
             {
                 "type": "header",

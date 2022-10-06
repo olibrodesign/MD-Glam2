@@ -4,7 +4,9 @@
 
 <div
   class="image-with-text--root"
-  data-section-id="{{ section.id }}"
+  data-section-id="{{ section.id }}" {% if section.settings.bg_img != blank %}
+    style="background-image: url('{{section.settings.bg_img | img_url: 'master'}}')"
+{% endif %}
 >
   {% render 'featured-content',
     text_color: section.settings.text-color,
@@ -32,12 +34,20 @@
     desc_sec: section.settings.description-sec,
     desc_third: section.settings.description-third,
     heading_mobile:section.settings.heading-mobile,
-    html5_video:section.settings. html5_video,
-    html5_video_M:section.settings. html5_video_M
+    html5_video:section.settings.html5_video,
+    html5_video_M:section.settings.html5_video_M,
+    uppercase: section.settings.uppercase
     
   %}
 </div>
-
+<style>
+  {% if section.settings.text_middle == true %}
+    #shopify-section-{{section.id}} .featured-content--container {
+      align-items: center;
+    }
+  {% endif %}
+  
+</style>
 {% schema %}
 {
   "name": "Image with text",
@@ -70,6 +80,11 @@
       "default": "none"
     },
     {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "Background image"
+    },
+    {
       "id": "container-width",
       "label": "Width of container",
       "type": "range",
@@ -88,6 +103,12 @@
       "id": "spacing-below",
       "label": "Spacing below",
       "type": "checkbox",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "text_middle",
+      "label": "Text middle",
       "default": false
     },
      {
@@ -205,6 +226,12 @@
       "label": "Heading 2",
       "type": "text",
       "default": "Image with text"
+    },
+    {
+      "type": "checkbox",
+      "id": "uppercase",
+      "label": "Uppercase",
+      "default": true
     },
     {
       "id": "description",

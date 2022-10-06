@@ -162,6 +162,24 @@
       render 'modal'
       render 'feedback-bar'
     -%}
-    
+    <style>
+      body {
+        background: #f7edec4d !important;
+      }
+      
+        {% comment %} html {
+          overflow: hidden;
+        } 
+        body {
+          height: 100vh;
+          overflow-y: scroll;
+          {% if template.name == "index" %}
+            background: url("{{ 'bg_img.png' | asset_url }}") !important;
+            background-size: cover !important;
+            background-repeat: no-repeat;
+          {% endif %}
+        }  {% endcomment %}
+      
+    </style>
   </body>
 </html>

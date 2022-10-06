@@ -72,7 +72,9 @@
         >
           {%- case block.type -%}
             {%- when 'overline' -%}
-              <div class="featured-product--overline sm--f40 fw-light uppercase ff-heading lg--f2" data-item="overline">
+              <div class="featured-product--overline sm--f40 fw-light uppercase ff-heading lg--f2" data-item="overline" style="{% unless block.settings.uppercase %}
+                text-transform: unset !important;
+              {% endunless %}">
                 {{ block.settings.text }}
               </div>
           {%- endcase -%}
@@ -121,7 +123,9 @@
         >
           {%- case block.type -%}
             {%- when 'overline' -%}
-              <div class="featured-product--overline  sm--hide sm--f16 fw-light uppercase ff-heading lg--f2" data-item="overline">
+              <div class="featured-product--overline  sm--hide sm--f16 fw-light uppercase ff-heading lg--f2" data-item="overline"  style="{% unless block.settings.uppercase %}
+                text-transform: unset !important;
+              {% endunless %}">
                 {{ block.settings.text }}
               </div>
             {%- when 'description' -%}
@@ -143,7 +147,11 @@
                 endif
               -%}
 
-              <h2 class="featured-product--heading uppercase sm--f30 ff-heading lg--f32" data-item="section-heading">
+              <h2 class="featured-product--heading uppercase sm--f30 ff-heading lg--f32" data-item="section-heading" style="text-transform: {% unless block.settings.uppercase %}
+                unset !important;
+                {% else %}
+                  uppercase;
+              {% endunless %}">
                 <a href="{{ product.url }}">{{ title }}</a>
               </h2>
 
@@ -330,6 +338,12 @@
             "id": "text",
             "type": "text",
             "default": "Overline text"
+          },
+          {
+            "type": "checkbox",
+            "id": "uppercase",
+            "label": "Text uppercase",
+            "default": true
           }
         ]
       },
@@ -337,7 +351,14 @@
         "type": "heading",
         "name": "Heading",
         "limit": 1,
-        "settings": []
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "uppercase",
+            "label": "Uppercase",
+            "default": true
+          }
+        ]
       },
       {
         "type": "vendor",

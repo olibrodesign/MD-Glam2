@@ -4,7 +4,9 @@
     <div class="custom-collections--content page-width">
         <div class="custom-collections--header__wrapper">
             {% if section.settings.title != blank %}
-                <h2 class="title lg--f2 sm--f40 ff-heading fw-light uppercase">{{ section.settings.title }}</h2>
+                <h2 class="title lg--f2 sm--f40 ff-heading fw-light uppercase" style="{% unless section.settings.uppercase %}
+                    text-transform: unset !important;
+                {% endunless %}">{{ section.settings.title }}</h2>
             {% endif %}       
             <div class="button--wrapper">
                 {% if section.settings.btn_1 != blank %}
@@ -73,6 +75,12 @@
                 "id": "title",
                 "label": "Title",
                 "default": "Listen to your skin"
+            },
+            {
+                "type": "checkbox",
+                "id": "uppercase",
+                "label": "Text uppercase",
+                "default": true
             },
             {
                 "type": "collection_list",

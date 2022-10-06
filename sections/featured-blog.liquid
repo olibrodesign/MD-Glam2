@@ -42,7 +42,9 @@
       
 
       <div class="featured-blog--header">
-        <h2 class="featured-blog--heading uppercase ff-heading lg--f2" data-item="section-heading">
+        <h2 class="featured-blog--heading uppercase ff-heading lg--f2" data-item="section-heading" style="{% unless section.settings.uppercase %}
+          text-transform: unset !important;
+      {% endunless %}">
           {{ blog_heading }}
         </h2>
         {% if view_more_text != blank %}
@@ -214,6 +216,12 @@ blogSlider();
         "type": "text",
         "default": "Blog posts"
       },
+      {
+        "type": "checkbox",
+        "id": "uppercase",
+        "label": "Text uppercase",
+        "default": true
+    },
       {
         "id": "blog",
         "label": "Choose blog",

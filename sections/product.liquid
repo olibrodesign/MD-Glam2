@@ -77,10 +77,20 @@
           </div>
 
         {%- when 'heading' -%}
-          <h2 class="product-page--heading" data-item="section-heading">
+          <h2 class="product-page--heading" data-item="section-heading" style="text-transform: {% unless block.settings.uppercase %}
+            unset !important;
+            {% else %}
+              uppercase;
+          {% endunless %}">
             {{ product.title }}
           </h2>
-
+          {%- liquid
+            if product.metafields.custom.set_count
+              echo '<div class="product--set-count">'
+              echo product.metafields.custom.set_count
+              echo ' pice set includes</div>'
+            endif
+          -%}
         {%- when 'vendor' -%}
           <div
             class="product-page--vendor"
@@ -157,7 +167,8 @@
               data-item="rte-content"
               itemprop="description"
             >
-              {{ product.description }}
+              <h5>{{product.metafields.accentuate.description_title}}</h5>
+              <p>{{product.metafields.accentuate.description}}</p>
             </div>
           {%- endunless -%}
 
@@ -254,7 +265,45 @@
       </div> {% endcomment %}
     </div>
   </div>
+  
 </product-root>
+
+<div class="product-sticky--root">
+  <div class="product--wrapper page-width">
+    <div class="product-image-title">
+      <img src="{{ product.featured_media.preview_image | img_url: '90x84' }}">
+      <h5 class="product-title">{{ product.title }}</h5>
+    </div>
+    <div class="product-price-atc">
+      <div class="product-price--wrapper">
+        <div class="product-price--original ff-body" data-item='accent-text'>
+          {{ current_variant.price | money_without_trailing_zeros }}
+        </div>
+    
+        <div
+          class="product-price--compare ff-body"
+          data-item='light-accent-text'
+          {% unless compare_enabled %}
+            style="display:none;"
+          {% else %}
+            style="display:inline-block;"
+          {% endunless %}
+        >
+          {% if compare_enabled %}
+            {{ current_variant.compare_at_price | money_without_trailing_zeros }}
+          {% endif %}
+        </div>
+      </div>
+      {%
+        render 'product-buy-buttons',
+        id: product_id,
+        product: product,
+        view_set_link: section.settings.view_set_link,
+        smart_payment_enabled: block.settings.smart-payment-enabled
+      %}
+    </div>
+  </div>
+</div>
 
 {%
   render "product--scripts",
@@ -331,7 +380,14 @@
       "type": "heading",
       "name": "Heading",
       "limit": 1,
-      "settings": []
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "uppercase",
+          "label": "Upercase heading",
+          "default": true
+        }
+      ]
     },
     {
       "type": "vendor",
@@ -468,11 +524,9 @@
           "default": "Collapsible tab"
         },
         {
-          "type": "richtext",
+          "type": "text",
           "id": "description",
-          "label": "Text",
-          "default": "<p>Use tabs to highlight unique features, <br/>sizing information, <br/>or other sales information.</p>",
-          "info": "You can use product metafields to assign content to this tab that is unique to an individual product. Learn more about [metafields](https://help.shopify.com/en/manual/metafields/displaying-metafields-on-your-online-store)."
+          "label": "Text"
         },
         {
           "type": "page",

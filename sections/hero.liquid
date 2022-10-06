@@ -1,4 +1,6 @@
-<section id="section--{{section.id}}">
+<section id="section--{{section.id}}" {% if section.settings.bg_img != blank %}
+    style="background-image: url('{{section.settings.bg_img | img_url: 'master'}}')"
+{% endif %}>
     <div class="hero__wrapper page-width">
         <div class="hero__image--wrapper">
             {% if section.settings.bg_desktop != blank %}
@@ -17,7 +19,9 @@
                 <p class="uppercase sm--f14 ff-body subtitle lg--f16">{{ section.settings.subtitle }}</p>
             {% endif %}
             {% if section.settings.title != blank %}
-                <h1 class="uppercase sm--f42 fw-light ff-heading title lg--f1">{{ section.settings.title }}</h1>
+                <h1 class="uppercase sm--f42 fw-light ff-heading title lg--f1" style="{% unless section.settings.uppercase == true %}
+                    text-transform: none !important;
+                {% endunless %}">{{ section.settings.title }}</h1>
             {% endif %}
             {% if section.settings.text != blank %}
                 <div class="text ff-body sm--f16 lg--f18">{{ section.settings.text }}</div>
@@ -93,6 +97,15 @@
     }
 </script>
 {% endif %}
+
+<style>
+    #shopify-section-header .header--root {
+        background: transparent !important;
+    }
+    #shopify-section-header .header--root.active {
+        background: var(--color-header-bg) !important;
+    }
+</style>
 {% schema %}
     {
         "name": "Hero Banner",
@@ -108,6 +121,12 @@
                 "type": "text",
                 "id": "title",
                 "label": "Title"
+            },
+            {
+                "type": "checkbox",
+                "id": "uppercase",
+                "label": "Text uppercase",
+                "default": true
             },
             {
                 "type": "richtext",
@@ -159,6 +178,11 @@
                 "type": "image_picker",
                 "id": "bg_mobile",
                 "label": "Background Image On Mobile"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_img",
+                "label": "Background image"
             },
             {
                 "type": "image_picker",

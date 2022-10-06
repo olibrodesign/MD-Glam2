@@ -1,6 +1,10 @@
-<section id="section--{{ section.id }}">
+<section id="section--{{ section.id }}" {% if section.settings.bg_img != blank %}
+    style="background-image: url('{{section.settings.bg_img | img_url: 'master'}}')"
+{% endif %}>
     {% if section.settings.title != blank %}
-        <h1 class="product-skin-title page-width fw-light uppercase sm--f40 ff-heading lg--f2">{{ section.settings.title }}</h1>
+        <h1 class="product-skin-title page-width fw-light uppercase sm--f40 ff-heading lg--f2" style="{% unless section.settings.uppercase %}
+            text-transform: unset !important;
+        {% endunless %}">{{ section.settings.title }}</h1>
     {% endif %}
     {% if section.settings.subheading != blank %}
         <h2 class="product-skin-subheading lg--f32 sm--f24 ff-heading page-width">{{ section.settings.subheading }}</h2>
@@ -151,6 +155,12 @@
                 "label": "Title"
             },
             {
+                "type": "checkbox",
+                "id": "uppercase",
+                "label": "Text uppercase",
+                "default": true
+            },
+            {
                 "type": "text",
                 "id": "subheading",
                 "label": "Sub heading",
@@ -158,13 +168,18 @@
             },
             {
                 "type": "image_picker",
-                "id": "bg_image",
+                "id": "bg_img",
                 "label": "Background image"
             },
             {
                 "type": "image_picker",
+                "id": "bg_image",
+                "label": "Stand image"
+            },
+            {
+                "type": "image_picker",
                 "id": "bg_image_mobile",
-                "label": "Background image on mobile"
+                "label": "Stand image on mobile"
             },
             {
                 "type": "image_picker",

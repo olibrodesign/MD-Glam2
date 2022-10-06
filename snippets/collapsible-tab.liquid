@@ -36,8 +36,7 @@
               {{ pages[page_content].content }}
 
             {% elsif description != blank %}
-              {{ description }}
-
+              {{ product.metafields.accentuate[description]  }}
             {% endif %}
           </div>
         </transition-root>

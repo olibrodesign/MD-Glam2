@@ -33,18 +33,30 @@
 >
   <div class="featured-text--wrapper">
   {% if mobile_heading!=blank %}
-    <h2 class="featured-text--heading-mobile uppercase sm--f40 ff-heading" data-item="section-heading">
+    <h2 class="featured-text--heading-mobile uppercase sm--f40 ff-heading" data-item="section-heading" style="text-transform: {% unless section.settings.uppercase %}
+      unset !important;
+      {% else %}
+        uppercase;
+    {% endunless %}">
         {{ mobile_heading }}
       </h2>
     {% endif %}
     {% if overline != blank %}
-      <h3 class="featured-text--overline uppercase ff-heading sm--hide lg--f2 fw-light " data-item="overline">
+      <h3 class="featured-text--overline uppercase ff-heading sm--hide lg--f2 fw-light " data-item="overline" style="text-transform: {% unless section.settings.uppercase %}
+        unset !important;
+        {% else %}
+          uppercase;
+      {% endunless %}">
         {{ overline | escape }}
       </h3>
     {% endif %}
 
     {% if heading != blank %}
-      <h2 class="featured-text--heading uppercase ff-heading sm--hide lg--f2 fw-light " data-item="section-heading">
+      <h2 class="featured-text--heading uppercase ff-heading sm--hide lg--f2 fw-light " data-item="section-heading" style="text-transform: {% unless section.settings.uppercase %}
+        unset !important;
+        {% else %}
+          uppercase;
+      {% endunless %}">
         {{ heading }}
       </h2>
     {% endif %}
@@ -174,6 +186,12 @@
         "id": "heading",
         "label": "Heading",
         "default": "Introduce your brand"
+      },
+      {
+        "type": "checkbox",
+        "id": "uppercase",
+        "label": "Uppercase title",
+        "default": true
       },
         {
       "type": "text",

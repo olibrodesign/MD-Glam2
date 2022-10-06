@@ -21,11 +21,29 @@
             {% endif %}
             {% if section.settings.show_concerns == true %}
                 <div class="concerns">
-                    <div class="concern">Normal</div>
-                    <div class="concern">Oily day</div>
-                    <div class="concern">Combination</div>
-                    <div class="concern">Sensitive</div>
-                    <div class="concern">All concern</div>
+                    {% comment %} {% assign filter_tags = '' %}
+                    {% for product in collections.all.products %}
+                        {% for tag in product.tags %}
+                            {% unless  tag contains "anti-aging" or tag contains "Nourishing & Hydrating" or tag contains "Protective & Preventative" %}
+                                {% unless filter_tags contains tag %}
+                                    {% assign filter_tags = filter_tags | append: ',' | append: tag %}
+                                {% endunless %}
+                            {% endunless %}
+                            
+                        {% endfor %}
+                    {% endfor %}
+                    {% assign filter_tags_array = filter_tags | split: ',' %}
+                    {% for tag in filter_tags_array %}
+                        {% unless tag == '' %}
+                            <div class="concern" data-tag = "{{tag}}">{{tag}}</div>
+                        {% endunless %}
+                    {% endfor %} {% endcomment %}
+                    <div class="concern" data-tag = "Fine Lines & Wrinkles">FINE LINES & WRINKLES</div>
+                    <div class="concern" data-tag = "Uneven Texture">UNEVEN TEXTURE</div>
+                    <div class="concern" data-tag = "Collagen Building">COLLAGEN BUILDING</div>
+                    <div class="concern" data-tag = "Pores & Breakouts">PORES & BREAKOUTS</div>
+                    <div class="concern" data-tag = "Hyperpigmentation">HYPERPIGMENTATION</div>
+                    <div class="concern" data-tag = "Sun Damage">SUN DAMAGE</div>
                 </div>
             {% endif %}
         </div>

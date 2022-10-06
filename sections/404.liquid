@@ -18,27 +18,232 @@
 {%- endcapture -%}
 
 <div
-  class="four-o-four--root"
+  class="main-page-container shopify-main-template--four-o-four-page four-o-four--root"
   data-section-id="{{ section.id }}"
 >
   <div class="four-o-four--wrapper">
-    <h1 class="four-o-four--heading" data-item="section-heading">
+    <h1 class="four-o-four--heading" data-item="section-heading" style="display:none;">
       {{ page_title_t }}
     </h1>
 
     <h3 class="four-o-four--info" data-item="block-heading">
-      {{ intro_t }}
+     Sorry, this page is unavailable.
     </h3>
 
     <p>
-      {{
-        'general.404.return_links_html' | t:
-        home_page_link: home_page_link, products_link: products_link
-      }}
+      The link you followed may be broken or removed.
     </p>
+    <div class="BackToShopBtn" data-item="button" style="">
+        <a href="{{ routes.all_products_collection_url }}" value="Back to Shop" style=""><span class="btnSpan" style=""> Back to Shop </span></a>
+ 
+    </div>
   </div>
 </div>
-
+<style>
+  @media (min-width: 1025px){
+    .main-page-container.shopify-main-template--four-o-four-page{
+        width: 1170px;
+        margin: 0px auto;
+    }
+    .four-o-four--root{
+        /* margin: 0 65px; */
+        margin-top: 80px !important;	
+        margin-bottom: 44px !important;	
+        padding: 0px !important;
+    }
+    .BackToShopBtn {
+      margin-top:40px;
+    }
+    .BackToShopBtn a{
+      width: 202px;
+      height: 60px;
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 0.04em;
+      /* text-transform: uppercase; */
+      color: #000000 !important;
+      background: #f7edec00 !important;
+      border-radius: 120px/20px;
+      border: 1px solid;
+      padding-top: 5px;
+    }
+    .BackToShopBtn a:hover{
+       color: #ffffff !important;
+      background: #000000 !important;
+    }
+    .BackToShopBtn a span{
+      vertical-align: middle;
+    }
+    .four-o-four--wrapper {
+       margin-top: 8px !important;
+       max-width: unset;
+        background: unset;
+        border: unset;     
+    }
+    .four-o-four--wrapper h3{    
+      /* Desktop/Spectral/H3 */    
+      font-family: 'Spectral';
+      font-style: normal;
+      font-weight: 275;
+      font-size: 56px;
+      line-height: 110%;
+      /* identical to box height, or 62px */    
+      text-align: center;
+      /* text-transform: uppercase;     */
+      color: #000000;    
+    }
+    .four-o-four--wrapper p{    
+      /* Desktop/Proxima Nova/Subtitle 2/ 32 regular */    
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 130%;
+      /* identical to box height, or 42px */    
+      text-align: center;    
+      /* Black */    
+      color: #000000;
+      margin-top: 6px;
+    }
+  }
+  @media (min-width: 678px) and (max-width: 1024px){
+    .main-page-container.shopify-main-template--four-o-four-page{
+       /* width: 1170px;
+        margin: 0px auto; */
+    }
+    .four-o-four--root{
+        margin: 0 40px;
+        margin-top: 60px !important;	
+        margin-bottom: 60px !important;	
+        padding: 0px !important;
+    }
+    .BackToShopBtn {
+      margin-top:40px;
+    }
+    .BackToShopBtn a{
+      width: 202px;
+      height: 60px;
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 0.04em;
+      /* text-transform: uppercase; */
+      color: #000000 !important;
+      background: #f7edec00 !important;
+      border-radius: 120px/20px;
+      border: 1px solid;
+      padding-top: 5px;
+    }
+    .BackToShopBtn a:hover{
+       color: #ffffff !important;
+      background: #000000 !important;
+    }
+    .BackToShopBtn a span{
+      vertical-align: middle;
+    }
+    .four-o-four--wrapper {
+       margin-top: 8px !important;
+       max-width: unset;
+        background: unset;
+        border: unset;     
+    }
+    .four-o-four--wrapper h3{    
+      /* Desktop/Spectral/H3 */    
+      font-family: 'Spectral';
+      font-style: normal;
+      font-weight: 275;
+      font-size: 30px;
+      line-height: 110%;
+      /* identical to box height, or 62px */    
+      text-align: center;
+      /* text-transform: uppercase;    */ 
+      color: #000000;    
+    }
+    .four-o-four--wrapper p{    
+      /* Desktop/Proxima Nova/Subtitle 2/ 32 regular */    
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 130%;
+      /* identical to box height, or 42px */    
+      text-align: center;    
+      /* Black */    
+      color: #000000;
+      margin-top: 6px;
+    }
+  }
+  @media (max-width: 767px){
+    .main-page-container.shopify-main-template--four-o-four-page{
+      padding-bottom: 30px !important;
+    }
+    .BackToShopBtn {
+      margin-top:40px;
+    }
+    .BackToShopBtn a{
+      width: 202px;
+      height: 60px;
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 0.04em;
+      /* text-transform: uppercase; */
+      color: #000000 !important;
+      background: #f7edec00 !important;
+      border-radius: 120px/20px;
+      border: 1px solid;
+      padding-top: 5px;
+    }
+    .BackToShopBtn a span{
+      vertical-align: middle;
+    }
+    .four-o-four--wrapper {
+      margin-top: 58px;
+      max-width: unset;
+      background: unset;
+      border: unset;  
+      padding: unset;
+    }
+    .four-o-four--wrapper h3{    
+      /* Desktop/Spectral/H3 */    
+      font-family: 'Spectral';
+      font-style: normal;
+      font-weight: 275;
+      font-size: 40px;
+      line-height: 120%;
+      /* identical to box height, or 62px */    
+      text-align: center;
+      /* text-transform: uppercase; */    
+      color: #000000;  
+      text-align: left;
+      padding-bottom : 0 !important;
+    }
+    .four-o-four--wrapper p{    
+      /* Desktop/Proxima Nova/Subtitle 2/ 32 regular */    
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 130%;
+      /* identical to box height, or 42px */    
+      text-align: center;    
+      /* Black */    
+      color: #000000;
+      margin-top: 18px;
+      text-align: left;
+    }
+  }
+</style>
 {% schema %}
   {
     "name": "404",

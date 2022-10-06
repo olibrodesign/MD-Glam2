@@ -67,7 +67,14 @@
   </div>
   {% else %}
   {% if section.settings.show_breadcrumbs == true %}
-    {% render 'breadcrumbs' %}
+    <ul class="breadcrumbs--root">
+      <li data-item="block-link">
+         <a id="breadcrumbtext" href="/">Home</a>
+      </li>
+      <li data-item="accent-text">
+            Shop
+      </li>
+   </ul>
   {% endif %}
 {% endif %}
 

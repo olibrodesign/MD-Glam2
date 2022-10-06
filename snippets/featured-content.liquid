@@ -92,7 +92,11 @@
     data-background-color="{{ bg_color }}"
   >
     {% if heading_mobile!=blank %}
-        <h3 class="Mobile-heading" id="Mobile-Heading" data-item="{{ heading_type }} {{ mobile_heading_type }}">
+        <h3 class="Mobile-heading ff-heading uppercase sm--f30" id="Mobile-Heading" data-item="{{ heading_type }} {{ mobile_heading_type }}" style="text-transform: {% unless uppercase %}
+          unset !important;
+          {% else %}
+            uppercase;
+        {% endunless %}">
               {{ heading_mobile | escape }}
             </h3>
       {% endif %}
@@ -151,17 +155,29 @@
       <div class="featured-content--text">
         <div class="featured-content--text-container">
           {% if overline != blank %}
-            <h2 class="featured-content--overline" data-item="overline">
+            <h2 class="featured-content--overline ff-heading uppercase lg--f46" data-item="overline" style="text-transform: {% unless uppercase %}
+              unset !important;
+              {% else %}
+                uppercase;
+            {% endunless %}">
               {{ overline | escape }}
             </h2>
           {% endif %}
           {% if title != blank %}
-            <h3 class="featured-content--title ff-heading uppercase lg--f46" data-item="{{ heading_type }} {{ mobile_heading_type }}">
+            <h3 class="featured-content--title ff-heading uppercase lg--f46" data-item="{{ heading_type }} {{ mobile_heading_type }}" style="text-transform: {% unless uppercase %}
+              unset !important;
+              {% else %}
+                uppercase;
+            {% endunless %}">
               {{ title | escape }}
             </h3>
           {% endif %}
       {% if title_sec != blank %}
-            <h3 class="featured-content--title ff-heading uppercase lg--f46" data-item="{{ heading_type }} {{ mobile_heading_type }}">
+            <h3 class="featured-content--title ff-heading uppercase lg--f46" data-item="{{ heading_type }} {{ mobile_heading_type }}" style="text-transform: {% unless uppercase %}
+              unset !important;
+              {% else %}
+                uppercase;
+            {% endunless %}">
               {{ title_sec | escape }}
             </h3>
           {% endif %}

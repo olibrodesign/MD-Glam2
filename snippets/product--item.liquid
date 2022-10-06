@@ -2,7 +2,7 @@
   assign color_t = 'products.color' | t
   assign compare_price_t = 'sections.onboarding.compare_price' | t
   assign from_t = 'products.from' | t
-  assign new_t = 'products.new' | t
+  assign new_t = 'products.best_seller' | t
   assign off_t = 'products.off' | t
   assign out_of_stock_t = 'products.out_of_stock' | t
   assign price_t = 'sections.onboarding.price' | t
@@ -93,7 +93,7 @@
     endcapture
     assign price = cart.currency.symbol | append: price_t
     assign title = 'sections.onboarding.product_title' | t
-    assign url = product.url | within: collection
+    assign url = product.url
     assign vendor = 'sections.onboarding.vendor' | t
 
   else
@@ -111,8 +111,8 @@
     endcapture
 
     assign title = product.title
-    assign url = product.url | within: collection
-    assign vendor = product.vendor
+    assign url = product.url
+    assign vendor = product.metafields.accentuate.subtitle
     assign price = product.price | money_without_trailing_zeros
 
     if product.compare_at_price > product.price and product.available
@@ -141,7 +141,7 @@
         elsif show_sale_label == 'show-percent'
           assign price_diff = product.compare_at_price | minus: product.price
           assign percent_diff = price_diff | times: 100 | divided_by: product.compare_at_price
-          assign sale_text = percent_diff | append: '% ' | append: off_t
+          assign sale_text = "save -" | append: percent_diff | append: '% '
         endif
 
         echo '<div class="product--label">'
@@ -250,7 +250,7 @@
         {{ hover_image }}
       {% endif %}
       {% if quick_view == true %}
-        <a class="quick_view" href="{{product.url}}">View product</a>
+        <a class="quick_view" href="{{url}}">View product</a>
       {% endif %}
       
     </div>
@@ -265,11 +265,16 @@
               echo '</div>'
             endif
 
-            echo '<p class="product--title ff-heading lg--f32 sm--f16 fw-light uppercase" data-item="paragraph">'
+            echo '<a href="'
+              echo url
+              echo '" class="product--title ff-heading lg--f32 sm--f16 fw-light uppercase" data-item="paragraph">'
               echo title
-            echo '</p>'
+            echo '</a>'
+            
             if product_description
-              echo '<p class="product--description">Reverse the ravages of time with this MD Glam Ultimate Anti-Aging Set sure to have a permanent place in your anti-aging arsenal. </p>'
+              echo '<p class="product--description">'
+              echo product.metafields.accentuate.shot_description
+              echo '</p>'
             endif
             if rating_enabled
               echo '<div class="product--rating">'
@@ -375,7 +380,6 @@
               {{ product.title }}
             </h2>
           </a>
-
           <div class="product--form--media-container">
             {%- for media in product.media -%}
               {%

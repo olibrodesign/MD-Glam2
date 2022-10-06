@@ -13,9 +13,13 @@
                 <img class="play_btn" src="{{ section.settings.play_btn | img_url: '100x100' }}" alt="{{ section.settings.play_btn.alt | escape }}">
             {% endif %}
         </div>
-        <div class="text--wrapper">
+        <div class="text--wrapper  {% if section.settings.align_center == true %}
+            sm--text-center
+        {% endif %}">
             {% if section.settings.title != blank %}
-                <h1 class="uppercase title ff-heading lg--f2 sm--f40 ">{{ section.settings.title }}</h1>
+                <h1 class="uppercase title ff-heading lg--f2 sm--f40" style="{% unless section.settings.uppercase %}
+                    text-transform: unset !important;
+                {% endunless %}">{{ section.settings.title }}</h1>
             {% endif %}
             {% if section.settings.text_image != blank %}
                 <img class="text_image lg--hide" src="{{ section.settings.text_image | img_url: '800x800' }}" alt="{{ section.settings.text_image.alt | escape }}">
@@ -39,7 +43,7 @@
             {% if section.blocks.size > 0 %}
                 <div class="icon--wrapper">
                     {% for block in section.blocks %}
-                        <img src="{{ block.settings.icon | img_url: '100x100'}}" alt="{{ block.settings.icon.alt | escape }}">
+                        <img src="{{ block.settings.icon | img_url: 'master'}}" alt="{{ block.settings.icon.alt | escape }}">
                     {% endfor %}
                 </div>
             {% endif %}
@@ -125,6 +129,20 @@
         background-repeat: no-repeat;
         background-repeat-x: repeat;
     }
+    {% if section.settings.bg_gradiant == true %}
+        #section--{{section.id}} .image-text--wrapper .image--wrapper img:not(.play_btn) {
+            background: linear-gradient(197.14deg,#ECA29B -62.11%,#FFFFFF 108.54%);
+    
+        } 
+        #section--{{section.id}} .image-text--wrapper .text--wrapper img:not(.play_btn) {
+            background: linear-gradient(197.14deg,#ECA29B -62.11%,#FFFFFF 108.54%);
+    
+        }
+        #section--{{section.id}} .image-text--wrapper .text--wrapper .icon--wrapper img {
+            background: unset;
+        }
+    {% endif %}
+    
 </style>
 {% schema %}
     {
@@ -135,6 +153,18 @@
                 "type": "text",
                 "id": "title",
                 "label": "Title"
+            },
+            {
+                "type": "checkbox",
+                "id": "align_center",
+                "label": "Text align center on mobile",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "uppercase",
+                "label": "Text uppercase",
+                "default": true
             },
             {
                 "type": "image_picker",
@@ -200,6 +230,12 @@
                 "type": "image_picker",
                 "id": "image_mobile",
                 "label": "Mobile image"
+            },
+            {
+                "type": "checkbox",
+                "id": "bg_gradiant",
+                "label": "Add gradiant",
+                "default": true
             },
             {
                 "type": "image_picker",

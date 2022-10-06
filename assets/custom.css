@@ -2,7 +2,6 @@
 .footer--block[data-block-type=subscribe] .footer--block--container {
     width: 535px !important;
 }}
-footer.footer--root {max-width: 1440px;margin: 0px auto;}	
 ul.payment-icons--list .payment-icons--item img {width: 44px;height: 28px;}	
 div#featured-text-text {text-transform: none;}	
 div#featured-text-cat p{font-weight:700;}	
@@ -15,7 +14,6 @@ span.footer--sub--shopify-link a{ font-size: 18px;}
 .footer--sub--block {width: 18%;float: left; flex:none;}	
 .footer--sub--block.payment-icons{width: 40%;}	
 @media(min-width:768px) and ( max-width:1024px){	
-  main#main-content{margin:inherit !important; padding:0px 15px;}	
   div#shopify-section-announcement .announcement--text{padding:3px 0px !important;}	
   div#shopify-section-template--16307266388222__166081576367f36c96{padding:20px 10px;}	
   div#shopify-section-template--16307266388222__16603036182e9617bf{margin-top:40px;}	
@@ -185,6 +183,7 @@ span.footer--sub--shopify-link a{ font-size: 16px;}
 }
   footer.footer--root {
     padding-top: 60px;
+    display: flow-root;
 }
 
 
@@ -469,7 +468,6 @@ text-align: left;
     background:#F7EDEC
   }
   .page--about-company ul.breadcrumbs--root {
-    background:#F7EDEC;
     padding-left: 62px;
     padding-top: 10px;
 } 
@@ -707,11 +705,11 @@ text-transform: uppercase;
 }
 
 /*   Page About Copmany CSS for > 1440 */
-  @media (min-width:1441px){
+  /* @media (min-width:1441px){
     .featured-text--wrapper {
  
     max-width: 1550px !important;
-}
+} */
     
 .featured-content--text {
     max-width: 1020px !important;
