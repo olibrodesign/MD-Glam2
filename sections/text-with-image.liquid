@@ -7,7 +7,7 @@
                 <img class="sm--hide" src="{{ section.settings.image | img_url: '800x800' }}" alt="{{ section.settings.image.alt | escape }}">
             {% endif %}
             {% if section.settings.image_mobile != blank %}
-                <img class="lg--hide" src="{{ section.settings.image_mobile | img_url: '800x800' }}" alt="{{ section.settings.image_mobile.alt | escape }}">
+                <img class="lg--hide md--hide" src="{{ section.settings.image_mobile | img_url: '800x800' }}" alt="{{ section.settings.image_mobile.alt | escape }}">
             {% endif %}
             {% if section.settings.play_btn != blank %}
                 <img class="play_btn" src="{{ section.settings.play_btn | img_url: '100x100' }}" alt="{{ section.settings.play_btn.alt | escape }}">
@@ -17,28 +17,26 @@
             sm--text-center
         {% endif %}">
             {% if section.settings.title != blank %}
-                <h1 class="uppercase title ff-heading lg--f2 sm--f40" style="{% unless section.settings.uppercase %}
+                <h2 class="uppercase title ff-heading" style="{% unless section.settings.uppercase %}
                     text-transform: unset !important;
-                {% endunless %}">{{ section.settings.title }}</h1>
+                {% endunless %}">{{ section.settings.title }}</h2>
             {% endif %}
             {% if section.settings.text_image != blank %}
-                <img class="text_image lg--hide" src="{{ section.settings.text_image | img_url: '800x800' }}" alt="{{ section.settings.text_image.alt | escape }}">
+                <img class="text_image lg--hide md--hide" src="{{ section.settings.text_image | img_url: '800x800' }}" alt="{{ section.settings.text_image.alt | escape }}">
             {% endif %}
             
             {% if section.settings.subtitle != blank %}
-                <h2 class="subtitle {% if section.settings.uppercase_subtitle %}
+                <h5 class="subtitle {% if section.settings.uppercase_subtitle %}
                     uppercase
-                {% endif %} ff-body  {% if section.settings.subtitle_size == 'normal' %}
-                    lg--f24 sm--f24
-                    {% else %}
-                        lg--f32 sm--f30
-                {% endif %}">{{ section.settings.subtitle }}</h2>
+                {% endif %} ff-body {% if section.settings.subtitle_size == 'normal' %}
+                    subtitle_normal
+                {% endif %}">{{ section.settings.subtitle }}</h5>
             {% endif %}
             {% if section.settings.text != blank %}
-                <div class="text lg--f18 ff-body sm--f16">{{ section.settings.text }}</div>
+                <div class="text ff-body fs--body">{{ section.settings.text }}</div>
             {% endif %}
             {% if section.settings.btn_text != blank %}
-                <a class="btn bg-transparent lg--f16 sm--hide uppercase" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+                <a class="btn bg-transparent lg--f16 uppercase" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
             {% endif %}
             {% if section.blocks.size > 0 %}
                 <div class="icon--wrapper">
@@ -98,10 +96,10 @@
             flex-direction: row-reverse;  
         {% endif %}
     }
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
         #section--{{section.id}} .image-text--wrapper {
             {% if section.settings.position == "left" %}
-                flex-direction: column-reverse;
+                flex-direction: column;
                 {% else %}
                 flex-direction: column;  
             {% endif %}
@@ -111,7 +109,7 @@
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom}}px;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
         #section--{{section.id}} {
             padding-top: {{ section.settings.padding_top | times: 0.7 }}px;
             padding-bottom: {{ section.settings.padding_bottom | times: 0.7}}px;
@@ -142,7 +140,11 @@
             background: unset;
         }
     {% endif %}
-    
+    {% if section.settings.position == "left" %}
+        #section--{{section.id}} .image-text--wrapper .image--wrapper{
+            justify-content: flex-start;
+        }
+    {% endif %}
 </style>
 {% schema %}
     {

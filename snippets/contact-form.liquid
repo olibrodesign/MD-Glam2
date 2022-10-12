@@ -38,38 +38,52 @@
 
   <div class="contact--right-column">
     {% form 'contact', id: form_id %}
-      <div class="contact--form-details">
+      
         <label for="{{ form_id }}-contact-name" data-item="hidden-text">
           {{ contact_name_t }}
         </label>
         <input
-          class="{% if form.errors contains 'name' %}error{% endif %}"
+          class="con-name {% if form.errors contains 'name' %}error{% endif %}"
           id="{{ form_id }}-contact-name"
           type="text"
           name="contact[name]"
           value="{{ contact.fields.name }}"
-          placeholder="{{ contact_name_t }}"
+          placeholder="{{ contact_name_t }}*"
           autocomplete="name"
           {% if form.errors contains 'name' %}
             aria-invalid="true"
           {% endif %}
         />
-
+		
+		<div class="contact--form-details">
         <label for="{{ form_id }}-contact-email" data-item="hidden-text">
           {{ contact_email_t }}
         </label>
         <input
-          class="{% if form.errors contains 'email' %}error{% endif %}"
+          class="con-email {% if form.errors contains 'email' %}error{% endif %}"
           id="{{ form_id }}-contact-email"
           type="email"
           name="contact[email]"
           value="{{ contact.fields.email }}"
-          placeholder="{{ contact_email_t }}"
+          placeholder="{{ contact_email_t }}*"
           autocomplete="email"
           {% if form.errors contains 'email' %}
             aria-invalid="true"
           {% endif %}
-          required
+          
+        />
+      
+
+        <label for="{{ form_id }}-contact-phone-number" data-item="hidden-text">
+          Phone Number
+        </label>
+        <input
+          class="con-phoneNumber contact-phone-number"
+          id="{{ form_id }}-contact-phone-number"
+          type="text"
+          name="contact-phone-number"
+          value=""
+          placeholder="Phone Number*" 
         />
       </div>
 
@@ -77,19 +91,32 @@
         {{ contact_message_t }}
       </label>
       <textarea
-        class="{% if form.errors contains 'body' %}error{% endif %}"
+        class="con-msg {% if form.errors contains 'body' %}error{% endif %}"
         id="{{ form_id }}-contact-textarea"
-        rows="5"
+        rows="1"
         cols="60"
         name="contact[body]"
-        placeholder="{{ contact_message_t }}"
-        required
+        placeholder="{{ contact_message_t }}*"
+        resize: both; contenteditable
       >{{ contact.fields.body }}</textarea>
+      <div class="agree_box" >
+      <input
+		type="checkbox"
+        class="con-agree"
+        id="{{ form_id }}-contact-agree"
+        name="contact-agree"
+         />
+		<span class="contactAgreeText" >I agree to MDGLAM Privacy policy</span>
+        <div class="agreeError" style="display:none;">Please agree to MDGLAM Privacy policy</div>
+      </div>
 
       <div class="contact--form-submit" data-item="{{ button_type }}">
-        <button type="submit" value="{{ contact_button_t }}">
+        <button type="submit" class="submitButtonReal" value="{{ contact_button_t }}" style="display:none;" >
           {{ contact_button_t }}
         </button>
+        <a fref="javascript:void(0)" class="submitButton" value="{{ contact_button_t }}">
+          {{ contact_button_t }}
+        </a>
       </div>
 
       {%- if form.posted_successfully? or form.errors -%}

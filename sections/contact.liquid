@@ -1,143 +1,704 @@
-{%- liquid
-  comment
-    "Variables"
-  endcomment
+	{%- liquid
+	  comment
+		"Variables"
+	  endcomment
 
-  assign bg_color = section.settings.background-color
-  assign container_width = section.settings.container-width
-  assign form_id = 'contact_form_' | append: section.id
-  assign facebook_url = settings.social--facebook--url
-  assign heading = section.settings.heading
-  assign instagram_url = settings.social--instagram--url
-  assign light_text = section.settings.light-text
-  assign pinterest_url = settings.social--pinterest--url
-  assign show_social_sharing = section.settings.show-social-sharing
-  assign store_address = section.settings.store-address
-  assign store_hours = section.settings.store-hours
-  assign spacing_above = section.settings.spacing-above
-  assign spacing_below = section.settings.spacing-below
-  assign tiktok_url = settings.social--tiktok--url
-  assign twitter_url = settings.social--twitter--url
-  assign vimeo_url = settings.social--vimeo--url
-  assign youtube_url = settings.social--youtube--url
+	  assign bg_color = section.settings.background-color
+	  assign container_width = section.settings.container-width
+	  assign form_id = 'contact_form_' | append: section.id
+	  assign facebook_url = settings.social--facebook--url
+	  assign heading = section.settings.heading
+	  assign instagram_url = settings.social--instagram--url
+	  assign light_text = section.settings.light-text
+	  assign pinterest_url = settings.social--pinterest--url
+	  assign show_social_sharing = section.settings.show-social-sharing
+	  assign store_address = section.settings.store-address
+	  assign store_hours = section.settings.store-hours
+	  assign spacing_above = section.settings.spacing-above
+	  assign spacing_below = section.settings.spacing-below
+	  assign tiktok_url = settings.social--tiktok--url
+	  assign twitter_url = settings.social--twitter--url
+	  assign vimeo_url = settings.social--vimeo--url
+	  assign youtube_url = settings.social--youtube--url
 
-  if facebook_url == blank and instagram_url == blank and pinterest_url == blank and tiktok_url == blank and twitter_url == blank and vimeo_url == blank and youtube_url == blank
-    assign show_social_sharing = false
-  endif
+	  if facebook_url == blank and instagram_url == blank and pinterest_url == blank and tiktok_url == blank and twitter_url == blank and vimeo_url == blank and youtube_url == blank
+		assign show_social_sharing = false
+	  endif
 
-  assign button_type = 'button'
-  if light_text
-    assign button_type = 'inverted-secondary-button'
-  endif
--%}
+	  assign button_type = 'button'
+	  if light_text
+		assign button_type = 'inverted-secondary-button'
+	  endif
+	-%}
 
-<div
-  class="contact--root"
-  data-section-id="{{ section.id }}"
-  data-background-color="{{ bg_color }}"
-  data-container-width="{{ container_width }}"
-  data-light-text="{{ light_text }}"
-  data-spacing-above="{{ spacing_above }}"
-  data-spacing-below="{{ spacing_below }}"
->
+	<div
+	  class="contact--root"
+	  data-section-id="{{ section.id }}"
+	  data-background-color="{{ bg_color }}"
+	  data-container-width="{{ container_width }}"
+	  data-light-text="{{ light_text }}"
+	  data-spacing-above="{{ spacing_above }}"
+	  data-spacing-below="{{ spacing_below }}"
+	>
 
-  <div class="contact--wrapper">
-    <div class="grid" >
-      <div class="grid-item" >
-        {% unless heading == blank %}
-          <div class="contact--header">
-            <h2 class="contact--title" data-item="section-heading">
-              {{ heading }}
-            </h2>
-          </div>
-        {% endunless %}
-      </div>
-      <div class="grid-item" >
-        {%
-          render 'contact-form',
-          store_address: store_address,
-          store_hours: store_hours,
-          form_id: form_id,
-          button_type: button_type,
-          show_social_sharing: show_social_sharing
-        %}
-      </div>
-    </div>
-  </div>
-</div>
+		<h1 class="contactUsMainTitle" "> Contact Us </h1>	
+		
+	  <div class="contact--wrapper">        
+		<div class="grid-container" >
+		  <div class="grid-item" >
+			<h2 class="contactAddressTitle"> For customer service and order inquiries, please contact us at: </h2>
+			<div class="contactAdress">
+				<div class="contactSec1" > 
+					<div class="contactEmail" >
+						<div class="emailTitle smallTitle" >EMAIL</div>
+						<div class="emailaddress smallDes" >help@mdglam.com</div>
+						<div class="emailtime" >7am-3:30pm PST, 5 Days a week</div>
+					</div>
+					<div class="contactPhone" >
+						<div class="phoneTitle smallTitle" >PHONE</div>
+						<div class="phonenumber smallDes" >1 (855) 768-0555</div>
+					</div>
+				</div>
+				<div class="contactSec2" >
+					<div class="contactOffice smallTitle" >
+						<div class="officeTitle" >Office</div>
+						<div class="officeaddress smallDes" >223 W Palm Ave, Burbank CA, 91502</div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item contact-form-grid" >
+			{% unless heading == blank %}
+			  <div class="contact--header">
+				<h2 class="contact--title" data-item="section-heading">
+				  {{ heading }}
+				</h2>
+			  </div>
+			{% endunless %}
+			{%
+			  render 'contact-form',
+			  store_address: store_address,
+			  store_hours: store_hours,
+			  form_id: form_id,
+			  button_type: button_type,
+			  show_social_sharing: show_social_sharing
+			%}
+			
+			<div class="contactBelowText">For quality assurance purposes, email transcripts and chat session transcripts are retained and monitored. For your protection and security, we do not take orders via email or chat. Customer Care representatives will not request your credit card number or any other sensitive information via email and chat. Orders may be placed securely on this website or by calling our Customer Care Center. We look forward to assisting you!</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<style>
+	@media screen and (min-width: 1025px){
+		.grid-container {
+			display: grid;
+			grid-template-columns: auto auto;
+			gap: 0 10px;
+		}
+		.contactSec1{
+			display: grid;
+			grid-template-columns: auto auto;
+			gap: 0 70px;
+			margin-top: 46px;
+		}
+		.contactSec2{
+			margin-top: 40px;
+		}
+		[data-section-id] {
+			padding: 0;
+		}
+		#main-content{
+			width: 1170px;	
+			margin: 0px auto;
+			margin-top: 13px;
+		}
 
-{% schema %}
-{
-  "name": "Contact form",
-  "settings": [
-    {
-      "id": "background-color",
-      "label": "Background color",
-      "type": "select",
-      "options": [
-        { "label": "None", "value": "none" },
-        { "label": "Light", "value": "light" },
-        { "label": "Dark", "value": "dark" },
-        { "label": "Accent", "value": "accent" }
-      ],
-      "default": "none"
-    },
-    {
-      "id": "light-text",
-      "label": "Use light text color",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "id": "container-width",
-      "label": "Width of container",
-      "type": "range",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "default": 2
-    },
-    {
-      "id": "spacing-above",
-      "label": "Spacing above",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "id": "spacing-below",
-      "label": "Spacing below",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Heading",
-      "id": "heading",
-      "type": "text",
-      "default": "Contact us"
-    },
-    {
-      "id": "store-address",
-      "type": "textarea",
-      "label": "Address",
-      "default": "391 Sutter St,\r\nSan Francisco"
-    },
-    {
-      "type": "richtext",
-      "id": "store-hours",
-      "label": "Hours",
-      "default": "<p>Monday - Friday<br>12pm - 8pm<br><br>Saturday - Sunday<br>12pm - 5pm</p>"
-    },
-    {
-      "id": "show-social-sharing",
-      "label": "Show social sharing",
-      "type": "checkbox",
-      "default": true
-    }
-  ],
-  "presets": [
-    {
-      "name": "Contact form"
-    }
-  ]
-}
-{% endschema %}
+		h2{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 130%;
+			/* or 31px */
+			color: #000000;
+			text-align: left;
+		}
+		.contactAddressTitle{
+			width: 500px;
+		}
+		.smallTitle{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 130%;
+			/* or 18px */
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			/* Black */
+			color: #000000;
+		}
+		.smallDes{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 130%;
+			/* or 23px */
+			color: #000000;
+			margin-top: 8px;
+		}
+		.emailtime{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 130%;
+			/* or 18px */
+			color: #515151;
+			margin-top: 8px;
+		}
+		.contactBelowText{
+			/* Desktop/Proxima Nova/Caption/14 light */
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 130%;
+			/* or 18px */
+
+			/* Gray */
+			color: #515151;
+
+		}
+		.contact--container input, .contact--container textarea{
+			border: none;
+			border-bottom: 1px solid;
+			outline: 0px;
+			background-color: unset;
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 130%;
+			padding: 0;
+			padding-bottom: 6px;
+			height: unset;
+		}
+		.contact--container textarea{
+			margin-bottom: 11px;
+		}
+		.contact-form-grid{
+			margin-left: 100px;
+		}
+
+		input{
+			/* Desktop/Proxima Nova/Body 2/16 regular */
+			
+		}
+		.contact-form-grid .contact--header{
+			padding-bottom: 76px;
+		}
+		.contactBelowText{
+			margin-bottom: 140px;
+		}
+
+		h1.contactUsMainTitle{
+			/* Desktop/Spectral/H1 */
+
+			font-family: 'Spectral';
+			font-style: normal;
+			font-weight: 275;
+			font-size: 110px;
+			/* identical to box height, or 121px */
+
+			text-transform: uppercase;
+
+			/* Black */
+
+			color: #000000;
+			margin-bottom: 96px !important;
+			margin-top: 3px !important;
+			line-height: 0.85em;
+		}
+	}
+	
+	@media only screen and  (min-width: 768px) and (max-width: 1024px){
+		.grid-container {
+			display: grid;
+			grid-template-columns: auto auto;
+			gap: 0 10px;
+		}
+		.contactSec1{
+			display: grid;
+			grid-template-columns: auto auto;
+			gap: 0 15px;
+			margin-top: 46px;
+		}
+		.contactSec2{
+			margin-top: 40px;
+		}
+		[data-section-id] {
+			padding: 0;
+		}
+		#main-content{
+			padding: 0 40px;
+			margin: 0px auto;
+			margin-top: 13px;
+		}
+
+		h2.contactAddressTitle, h2.contact--title{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 22px;
+			line-height: 130%;
+			/* or 31px */
+			color: #000000;
+			text-align: left;
+		}
+		.smallTitle{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 130%;
+			/* or 18px */
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			/* Black */
+			color: #000000;
+		}
+		.smallDes{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 130%;
+			/* or 23px */
+			color: #000000;
+			margin-top: 8px;
+		}
+		.emailtime{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 12px;
+			line-height: 130%;
+			/* or 18px */
+			color: #515151;
+			margin-top: 8px;
+		}
+		.contactBelowText{
+			/* Desktop/Proxima Nova/Caption/14 light */
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 130%;
+			/* or 18px */
+
+			/* Gray */
+			color: #515151;
+
+		}
+		.contact--container input, .contact--container textarea{
+			border: none;
+			border-bottom: 1px solid;
+			outline: 0px;
+			background-color: unset;
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 130%;
+			padding: 0;
+			padding-bottom: 6px;
+			height: unset;
+		}
+		.contact--container textarea{
+			margin-bottom: 11px;
+		}
+
+		input{
+			/* Desktop/Proxima Nova/Body 2/16 regular */
+			
+		}
+		.contact-form-grid .contact--header{
+			padding-bottom: 76px;
+		}
+		.contactBelowText{
+			margin-bottom: 140px;
+		}
+
+		h1.contactUsMainTitle{
+			/* Desktop/Spectral/H1 */
+
+			font-family: 'Spectral';
+			font-style: normal;
+			font-weight: 275;
+			font-size: 64px;
+			/* identical to box height, or 121px */
+
+			text-transform: uppercase;
+
+			/* Black */
+
+			color: #000000;
+			margin-bottom: 72px !important;
+			margin-top: 3px !important;
+			line-height: 0.85em;
+		}
+	}
+	
+	@media only screen and (max-width: 480px){
+		
+		.contactSec1{			
+			margin-top: 37px;
+		}
+		.contactPhone{			
+			margin-top: 32px;
+		}
+		.contactSec2{
+			margin-top: 32px;
+		}
+		[data-section-id] {
+			padding: 0;
+		}
+		#main-content{
+			padding: 0 16px;
+			margin: 0px auto;
+			margin-top: 13px;
+		}
+
+		h2.contactAddressTitle{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 130%;
+			color: #000000;
+			text-align: left;
+		}
+		
+
+		h2.contact--title{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 130%;
+			color: #000000;
+			text-align: left;
+		}
+		
+		.smallTitle{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			color: #000000;
+		}
+		.smallDes{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 130%;
+			color: #000000;
+			margin-top: 8px;
+		}
+		.emailtime{
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 130%;
+			/* or 18px */
+			color: #515151;
+			margin-top: 8px;
+		}
+		.grid-item.contact-form-grid{
+			margin-top: 46px;
+		}
+		.contactBelowText{
+			/* Desktop/Proxima Nova/Caption/14 light */
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 130%;
+			/* or 18px */
+
+			/* Gray */
+			color: #515151;
+			margin-bottom: 80px;
+
+		}
+		.contact--container input, .contact--container textarea{
+			border: none;
+			border-bottom: 1px solid;
+			outline: 0px;
+			background-color: unset;
+			font-family: 'Proxima Nova';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 130%;
+			padding: 0;
+			padding-bottom: 6px;
+			height: unset;
+		}
+		.contact--container textarea{
+			margin-bottom: 11px;
+		}
+
+		input{
+			/* Desktop/Proxima Nova/Body 2/16 regular */
+			
+		}
+		.contact-form-grid .contact--header{
+			padding-bottom: 32px;
+		}
+
+		h1.contactUsMainTitle{
+			font-family: 'Spectral';
+			font-style: normal;
+			font-weight: 275;
+			font-size: 42px;
+			line-height: 110%;
+			/* or 46px */
+
+			text-transform: uppercase;
+
+			/* Black */
+
+			color: #000000;
+			margin-bottom: 65px !important;
+			margin-top: 24px !important;
+			line-height: 0.85em;
+		}
+	}
+	
+	
+	
+	
+	
+	.inputError, input.inputError::placeholder, textarea.inputError::placeholder{
+		color: #F2A7A0;
+	}
+	input.inputError:focus-visible{
+		color: #F2A7A0;
+	}
+	.contactAgreeText{
+		font-family: 'Proxima Nova';
+		vertical-align: text-bottom;
+		font-weight: 300;
+		font-size: 14px;
+	}
+	.agreeError{
+		color: #F2A7A0;
+		position: absolute;
+	}
+	.contact--form-submit a{
+		width: 160px;
+		height: 48px;
+		font-family: 'Proxima Nova';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		text-decoration: none;
+		text-align: center;
+		letter-spacing: 0.04em;
+		/* text-transform: uppercase; */
+		color: #000000 !important;
+		background: #f7edec00 !important;
+		border-radius: 120px/20px;
+		border: 1px solid;
+		margin-top: 37px;
+		margin-bottom: 40px;
+		float: right;
+	}
+	.contact--form-submit a:hover{
+		color: #ffffff !important;
+		background: #000000 !important;
+	}
+	</style>
+	<script>
+	jQuery(document).ready(function(){
+		jQuery('form.contact-form .submitButton').click(function(event){
+			var error = 0;
+			var con_name = jQuery('.con-name').val();		
+			if(con_name == ''){
+				error = 1;
+				jQuery('.con-name').addClass('inputError');
+			}else{
+				jQuery('.con-name').removeClass('inputError');
+			}
+			
+			var con_email = jQuery('.con-email').val();
+			if(con_email == ''){
+				error = 1;
+				jQuery('.con-email').addClass('inputError');
+			}else{
+				jQuery('.con-email').removeClass('inputError');
+			}
+			
+			var con_phoneNumber = jQuery('.con-phoneNumber').val();		
+			if(con_phoneNumber == ''){
+				error = 1;
+				jQuery('.con-phoneNumber').addClass('inputError');
+			}else{
+				jQuery('.con-phoneNumber').removeClass('inputError');
+			}
+			
+			var con_msg = jQuery('.con-msg').val();	
+			if(con_msg == ''){
+				error = 1;
+				jQuery('.con-msg').addClass('inputError');
+			}else{
+				jQuery('.con-msg').removeClass('inputError');
+			}
+			
+			if(jQuery('.con-agree').is(':checked')){
+				jQuery('.agreeError').hide();
+			}else{
+				error = 1;
+				jQuery('.agreeError').show();
+			}
+			if(error == 0){
+				jQuery('.submitButtonReal').trigger('click');
+			}
+			
+		});
+		
+		jQuery('form.contact-form input.con-name').on('change keyup', function(){
+			if(jQuery(this).val() != ''){
+				jQuery(this).removeClass('inputError');
+				jQuery(this).attr("placeholder", "Name*");
+			}else{
+				jQuery(this).addClass('inputError');
+				jQuery(this).attr("placeholder", "Please enter your name*");
+			}
+		});
+		
+		jQuery('form.contact-form input.con-email').on('change keyup keydown', function(){
+			if(jQuery(this).val() != ''){
+				jQuery(this).removeClass('inputError');
+				jQuery(this).attr("placeholder", "Email*");
+			}else{
+				jQuery(this).addClass('inputError');
+				jQuery(this).attr("placeholder", "Please enter your email*");
+			}
+		});
+		
+		jQuery('form.contact-form input.con-phoneNumber').on('change keyup keydown', function(){
+			if(jQuery(this).val() != ''){
+				jQuery(this).removeClass('inputError');
+				jQuery(this).attr("placeholder", "Phone Number*");
+			}else{
+				jQuery(this).addClass('inputError');
+				jQuery(this).attr("placeholder", "Please enter your phone number*");
+			}
+		});
+		
+		jQuery('form.contact-form textarea.con-msg').on('change keyup keydown', function(){
+			if(jQuery(this).val() != ''){
+				jQuery(this).removeClass('inputError');
+				jQuery(this).attr("placeholder", "Message*");
+			}else{
+				jQuery(this).addClass('inputError');
+				jQuery(this).attr("placeholder", "Please enter your message*");
+			}
+		});
+		
+		jQuery('form.contact-form input.con-agree').on('click', function(){
+			if(jQuery(this).is(':checked')){
+				jQuery('.agreeError').hide();
+			}else{
+				jQuery('.agreeError').show();
+			}
+		});
+		
+		
+	});
+	</script>
+	{% schema %}
+	{
+	  "name": "Contact form",
+	  "settings": [
+		{
+		  "id": "background-color",
+		  "label": "Background color",
+		  "type": "select",
+		  "options": [
+			{ "label": "None", "value": "none" },
+			{ "label": "Light", "value": "light" },
+			{ "label": "Dark", "value": "dark" },
+			{ "label": "Accent", "value": "accent" }
+		  ],
+		  "default": "none"
+		},
+		{
+		  "id": "light-text",
+		  "label": "Use light text color",
+		  "type": "checkbox",
+		  "default": false
+		},
+		{
+		  "id": "container-width",
+		  "label": "Width of container",
+		  "type": "range",
+		  "min": 1,
+		  "max": 5,
+		  "step": 1,
+		  "default": 2
+		},
+		{
+		  "id": "spacing-above",
+		  "label": "Spacing above",
+		  "type": "checkbox",
+		  "default": true
+		},
+		{
+		  "id": "spacing-below",
+		  "label": "Spacing below",
+		  "type": "checkbox",
+		  "default": true
+		},
+		{
+		  "label": "Heading",
+		  "id": "heading",
+		  "type": "text",
+		  "default": "Contact us"
+		},
+		{
+		  "id": "store-address",
+		  "type": "textarea",
+		  "label": "Address",
+		  "default": "391 Sutter St,\r\nSan Francisco"
+		},
+		{
+		  "type": "richtext",
+		  "id": "store-hours",
+		  "label": "Hours",
+		  "default": "<p>Monday - Friday<br>12pm - 8pm<br><br>Saturday - Sunday<br>12pm - 5pm</p>"
+		},
+		{
+		  "id": "show-social-sharing",
+		  "label": "Show social sharing",
+		  "type": "checkbox",
+		  "default": true
+		}
+	  ],
+	  "presets": [
+		{
+		  "name": "Contact form"
+		}
+	  ]
+	}
+	{% endschema %}

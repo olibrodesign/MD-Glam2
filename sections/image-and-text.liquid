@@ -2,12 +2,12 @@
     style="background-image: url('{{section.settings.bg_img | img_url: 'master'}}')"
 {% endif %}>
     {% if section.settings.title != blank %}
-        <h1 class="product-skin-title page-width fw-light uppercase sm--f40 ff-heading lg--f2" style="{% unless section.settings.uppercase %}
+        <h2 class="product-skin-title page-width uppercase  ff-heading" style="{% unless section.settings.uppercase %}
             text-transform: unset !important;
         {% endunless %}">{{ section.settings.title }}</h1>
     {% endif %}
     {% if section.settings.subheading != blank %}
-        <h2 class="product-skin-subheading lg--f32 sm--f24 ff-heading page-width">{{ section.settings.subheading }}</h2>
+        <h5 class="product-skin-subheading ff-body page-width">{{ section.settings.subheading }}</h5>
     {% endif %}
     <div class="products--wrapper page-width">
         <div class="product-detail--wrapper active" data-id="{{block.id}}">
@@ -15,10 +15,10 @@
                 <img src="{{ section.settings.detail_image | img_url: '800x800'}}" alt="{{ section.settings.women_image.alt | escape }}">
             {% endif %}
             {% if section.settings.subtitle != blank %}
-                <h2 class="subtitle uppercase lg--f24 ff-heading">{{ section.settings.subtitle }}</h2>
+                <h5 class="subtitle ff-heading">{{ section.settings.subtitle }}</h5>
             {% endif %}
             {% if section.settings.text != blank %}
-                <div class="text lg--f18 ff-body">{{ section.settings.text }}</div>
+                <div class="text lg--f18 ff-body fs--body">{{ section.settings.text }}</div>
             {% endif %}
         </div>
         {% for block in section.blocks %}
@@ -26,12 +26,14 @@
                 {% if block.settings.detail_image != blank %}
                     <img src="{{ block.settings.detail_image | img_url: '800x800'}}" alt="{{ block.settings.women_image.alt | escape }}">
                 {% endif %}
-                {% if block.settings.subtitle != blank %}
-                    <h2 class="subtitle uppercase lg--f24 ff-heading">{{ block.settings.subtitle }}</h2>
-                {% endif %}
-                {% if block.settings.text != blank %}
-                    <div class="text lg--f18 ff-body">{{ block.settings.text }}</div>
-                {% endif %}
+                <div>
+                    {% if block.settings.subtitle != blank %}
+                        <h5 class="subtitle ff-heading">{{ block.settings.subtitle }}</h2>
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                        <div class="text fs--body ff-body">{{ block.settings.text }}</div>
+                    {% endif %}
+                </div>
             </div>
         {% endfor %}
         <div class="product--wrapper">
@@ -39,7 +41,7 @@
                 <img class="bg_image sm--hide" src="{{ section.settings.bg_image | img_url: '800x800'}}" alt="{{ section.settings.bg_image.alt | escape }}">
             {% endif %}
             {% if section.settings.bg_image_mobile != blank %}
-                <img class="bg_image lg--hide" src="{{ section.settings.bg_image_mobile | img_url: '4500x450'}}" alt="{{ section.settings.bg_image_mobile.alt | escape }}">
+                <img class="bg_image lg--hide md--hide" src="{{ section.settings.bg_image_mobile | img_url: '4500x450'}}" alt="{{ section.settings.bg_image_mobile.alt | escape }}">
             {% endif %}
             {% for block in section.blocks %}
                 <div class="product_image--wrapper" data-id="{{block.id}}">
@@ -47,7 +49,7 @@
                         <img class="product_image sm--hide" src="{{ block.settings.product_image | img_url: '800x800'}}" alt="{{ block.settings.product_image.alt | escape }}">
                     {% endif %}
                     {% if block.settings.product_image_mobile != blank %}
-                        <img class="product_image lg--hide" src="{{ block.settings.product_image_mobile | img_url: '200x200'}}" alt="{{ block.settings.product_image_mobile.alt | escape }}">
+                        <img class="product_image lg--hide md--hide" src="{{ block.settings.product_image_mobile | img_url: '200x200'}}" alt="{{ block.settings.product_image_mobile.alt | escape }}">
                     {% endif %}
                 </div>
             {% endfor %}

@@ -2,21 +2,14 @@
     style="background-image: url('{{section.settings.bg_img | img_url: 'master'}}')"
 {% endif %}>
     <div class="review-slider--wrapper page-width">
-        {% if section.settings.title_firstline != blank %}
-            <h1 class="title lg--f2 ff-heading sm--f40 uppercase" style="{% unless section.settings.uppercase %}
+        {% if section.settings.title != blank %}
+            <h2 class="title lg--f2 ff-heading sm--f40 uppercase" style="{% unless section.settings.uppercase %}
                 text-transform: unset!important;
-            {% endunless %}">{{ section.settings.title_firstline }}</h1>
+            {% endunless %}">{{ section.settings.title }}</h2>
         {% endif %}
-        <div class="title_content">
-            {% if section.settings.title_secondline %}
-                <h1 class="title lg--f2 sm--f40 ff-heading uppercase" style="{% unless section.settings.uppercase %}
-                    text-transform: unset!important;
-                {% endunless %}">{{ section.settings.title_secondline }}</h1>
-            {% endif %}
-            {% if section.settings.subtitle != blank %}
-                <div class="subtitle fw-light ff-body lg--f18 sm--f16">{{ section.settings.subtitle }}</div>
-            {% endif %}
-        </div>
+        {% if section.settings.subtitle != blank %}
+            <h5 class="subtitle ff-body">{{ section.settings.subtitle }}</h5>
+        {% endif %}
         <div class="slider--wrapper">
             <div class="slider--content">
                 {% for block in section.blocks %}
@@ -35,9 +28,9 @@
                                 </div>
                             {% endif %}
                         </div>
-                        <div class="data--wrapper">
+                        <div class="data--wrapper"> 
                             {% if block.settings.reviewer != blank %}
-                                <h4 class="reviewer lg--f24 sm--f30 ff-body uppercase">{{ block.settings.reviewer }}</h4>
+                                <h5 class="reviewer ff-body">{{ block.settings.reviewer }}</h5>
                             {% endif %}
                             <div class="star-date--wrapper">
                                 {% for I in (1..5) %}
@@ -52,7 +45,7 @@
                                     {% endif %}
                                  {% endfor %}
                                 {% if block.settings.date != blank %}
-                                    <span class="date ff-body lg--f16 sm--f14 fw-light">{{block.settings.date}}</span>
+                                    <span class="date ff-body ">{{block.settings.date}}</span>
                                 {% endif %}
                             </div>
                             <div class="data--table">
@@ -76,7 +69,7 @@
                                 {% endif %}
                             </div>
                             {% if block.settings.description != blank %}
-                                <div class="description ff-body lg--f18">
+                                <div class="description ff-body fs--body">
                                     {{ block.settings.description }}
                                 </div>
                             {% endif %}
@@ -84,7 +77,7 @@
                     </div>
                 {% endfor %}
             </div>
-            <div class="item--count">
+            <div class="item--count md--hide sm--hide">
                 <span class="position">1</span>/<span>{{ section.blocks.size }}</span>
             </div>
             <div class="scroll-bar"><div class="scroll-tumb"></div></div>
@@ -92,6 +85,10 @@
                 <img class="prev_btn" src="{{'prev_btn.png' | asset_url }}">
                 <img class="next_btn" src="{{'next_btn.png' | asset_url }}">
             </div>
+            <div class="switch--photos__tap ff-body lg--hide"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">
+                <path id="cached_FILL0_wght400_GRAD0_opsz48" d="M14.114,26.1a8.313,8.313,0,0,1-6.171-2.658A8.778,8.778,0,0,1,5.357,17.1V15.834l-2.189,2.25L2.1,16.987,6.178,12.8l4.078,4.191-1.067,1.1L7,15.834V17.1a7.138,7.138,0,0,0,2.094,5.161,6.758,6.758,0,0,0,5.022,2.152,7.753,7.753,0,0,0,1.505-.141,6.242,6.242,0,0,0,1.341-.422l1.177,1.209a7.539,7.539,0,0,1-1.984.8A8.728,8.728,0,0,1,14.114,26.1Zm7.909-4.753-4.078-4.191,1.095-1.125L21.2,18.253V17.1a7.138,7.138,0,0,0-2.093-5.161,6.758,6.758,0,0,0-5.022-2.152,7.071,7.071,0,0,0-1.505.155,10.794,10.794,0,0,0-1.341.38L10.064,9.112a7.183,7.183,0,0,1,1.984-.787A9.249,9.249,0,0,1,14.086,8.1a8.313,8.313,0,0,1,6.171,2.658A8.778,8.778,0,0,1,22.843,17.1v1.209l2.189-2.25,1.067,1.1Z" transform="translate(-2.1 -8.1)" fill="#f2a7a0"/>
+              </svg>
+              Tap to switch photos</div>
         </div>
     </div>
 </section>
@@ -118,6 +115,8 @@
         const prev_btn = document.querySelector('#section--{{ section.id }} .scroll-button .prev_btn');
         const next_btn = document.querySelector('#section--{{ section.id }} .scroll-button .next_btn');
         const scroll_content = document.querySelector('#section--{{ section.id }} .slider--content');
+        const image_content = document.querySelector('#section--{{ section.id }} .image--wrapper');
+        const tap_btn = document.querySelector('#section--{{ section.id }} .switch--photos__tap');
         const scroll_content_width = scroll_content.offsetWidth;
         const count = document.querySelector('#section--{{ section.id }} .item--count .position');
         var scroll_position = 0;
@@ -151,7 +150,9 @@
               behavior: 'smooth'
             });  
         })
-        
+        tap_btn.on('click', event=> {
+            image_content.classList.toggle('active')
+        })
     }
    
     reviewSlider();
@@ -163,13 +164,8 @@
         "settings": [
             {
                 "type": "text",
-                "id": "title_firstline",
-                "label": "First line title"
-            },
-            {
-                "type": "text",
-                "id": "title_secondline",
-                "label": "Second line title"
+                "id": "title",
+                "label": "Title"
             },
             {
                 "type": "checkbox",
@@ -178,7 +174,7 @@
                 "default": true
             },
             {
-                "type": "richtext",
+                "type": "text",
                 "id": "subtitle",
                 "label": "Subtitle"
             },

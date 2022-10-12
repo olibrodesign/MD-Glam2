@@ -72,11 +72,11 @@
         >
           {%- case block.type -%}
             {%- when 'overline' -%}
-              <div class="featured-product--overline sm--f40 fw-light uppercase ff-heading lg--f2" data-item="overline" style="{% unless block.settings.uppercase %}
+              <h2 class="featured-product--overline  uppercase ff-heading" data-item="overline" style="{% unless block.settings.uppercase %}
                 text-transform: unset !important;
               {% endunless %}">
                 {{ block.settings.text }}
-              </div>
+            </h2>
           {%- endcase -%}
         </div>
       {%- endfor -%}
@@ -105,10 +105,6 @@
             product: product
           %}
         {% endif %}
-        <div class="featured-product--slider__buttons lg--hide">
-          <img class="prev_btn" src="{{'prev_btn.png' | asset_url }}">
-          <img class="next_btn" src="{{'next_btn.png' | asset_url }}">
-        </div>
       </div>
 
     {% endif %}
@@ -123,11 +119,11 @@
         >
           {%- case block.type -%}
             {%- when 'overline' -%}
-              <div class="featured-product--overline  sm--hide sm--f16 fw-light uppercase ff-heading lg--f2" data-item="overline"  style="{% unless block.settings.uppercase %}
+              <h2 class="featured-product--overline  sm--hide md--hide w-light uppercase ff-heading" data-item="overline"  style="{% unless block.settings.uppercase %}
                 text-transform: unset !important;
               {% endunless %}">
                 {{ block.settings.text }}
-              </div>
+            </h2>
             {%- when 'description' -%}
               {%- liquid
                 assign description = product.description
@@ -135,7 +131,7 @@
                   assign description = 'sections.onboarding.product_description' | t
                 endif
               -%}
-              <div class="featured-product--description sm--f16 ff-body lg--f18" data-item="product_description">
+              <div class="featured-product--description fs--body ff-body" data-item="product_description">
                 {{ description }}
               </div>
 
@@ -147,13 +143,13 @@
                 endif
               -%}
 
-              <h2 class="featured-product--heading uppercase sm--f30 ff-heading lg--f32" data-item="section-heading" style="text-transform: {% unless block.settings.uppercase %}
+              <h4 class="featured-product--heading uppercase ff-heading" data-item="section-heading" style="text-transform: {% unless block.settings.uppercase %}
                 unset !important;
                 {% else %}
                   uppercase;
               {% endunless %}">
                 <a href="{{ product.url }}">{{ title }}</a>
-              </h2>
+              </h4>
 
             {%- when 'vendor' -%}
               {%- liquid
@@ -172,9 +168,9 @@
             {%- when 'price' -%}
               {%- if onboarding -%}
                 <div class="featured-product--price-wrapper">
-                  <span class="featured-product--price lg--f48 ff-body" data-item='light-accent-text'>
-                    <span class="lg--f24">{{- cart.currency.symbol -}}</span>{{- price_t -}}
-                  </span>
+                  <h3 class="featured-product--price ff-body" data-item='light-accent-text'>
+                    <span >{{- cart.currency.symbol -}}</span>{{- price_t -}}
+                  </h3>
                 </div>
               {%- else -%}
                 {%- render 'product-price', product: product, id: product_id -%}

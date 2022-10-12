@@ -4,7 +4,7 @@
       "type": "hero",
       "settings": {
         "subtitle": "The world’s #1 anti-aging skincare regimen",
-        "title": "Visible Results<br> In Weeks",
+        "title": "Visible Results In Weeks",
         "uppercase": false,
         "text": "<p>Luxurious, superior quality, medical-grade skincare by the leading plastic surgeon Dr. Cat<\/p>",
         "btn_text_1": "shop now",
@@ -13,10 +13,10 @@
         "btn_url_2": "",
         "star_count": 5,
         "reveiw_text": "4.9\/5 based on 1,000+ reviews",
-        "bg_desktop": "shopify:\/\/shop_images\/Untitled_3.png",
-        "bg_mobile": "shopify:\/\/shop_images\/Untitled_eb58a0e7-42c3-461b-8452-3bc7979ca297.png",
-        "play_btn": "shopify:\/\/shop_images\/Watch_video_icon_aabdef71-49ed-440f-b484-81666678b7c0.png",
-        "video": "https:\/\/player.vimeo.com\/video\/513970522"
+        "bg_desktop": "shopify:\/\/shop_images\/Banner_image.png",
+        "bg_tablet": "shopify:\/\/shop_images\/Screenshot_1.png",
+        "bg_mobile": "shopify:\/\/shop_images\/Screenshot_2.png",
+        "video": ""
       }
     },
     "1660785703f2ab5638": {
@@ -78,28 +78,81 @@
         "bg_color": "#f2a7a0"
       }
     },
-    "16607754620e16371b": {
-      "type": "text-with-image",
+    "16611039312082caaf": {
+      "type": "review-slider",
+      "blocks": {
+        "e1878941-eb35-46a0-a710-15b05917af8d": {
+          "type": "review",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/NIKOLETA-BEFORE.png",
+            "after_image": "shopify:\/\/shop_images\/NIKOLETA-AFTER.png",
+            "reviewer": "Nikoleta A.",
+            "star_count": 5,
+            "date": "February 22, 2022",
+            "age": "30s",
+            "skin_type": "Sensitive",
+            "skin_concerns": "Uneven skin tone, Rosacea",
+            "description": "<p>“I have been using MD glam for over 3 years. I do suffer from rosacea, therefore I have to be very careful with the products that I apply in my face. MD glam products are amazing. I always had issues with other sunscreens but not the MD glam. I apply it daily and it keeps my face calm and protected. There are no bumps and my face doesn’t get irritated.”<\/p>"
+          }
+        },
+        "2a804f74-59b1-415b-afe3-15c918d4af8e": {
+          "type": "review",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/KALEIGH-BEFORE.png",
+            "after_image": "shopify:\/\/shop_images\/KALEIGH-AFTER.png",
+            "reviewer": "Kaleigh M.",
+            "star_count": 5,
+            "date": "January 31, 2022",
+            "age": "30s",
+            "skin_type": "Combination",
+            "skin_concerns": "Pores, uneven skin tone",
+            "description": "<p>“I didn’t realize how visible my pores and red uneven skin tone were getting because usually I’d wear foundation or a filter and it would be covered. Since using MD GLAM Anti-Aging Kit my pores aren’t apparent, the redness has gone and my skin looks more youthful and glowing!”<\/p>"
+          }
+        },
+        "47965721-80d4-4a52-99d3-2c81aeaebda2": {
+          "type": "review",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/LUPE-BEFORE.png",
+            "after_image": "shopify:\/\/shop_images\/LUPE-AFTER.png",
+            "reviewer": "Lupe O.",
+            "star_count": 5,
+            "date": "February 22, 2022",
+            "age": "40s",
+            "skin_type": "Dry",
+            "skin_concerns": "Fine lines & wrinkles, Pores",
+            "description": "<p>“I have been using MD glam daily since October 20, 2017. The difference was obvious 7 days after which I documented in a photo. I began with the daily day and night cream and pore foaming cleanser and the scrub twice a week  I then added the sunscreen and eye serum. I will be 48 in a few days and couldn't be more proud of my skin.” <\/p>"
+          }
+        },
+        "5e73ab56-1bd7-430c-aa7e-e01c7ca86390": {
+          "type": "review",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/ESTER-BEFORE.png",
+            "after_image": "shopify:\/\/shop_images\/ESTER-AFTER.png",
+            "reviewer": "Ester T.",
+            "star_count": 5,
+            "date": "March 3, 2022",
+            "age": "20s",
+            "skin_type": "Dry",
+            "skin_concerns": "Dullness & Dehydration",
+            "description": "<p>“My skin has been feeling it from all of the traveling and movies I filmed this year, so I tried two weeks of using it and my skin feels so soft and hydrated. This kit was exactly what my skin needed!”<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "e1878941-eb35-46a0-a710-15b05917af8d",
+        "2a804f74-59b1-415b-afe3-15c918d4af8e",
+        "47965721-80d4-4a52-99d3-2c81aeaebda2",
+        "5e73ab56-1bd7-430c-aa7e-e01c7ca86390"
+      ],
       "settings": {
-        "title": "Start Before <br> It's Too Late",
-        "align_center": false,
+        "title": "Suitable for Ages 20-65+",
         "uppercase": false,
-        "video": "",
-        "subtitle": "<p>You start losing collagen in early 20s<\/p>",
-        "uppercase_subtitle": false,
-        "subtitle_size": "normal",
-        "text": "<p>Collagen production starts to decline in most people’s bodies from the time they’re in their late teens or early 20s and decreases about 1% a year. This collagen attenuation accelerates during and after menopause. Research shows, by the time you turn 50, your skin loses half of your natural collagen. Environmental exposures amplify this process.<\/p><p><\/p><p>MD GLAM products help replenish and protect the skin of its natural protectants that are depleted from environmental toxins and the aging process.<\/p>",
-        "btn_text": "Learn more",
-        "btn_url": "",
-        "image": "shopify:\/\/shop_images\/Graphic.png",
-        "image_mobile": "shopify:\/\/shop_images\/Graphik.png",
-        "bg_gradiant": false,
-        "position": "left",
+        "subtitle": "Before & after photos by real MD GLAM users. Results may vary.",
         "bg_img": "shopify:\/\/shop_images\/new_bg_img.png",
-        "padding_top": 170,
-        "padding_bottom": 90,
-        "padding_top_mobile": 80,
-        "padding_bottom_mobile": 30
+        "padding_top": 130,
+        "padding_bottom": 130,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
       }
     },
     "1660777035c35bcd51": {
@@ -111,7 +164,7 @@
         "video": "https:\/\/player.vimeo.com\/video\/513970522",
         "subtitle": "<p>Beverly Hills Plastic Surgeon & MD GLAM creator<\/p>",
         "uppercase_subtitle": false,
-        "subtitle_size": "normal",
+        "subtitle_size": "large",
         "text": "<p>Dr. Cat has dedicated her life to helping women feel and look their best. Her message to the world embodies the essence of self-compassion and self-care. Dr. Cat’s extensive scientific research in anti-aging and skincare started after majoring with honors in Molecular and Cellular Biology at Harvard.<\/p><p><\/p><p>After a successful career in Plastic Surgery and many years of research she decided to launch MD GLAM - a natural evolutionary process of her passion for beauty and anti-aging. The complexity of her beauty journey was narrowed down to a simple skincare philosophy; create simple, effective, safe, feel good, smell good, skinare regimen that really works.<\/p>",
         "btn_text": "Read more",
         "btn_url": "",
@@ -120,10 +173,10 @@
         "bg_gradiant": true,
         "play_btn": "shopify:\/\/shop_images\/Watch_video_icon_aabdef71-49ed-440f-b484-81666678b7c0.png",
         "position": "right",
-        "padding_top": 60,
-        "padding_bottom": 30,
+        "padding_top": 130,
+        "padding_bottom": 130,
         "padding_top_mobile": 70,
-        "padding_bottom_mobile": 10
+        "padding_bottom_mobile": 70
       }
     },
     "1660847051723d4e9d": {
@@ -240,10 +293,10 @@
         "detail_image": "shopify:\/\/shop_images\/Image_6_3e5827ba-60b1-4210-868c-d32bcd95452d.png",
         "subtitle": "Deep Pore Foaming Cleanser: Refresh skin and unclog pores",
         "text": "<p>Clarify skin and cleanse pores with our invigorating foaming cleanser formulated to wash away impurities, remove dirt, oil & makeup. Packed with minerals to detoxify skin and gentle, long-lasting moisturizers for refreshed, supple, smooth skin. Daily cleansing to rely on.<\/p>",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "padding_top": 130,
+        "padding_bottom": 130,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
       }
     },
     "1640181507ee260ca6": {
@@ -270,7 +323,7 @@
         "164018150735c4d43c-1": {
           "type": "heading",
           "settings": {
-            "uppercase": true
+            "uppercase": false
           }
         },
         "6886f409-4fe7-458a-9998-1a9cfd6ce9d2": {
@@ -357,227 +410,6 @@
         "view_all_btn_url": "shopify:\/\/collections\/all"
       }
     },
-    "166087916346dbba2a": {
-      "type": "text-with-image",
-      "settings": {
-        "title": "Which Skin Type Is Good For?",
-        "align_center": false,
-        "uppercase": false,
-        "video": "",
-        "subtitle": "<p>Normal | Oily | Combination | Dry | Sensitive<\/p>",
-        "uppercase_subtitle": false,
-        "subtitle_size": "normal",
-        "text": "<p>We’re here to help! Take this one-minute skin quiz to find your perfect skincare routine.<\/p>",
-        "btn_text": "TAKE SKIN QUIZ",
-        "btn_url": "",
-        "image": "shopify:\/\/shop_images\/Image_colage.png",
-        "image_mobile": "shopify:\/\/shop_images\/Image_colage.png",
-        "bg_gradiant": true,
-        "position": "right",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
-    "16609851618168eacc": {
-      "type": "image-with-accordion",
-      "blocks": {
-        "768e64f5-05f5-47a1-9af0-6d0e911fa2b4": {
-          "type": "accordion",
-          "settings": {
-            "accordion_header": "Anti-aging",
-            "accordion_body": "<p>Slowing down the aging process Anti-aging - slowing down the clock by building collagen, protecting against environmental toxins that injure the skin causing fine lines and wrinkles, sagging skin, hyperpigmen tation, lack of elasticity, and large pores. <\/p>\n<p>\nCollagen production starts to decrease in most people's bodies from the time they're in their late teens or early 20s and decreases about 1% each year. This collagen attenuation picks up pace during and after menopause.<\/p>\n<ul>\n<li>Increases hydration and suppleness<\/li>\n<li>Improved texture<\/li>\n<li>Evening the pigmentation<\/li>\n<li>Improved overall skin appearance <\/li>\n<\/ul>",
-            "image_mobile": "shopify:\/\/shop_images\/ezgifcomgifmaker-1657189220136.gif"
-          }
-        },
-        "381933df-2ca6-4414-9a17-b8234abe1aa0": {
-          "type": "accordion",
-          "settings": {
-            "accordion_header": "Nourishing",
-            "accordion_body": "<p>Slowing down the aging process Anti-aging - slowing down the clock by building collagen, protecting against environmental toxins that injure the skin causing fine lines and wrinkles, sagging skin, hyperpigmen tation, lack of elasticity, and large pores. <\/p>\n<p>\nCollagen production starts to decrease in most people's bodies from the time they're in their late teens or early 20s and decreases about 1% each year. This collagen attenuation picks up pace during and after menopause.<\/p>\n<ul>\n<li>Increases hydration and suppleness<\/li>\n<li>Improved texture<\/li>\n<li>Evening the pigmentation<\/li>\n<li>Improved overall skin appearance <\/li>\n<\/ul>",
-            "image_mobile": "shopify:\/\/shop_images\/ezgifcomgifmaker-1657189220136.gif"
-          }
-        },
-        "6bbb676d-e3bd-4f56-9ec9-1148f7710c12": {
-          "type": "accordion",
-          "settings": {
-            "accordion_header": "Preventative & Protective",
-            "accordion_body": "<p>Slowing down the aging process Anti-aging - slowing down the clock by building collagen, protecting against environmental toxins that injure the skin causing fine lines and wrinkles, sagging skin, hyperpigmen tation, lack of elasticity, and large pores. <\/p>\n<p>\nCollagen production starts to decrease in most people's bodies from the time they're in their late teens or early 20s and decreases about 1% each year. This collagen attenuation picks up pace during and after menopause.<\/p>\n<ul>\n<li>Increases hydration and suppleness<\/li>\n<li>Improved texture<\/li>\n<li>Evening the pigmentation<\/li>\n<li>Improved overall skin appearance <\/li>\n<\/ul>",
-            "image_mobile": "shopify:\/\/shop_images\/ezgifcomgifmaker-1657189220136.gif"
-          }
-        }
-      },
-      "block_order": [
-        "768e64f5-05f5-47a1-9af0-6d0e911fa2b4",
-        "381933df-2ca6-4414-9a17-b8234abe1aa0",
-        "6bbb676d-e3bd-4f56-9ec9-1148f7710c12"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/ezgifcomgifmaker-1657189220136.gif",
-        "bg_img": "shopify:\/\/shop_images\/new_bg_img.png",
-        "title": "Skincare That Works for You Around the Clock",
-        "uppercase": false,
-        "position": "left",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
-    "16611039312082caaf": {
-      "type": "review-slider",
-      "blocks": {
-        "e1878941-eb35-46a0-a710-15b05917af8d": {
-          "type": "review",
-          "settings": {
-            "before_image": "shopify:\/\/shop_images\/NIKOLETA-BEFORE.png",
-            "after_image": "shopify:\/\/shop_images\/NIKOLETA-AFTER.png",
-            "reviewer": "Nikoleta A.",
-            "star_count": 5,
-            "date": "February 22, 2022",
-            "age": "30s",
-            "skin_type": "Sensitive",
-            "skin_concerns": "Uneven skin tone, Rosacea",
-            "description": "<p>“I have been using MD glam for over 3 years. I do suffer from rosacea, therefore I have to be very careful with the products that I apply in my face. MD glam products are amazing. I always had issues with other sunscreens but not the MD glam. I apply it daily and it keeps my face calm and protected. There are no bumps and my face doesn’t get irritated.”<\/p>"
-          }
-        },
-        "2a804f74-59b1-415b-afe3-15c918d4af8e": {
-          "type": "review",
-          "settings": {
-            "before_image": "shopify:\/\/shop_images\/KALEIGH-BEFORE.png",
-            "after_image": "shopify:\/\/shop_images\/KALEIGH-AFTER.png",
-            "reviewer": "Kaleigh M.",
-            "star_count": 5,
-            "date": "January 31, 2022",
-            "age": "30s",
-            "skin_type": "Combination",
-            "skin_concerns": "Pores, uneven skin tone",
-            "description": "<p>“I didn’t realize how visible my pores and red uneven skin tone were getting because usually I’d wear foundation or a filter and it would be covered. Since using MD GLAM Anti-Aging Kit my pores aren’t apparent, the redness has gone and my skin looks more youthful and glowing!”<\/p>"
-          }
-        },
-        "47965721-80d4-4a52-99d3-2c81aeaebda2": {
-          "type": "review",
-          "settings": {
-            "before_image": "shopify:\/\/shop_images\/LUPE-BEFORE.png",
-            "after_image": "shopify:\/\/shop_images\/LUPE-AFTER.png",
-            "reviewer": "Lupe O.",
-            "star_count": 5,
-            "date": "February 22, 2022",
-            "age": "40s",
-            "skin_type": "Dry",
-            "skin_concerns": "Fine lines & wrinkles, Pores",
-            "description": "<p>“I have been using MD glam daily since October 20, 2017. The difference was obvious 7 days after which I documented in a photo. I began with the daily day and night cream and pore foaming cleanser and the scrub twice a week  I then added the sunscreen and eye serum. I will be 48 in a few days and couldn't be more proud of my skin.” <\/p>"
-          }
-        },
-        "5e73ab56-1bd7-430c-aa7e-e01c7ca86390": {
-          "type": "review",
-          "settings": {
-            "before_image": "shopify:\/\/shop_images\/ESTER-BEFORE.png",
-            "after_image": "shopify:\/\/shop_images\/ESTER-AFTER.png",
-            "reviewer": "Ester T.",
-            "star_count": 5,
-            "date": "March 3, 2022",
-            "age": "20s",
-            "skin_type": "Dry",
-            "skin_concerns": "Dullness & Dehydration",
-            "description": "<p>“My skin has been feeling it from all of the traveling and movies I filmed this year, so I tried two weeks of using it and my skin feels so soft and hydrated. This kit was exactly what my skin needed!”<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "e1878941-eb35-46a0-a710-15b05917af8d",
-        "2a804f74-59b1-415b-afe3-15c918d4af8e",
-        "47965721-80d4-4a52-99d3-2c81aeaebda2",
-        "5e73ab56-1bd7-430c-aa7e-e01c7ca86390"
-      ],
-      "settings": {
-        "title_firstline": "Suitable for",
-        "title_secondline": "Ages 20-65+",
-        "uppercase": false,
-        "subtitle": "<p>Before & after photos by real MD GLAM users. Results may vary.  <\/p>",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
-    "1661148303de44f237": {
-      "type": "text-with-image",
-      "blocks": {
-        "9fdf0576-f416-44c8-a7c6-dfd4234fc519": {
-          "type": "icon",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/Frame_11833_1.png"
-          }
-        },
-        "c9e0eb3d-2bb2-4219-a61d-c8d49c7bd889": {
-          "type": "icon",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/TESTING_1.png"
-          }
-        },
-        "920cda09-793e-4702-8b75-9411e0b4fc05": {
-          "type": "icon",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/PARABEN_1.png"
-          }
-        },
-        "993b9afd-bbab-481f-8844-5a897c0877c0": {
-          "type": "icon",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/SULFATE_1.png"
-          }
-        }
-      },
-      "block_order": [
-        "9fdf0576-f416-44c8-a7c6-dfd4234fc519",
-        "c9e0eb3d-2bb2-4219-a61d-c8d49c7bd889",
-        "920cda09-793e-4702-8b75-9411e0b4fc05",
-        "993b9afd-bbab-481f-8844-5a897c0877c0"
-      ],
-      "settings": {
-        "title": "Our Promise",
-        "align_center": false,
-        "uppercase": false,
-        "text_image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1.png",
-        "video": "",
-        "subtitle": "<p>Risk free, Money <em>back guarantee<\/em><\/p><p><em>free shipping<\/em><\/p><p>Award winning <em>customer service<\/em><\/p>",
-        "uppercase_subtitle": true,
-        "subtitle_size": "large",
-        "text": "<p>“We are committed to the highest standards of quality, ethics, and integrity. We simply don’t want to do anything without high quality. If for any reason you're not completely satisfied with our products, just return the containers within 60 days of receipt, and you'll get a full refund (minus shipping and handling). Please let us know how we can be better. Your opinion matters\" - Love, Dr. Cat<\/p><p><\/p><p><strong>Dr. Cat<\/strong><\/p><p><em>(Board-Certified Plastic Surgeon,<\/em><\/p><p><em> Founder of MD GLAM)<\/em><\/p>",
-        "btn_text": "",
-        "btn_url": "",
-        "image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1.png",
-        "bg_gradiant": true,
-        "position": "left",
-        "bg_img": "shopify:\/\/shop_images\/new_bg_img.png",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
-    "166180561442fb65a1": {
-      "type": "custom-featured-collections",
-      "settings": {
-        "title": "Quality, Luxury, Simplicity",
-        "uppercase": false,
-        "collections": [
-          "anti-aging",
-          "nourishing-hydrating",
-          "preventative-protective"
-        ],
-        "btn_1": "Shop all products",
-        "btn_url_1": "shopify:\/\/collections\/all",
-        "btn_2": "Take skin quiz",
-        "btn_url_2": "",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
-      }
-    },
     "1661155104d6d4c851": {
       "type": "testmimonials",
       "blocks": {
@@ -623,11 +455,111 @@
       "settings": {
         "title": "People Love Us",
         "uppercase": false,
+        "padding_top": 130,
+        "padding_bottom": 130,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "f4b3c5b0-6b1f-4c25-af9f-36e68b38a18e": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "none",
         "bg_img": "shopify:\/\/shop_images\/new_bg_img.png",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "mobile-heading": "",
+        "overline": "",
+        "heading": "Quality, Luxury, Simplicity",
+        "uppercase": false,
+        "html5_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f66fd43b62524e4aa3f2cda04de11829.mp4",
+        "html5_video_M": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/00b16272ee7540f99039ceec3d14a88d.mp4",
+        "text": "",
+        "text-1": "",
+        "text-2": "",
+        "button-name": "",
+        "button-url": ""
+      }
+    },
+    "1661148303de44f237": {
+      "type": "text-with-image",
+      "blocks": {
+        "9fdf0576-f416-44c8-a7c6-dfd4234fc519": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_11833_1.png"
+          }
+        },
+        "c9e0eb3d-2bb2-4219-a61d-c8d49c7bd889": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/TESTING_1.png"
+          }
+        },
+        "920cda09-793e-4702-8b75-9411e0b4fc05": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/PARABEN_1.png"
+          }
+        },
+        "993b9afd-bbab-481f-8844-5a897c0877c0": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/SULFATE_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "9fdf0576-f416-44c8-a7c6-dfd4234fc519",
+        "c9e0eb3d-2bb2-4219-a61d-c8d49c7bd889",
+        "920cda09-793e-4702-8b75-9411e0b4fc05",
+        "993b9afd-bbab-481f-8844-5a897c0877c0"
+      ],
+      "settings": {
+        "title": "Our Promise",
+        "align_center": false,
+        "uppercase": false,
+        "text_image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1.png",
+        "video": "",
+        "subtitle": "<p>Risk free<\/p><p>Money back guarantee<\/p><p>free shipping<\/p><p>Award winning customer service<\/p>",
+        "uppercase_subtitle": true,
+        "subtitle_size": "normal",
+        "text": "<p>“We are committed to the highest standards of quality, ethics, and integrity. We simply don’t want to do anything without high quality. If for any reason you're not completely satisfied with our products, just return the containers within 60 days of receipt, and you'll get a full refund (minus shipping and handling). Please let us know how we can be better. Your opinion matters\" - Love, Dr. Cat<\/p><p><\/p><p><strong>Dr. Cat<\/strong><\/p><p><em>(Board-Certified Plastic Surgeon, Founder of MD GLAM)<\/em><\/p>",
+        "btn_text": "",
+        "btn_url": "",
+        "image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1.png",
+        "bg_gradiant": true,
+        "position": "left",
+        "padding_top": 130,
+        "padding_bottom": 130,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "16607754620e16371b": {
+      "type": "text-with-image",
+      "settings": {
+        "title": "Start Before It's Too Late",
+        "align_center": false,
+        "uppercase": false,
+        "video": "",
+        "subtitle": "<p>You start losing collagen in early 20s<\/p>",
+        "uppercase_subtitle": false,
+        "subtitle_size": "large",
+        "text": "<p>Collagen production starts to decline in most people’s bodies from the time they’re in their late teens or early 20s and decreases about 1% a year. This collagen attenuation accelerates during and after menopause. Research shows, by the time you turn 50, your skin loses half of your natural collagen. Environmental exposures amplify this process.<\/p><p><\/p><p>MD GLAM products help replenish and protect the skin of its natural protectants that are depleted from environmental toxins and the aging process.<\/p>",
+        "btn_text": "Learn more",
+        "btn_url": "",
+        "image": "shopify:\/\/shop_images\/Graphic.png",
+        "image_mobile": "shopify:\/\/shop_images\/Graphik.png",
+        "bg_gradiant": false,
+        "position": "left",
+        "bg_img": "shopify:\/\/shop_images\/new_bg_img.png",
+        "padding_top": 130,
+        "padding_bottom": 130,
+        "padding_top_mobile": 70,
+        "padding_bottom_mobile": 70
       }
     },
     "16611800537bded43a": {
@@ -639,12 +571,104 @@
         "spacing-above": true,
         "spacing-below": true,
         "blog-heading": "Latest from Our Blog",
+        "subheading": "Best Skincare Tips from Our Experts",
         "uppercase": false,
         "blog": "news",
         "tag-select": "pinned",
-        "show-date": true,
+        "show-date": false,
         "show-excerpt": true,
-        "view-more-text": "View all post",
+        "view-more-text": "",
+        "padding_top": 130,
+        "padding_bottom": 130,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "166087916346dbba2a": {
+      "type": "text-with-image",
+      "disabled": true,
+      "settings": {
+        "title": "Which Skin Type Is Good For?",
+        "align_center": false,
+        "uppercase": false,
+        "video": "",
+        "subtitle": "<p>Normal | Oily | Combination | Dry | Sensitive<\/p>",
+        "uppercase_subtitle": false,
+        "subtitle_size": "normal",
+        "text": "<p>We’re here to help! Take this one-minute skin quiz to find your perfect skincare routine.<\/p>",
+        "btn_text": "TAKE SKIN QUIZ",
+        "btn_url": "",
+        "image": "shopify:\/\/shop_images\/Image_colage.png",
+        "image_mobile": "shopify:\/\/shop_images\/Image_colage.png",
+        "bg_gradiant": true,
+        "position": "right",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "16609851618168eacc": {
+      "type": "image-with-accordion",
+      "disabled": true,
+      "blocks": {
+        "768e64f5-05f5-47a1-9af0-6d0e911fa2b4": {
+          "type": "accordion",
+          "settings": {
+            "accordion_header": "Anti-aging",
+            "accordion_body": "<p>Slowing down the aging process Anti-aging - slowing down the clock by building collagen, protecting against environmental toxins that injure the skin causing fine lines and wrinkles, sagging skin, hyperpigmen tation, lack of elasticity, and large pores. <\/p>\n<p>\nCollagen production starts to decrease in most people's bodies from the time they're in their late teens or early 20s and decreases about 1% each year. This collagen attenuation picks up pace during and after menopause.<\/p>\n<ul>\n<li>Increases hydration and suppleness<\/li>\n<li>Improved texture<\/li>\n<li>Evening the pigmentation<\/li>\n<li>Improved overall skin appearance <\/li>\n<\/ul>",
+            "image_mobile": "shopify:\/\/shop_images\/ezgifcomgifmaker-1657189220136.gif"
+          }
+        },
+        "381933df-2ca6-4414-9a17-b8234abe1aa0": {
+          "type": "accordion",
+          "settings": {
+            "accordion_header": "Nourishing",
+            "accordion_body": "<p>Slowing down the aging process Anti-aging - slowing down the clock by building collagen, protecting against environmental toxins that injure the skin causing fine lines and wrinkles, sagging skin, hyperpigmen tation, lack of elasticity, and large pores. <\/p>\n<p>\nCollagen production starts to decrease in most people's bodies from the time they're in their late teens or early 20s and decreases about 1% each year. This collagen attenuation picks up pace during and after menopause.<\/p>\n<ul>\n<li>Increases hydration and suppleness<\/li>\n<li>Improved texture<\/li>\n<li>Evening the pigmentation<\/li>\n<li>Improved overall skin appearance <\/li>\n<\/ul>",
+            "image_mobile": "shopify:\/\/shop_images\/ezgifcomgifmaker-1657189220136.gif"
+          }
+        },
+        "6bbb676d-e3bd-4f56-9ec9-1148f7710c12": {
+          "type": "accordion",
+          "settings": {
+            "accordion_header": "Preventative & Protective",
+            "accordion_body": "<p>Slowing down the aging process Anti-aging - slowing down the clock by building collagen, protecting against environmental toxins that injure the skin causing fine lines and wrinkles, sagging skin, hyperpigmen tation, lack of elasticity, and large pores. <\/p>\n<p>\nCollagen production starts to decrease in most people's bodies from the time they're in their late teens or early 20s and decreases about 1% each year. This collagen attenuation picks up pace during and after menopause.<\/p>\n<ul>\n<li>Increases hydration and suppleness<\/li>\n<li>Improved texture<\/li>\n<li>Evening the pigmentation<\/li>\n<li>Improved overall skin appearance <\/li>\n<\/ul>",
+            "image_mobile": "shopify:\/\/shop_images\/ezgifcomgifmaker-1657189220136.gif"
+          }
+        }
+      },
+      "block_order": [
+        "768e64f5-05f5-47a1-9af0-6d0e911fa2b4",
+        "381933df-2ca6-4414-9a17-b8234abe1aa0",
+        "6bbb676d-e3bd-4f56-9ec9-1148f7710c12"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ezgifcomgifmaker-1657189220136.gif",
+        "bg_img": "shopify:\/\/shop_images\/new_bg_img.png",
+        "title": "Skincare That Works for You Around the Clock",
+        "uppercase": false,
+        "position": "left",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "166180561442fb65a1": {
+      "type": "custom-featured-collections",
+      "disabled": true,
+      "settings": {
+        "title": "Quality, Luxury, Simplicity",
+        "uppercase": false,
+        "collections": [
+          "anti-aging",
+          "nourishing-hydrating",
+          "preventative-protective"
+        ],
+        "btn_1": "Shop all products",
+        "btn_url_1": "shopify:\/\/collections\/all",
+        "btn_2": "Take skin quiz",
+        "btn_url_2": "",
         "padding_top": 50,
         "padding_bottom": 50,
         "padding_top_mobile": 20,
@@ -655,17 +679,18 @@
   "order": [
     "1660762024bfb708fc",
     "1660785703f2ab5638",
-    "16607754620e16371b",
+    "16611039312082caaf",
     "1660777035c35bcd51",
     "1660847051723d4e9d",
     "1640181507ee260ca6",
     "1660875395251086fb",
+    "1661155104d6d4c851",
+    "f4b3c5b0-6b1f-4c25-af9f-36e68b38a18e",
+    "1661148303de44f237",
+    "16607754620e16371b",
+    "16611800537bded43a",
     "166087916346dbba2a",
     "16609851618168eacc",
-    "16611039312082caaf",
-    "1661148303de44f237",
-    "166180561442fb65a1",
-    "1661155104d6d4c851",
-    "16611800537bded43a"
+    "166180561442fb65a1"
   ]
 }

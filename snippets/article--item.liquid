@@ -45,16 +45,16 @@
           {% endif %}
         </div>
       {% endif %}
-      <h3 class="article--item--heading" data-item="block-heading">
+      <h5 class="article--item--heading ff-heading" data-item="block-heading">
         <a href="{{ featured_article.url }}">
           {{ featured_article.title }}
         </a>
-      </h3>
+      </h5>
 
       
 
       {% if show_excerpt %}
-        <div class="article--item--excerpt" data-item="paragraph">
+        <div class="article--item--excerpt ff-body fs--body" data-item="paragraph">
           {% if featured_article.excerpt == blank %}
             {{ featured_article.content | strip_html | truncate: 100 }}
           {% else %}
@@ -73,9 +73,9 @@
         {% render "placeholder", type: "image" %}
       </div>
 
-      <h3 class="article--item--heading" data-item="block-heading">
+      <h5 class="article--item--heading ff-heading" data-item="block-heading">
         {{ article_item_title_t }}
-      </h3>
+      </h5>
 
       {% if show_date %}
         <div class="article--item--date" data-item="light-accent-text">
@@ -84,7 +84,7 @@
       {% endif %}
 
       {% if show_excerpt %}
-        <div class="article--item--excerpt" data-item="paragraph">
+        <div class="article--item--excerpt fs--body ff-body" data-item="paragraph">
           {{ article_excerpt_t }}
         </div>
       {% endif %}

@@ -23,15 +23,18 @@
 {% comment %} View {% endcomment %}
 <div
   id="section--{{section.id}}"
-  class="featured-text--root sm-page-width"
+  class="featured-text--root"
   data-section-id="{{ section.id }}"
   data-background-color="{{ bg_color }}"
   data-container-width="{{ container_width }}"
   data-light-text="{{ light_text }}"
   data-spacing-above="{{ spacing_above }}"
   data-spacing-below="{{ spacing_below }}"
+  style="display:block; {% if section.settings.bg_img != blank %}
+    background-image: url('{{section.settings.bg_img | img_url: 'master'}}')
+{% endif %}"
 >
-  <div class="featured-text--wrapper">
+  <div class="featured-text--wrapper  sm-page-width">
   {% if mobile_heading!=blank %}
     <h2 class="featured-text--heading-mobile uppercase sm--f40 ff-heading" data-item="section-heading" style="text-transform: {% unless section.settings.uppercase %}
       unset !important;
@@ -52,7 +55,7 @@
     {% endif %}
 
     {% if heading != blank %}
-      <h2 class="featured-text--heading uppercase ff-heading sm--hide lg--f2 fw-light " data-item="section-heading" style="text-transform: {% unless section.settings.uppercase %}
+      <h2 class="featured-text--heading uppercase ff-heading lg--f2 fw-light " data-item="section-heading" style="text-transform: {% unless section.settings.uppercase %}
         unset !important;
         {% else %}
           uppercase;
@@ -89,7 +92,7 @@
           </video>
        
           
-          <iframe id="video_id_mobile"  class="featured-video--play-mobile lg--hide" src="{{html5_video_M}}" width="352" height="390" frameborder="0" allow="autoplay; encrypted-media"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  
+          <iframe id="video_id_mobile"  class="featured-video--play-mobile lg--hide" src="{{html5_video_M}}" width="352" height="390" frameborder="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  
 
   
       
@@ -137,6 +140,11 @@
           { "label": "Accent", "value": "accent" }
         ],
         "default": "none"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_img",
+        "label": "Background image"
       },
       {
         "id": "light-text",

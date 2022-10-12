@@ -13,6 +13,7 @@
     },
     "1632436597fbc1d0e4": {
       "type": "image-with-text",
+      "disabled": true,
       "settings": {
         "text-color": "auto",
         "background-color": "none",
@@ -45,6 +46,7 @@
     },
     "16324378141979f11c": {
       "type": "featured-text",
+      "disabled": true,
       "settings": {
         "background-color": "none",
         "light-text": false,
@@ -70,11 +72,11 @@
         "background-color": "none",
         "light-text": false,
         "container-width": 4,
-        "spacing-above": false,
+        "spacing-above": true,
         "spacing-below": true,
-        "heading": "",
-        "store-address": "842 Beech Street\nMountain View, CA 94041",
-        "store-hours": "<p>Monday - Friday<br\/>12pm - 8pm<br\/><br\/>Saturday - Sunday<br\/>12pm - 5pm<\/p>",
+        "heading": "Or you can use contact form",
+        "store-address": "",
+        "store-hours": "",
         "show-social-sharing": true
       }
     }

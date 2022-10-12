@@ -42,13 +42,18 @@
       
 
       <div class="featured-blog--header">
-        <h2 class="featured-blog--heading uppercase ff-heading lg--f2" data-item="section-heading" style="{% unless section.settings.uppercase %}
-          text-transform: unset !important;
-      {% endunless %}">
-          {{ blog_heading }}
-        </h2>
+        <div>
+          <h2 class="featured-blog--heading uppercase ff-heading lg--f2" data-item="section-heading" style="{% unless section.settings.uppercase %}
+            text-transform: unset !important;
+            {% endunless %}">
+            {{ blog_heading }}
+          </h2>
+          {% if section.settings.subheading != blank %}
+            <h5 class="subheading ff-body">{{ section.settings.subheading }}</h5>
+          {% endif %}
+        </div>
         {% if view_more_text != blank %}
-            <a class="btn" data-item="{{ button_type }}" href="{{ blog.url }}">
+            <a class="btn ff-body" data-item="{{ button_type }}" href="{{ blog.url }}">
               <div>{{ view_more_text }}</div>
             </a>
           
@@ -98,9 +103,7 @@
       -%}
     </div>
     <div class="lg--hide scroll-controller">
-      <div class="item--count">
-          <span class="position">1</span>/<span>{{ blog.articles.size }}</span>
-      </div>
+      
       <div class="scroll-bar"><div class="scroll-tumb"></div></div>
       <div class="scroll-button">
           <img class="prev_btn" src="{{'prev_btn.png' | asset_url }}">
@@ -118,7 +121,6 @@
     const next_btn = document.querySelector('#section--{{ section.id }} .scroll-button .next_btn');
     const scroll_content = document.querySelector('#section--{{ section.id }} .featured-blog--grid');
     const scroll_content_width = scroll_content.offsetWidth;
-    const count = document.querySelector('#section--{{ section.id }} .item--count .position');
     var scroll_position = 0;
     const device_width = document.querySelector('body').offsetWidth;
     const item_width = document.querySelector('#section--{{ section.id }} .article--item').offsetWidth;
@@ -132,7 +134,6 @@
         if (num > {{blog.articles.size}}) {
             num = num - 1;
         }
-        count.innerHTML = num;
         var margin_tumb = (num-1) * scroll_tumb_width;
         scroll_tumb.style.cssText += 'margin-left: '+margin_tumb+'px';
     })
@@ -215,6 +216,12 @@ blogSlider();
         "label": "Heading",
         "type": "text",
         "default": "Blog posts"
+      },
+      {
+        "id": "subheading",
+        "label": "Subheading",
+        "type": "text",
+        "default": "Best Skincare Tips from Our Experts"
       },
       {
         "type": "checkbox",

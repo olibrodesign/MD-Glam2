@@ -3,9 +3,9 @@
 {% endif %}>
     <div class="testimonials--wrapper page-width">
         {% if section.settings.title != blank %}
-            <h1 class="title uppercase ff-heading lg--f2 sm--f40 fw-light" style="{% unless section.settings.uppercase %}
+            <h2 class="title uppercase ff-heading " style="{% unless section.settings.uppercase %}
                 text-transform: unset !important;
-            {% endunless %}">{{ section.settings.title }}</h1>
+            {% endunless %}">{{ section.settings.title }}</h2>
         {% endif %}
         <div class="testimonials--content">
             {% for block in section.blocks %}
@@ -15,52 +15,44 @@
                     {% endif %}
                     <div class="title-star-date">
                         {% if block.settings.title != blank %}
-                            <h4 class="title uppercase ff-body lg--f24 fw-light">{{ block.settings.title }}</h4>                        
+                            <h5 class="title uppercase ff-body">{{ block.settings.title }}</h5>                        
                         {% endif %}
-                        <div class="star-date--wrapper">
-                            {% for I in (1..5) %}
-                                {% if I > block.settings.star_count %}
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.1902 5.34434L10.3066 5.58005L10.5667 5.61786L15.4641 6.32953L11.92 9.7839L11.7318 9.96738L11.7762 10.2265L12.6129 15.1042L8.23266 12.8012L7.99999 12.6789L7.76731 12.8012L3.38694 15.1041L4.22336 10.2265L4.26778 9.96739L4.07957 9.78392L0.535916 6.32953L5.4332 5.61789L5.69332 5.58009L5.80966 5.34438L8.00001 0.906534L10.1902 5.34434ZM3.37625 15.1665C3.37624 15.1665 3.37624 15.1665 3.37624 15.1665L3.37625 15.1665ZM0.490573 6.28533C0.490588 6.28534 0.490603 6.28536 0.490619 6.28537L0.490573 6.28533ZM0.473357 6.33862C0.473318 6.33862 0.473279 6.33863 0.473239 6.33864L0.468754 6.30777L0.473241 6.33864L0.473357 6.33862Z" stroke="black"/>
-                                    </svg>
-                                    {% else %}
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.979 6.16358C15.9239 5.99384 15.7772 5.87017 15.6006 5.84451L10.6399 5.12364L8.4214 0.628501C8.34242 0.468481 8.17946 0.367188 8.001 0.367188C7.82257 0.367188 7.65959 0.468512 7.58061 0.628501L5.36196 5.12367L0.401389 5.84451C0.224805 5.87017 0.0780998 5.99387 0.0229681 6.16358C-0.0321949 6.33329 0.0138107 6.51959 0.141576 6.64414L3.73101 10.1432L2.88379 15.0839C2.85363 15.2597 2.92595 15.4375 3.07031 15.5423C3.21464 15.6472 3.40597 15.6611 3.56402 15.578L8.00097 13.2454L12.4378 15.5781C12.5064 15.6141 12.5813 15.6319 12.6559 15.6319C12.7531 15.6319 12.8499 15.6017 12.9315 15.5424C13.0759 15.4375 13.1482 15.2598 13.118 15.0839L12.2706 10.1432L15.8604 6.64417C15.9882 6.51959 16.0342 6.33329 15.979 6.16358Z" fill="black"/>
-                                    </svg>
-                                {% endif %}
-                            {% endfor %}
-                            {% if block.settings.date != blank %}
-                                <span class="date ff-body lg--f16 sm--f14 fw-light">{{block.settings.date}}</span>
-                            {% endif %}
-                        </div>
+                        {% if block.settings.subtitle != blank %}
+                            <p class="subtitle ff-body lg--f16">{{ block.settings.subtitle }}</p>
+                        {% endif %}
+                        
                     </div>
-                    {% if block.settings.subtitle != blank %}
-                        <p class="subtitle ff-body lg--f16">{{ block.settings.subtitle }}</p>
-                    {% endif %}
+                    <div class="star-date--wrapper">
+                        {% for I in (1..5) %}
+                            {% if I > block.settings.star_count %}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17.02" height="16.012" viewBox="0 0 17.02 16.012">
+                                <path id="Path_46" data-name="Path 46" d="M95.989,6.063a.467.467,0,0,0-.379-.314L90.65,5.041,88.431.624a.473.473,0,0,0-.841,0L85.372,5.041l-4.96.708a.467.467,0,0,0-.379.314.455.455,0,0,0,.119.472l3.59,3.438-.847,4.855a.457.457,0,0,0,.187.45.476.476,0,0,0,.494.035l4.437-2.292,4.437,2.292a.476.476,0,0,0,.494-.035.457.457,0,0,0,.187-.451L92.28,9.974l3.59-3.438A.455.455,0,0,0,95.989,6.063Z" transform="translate(-79.501 0.133)" fill="none" stroke="#f2a7a0" stroke-width="1"/>
+                                </svg>
+                                {% else %}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="15" viewBox="0 0 16.002 15">
+                                    <path id="Path_45" data-name="Path 45" d="M75.986,6.063a.467.467,0,0,0-.378-.314l-4.961-.708L68.428.624a.473.473,0,0,0-.841,0L65.369,5.041l-4.961.708a.467.467,0,0,0-.378.314.455.455,0,0,0,.119.472l3.589,3.438-.847,4.855a.457.457,0,0,0,.187.45.476.476,0,0,0,.494.035l4.437-2.292,4.437,2.292a.476.476,0,0,0,.494-.035.457.457,0,0,0,.187-.451l-.848-4.855,3.59-3.438A.455.455,0,0,0,75.986,6.063Z" transform="translate(-60.007 -0.367)" fill="#f2a7a0"/>
+                                </svg>
+                                  
+                            {% endif %}
+                        {% endfor %}
+                        {% comment %} {% if block.settings.date != blank %}
+                            <span class="date ff-body lg--f16 sm--f14 fw-light">{{block.settings.date}}</span>
+                        {% endif %} {% endcomment %}
+                    </div>
                     {% if block.settings.description != blank %}
                         {% assign description = block.settings.description %}
                         {% if description.size > 160 %}
                             {% assign description = description | truncate: 160, '...' %}
-                            <div class="description active ff-body lg--f18">{{ description }}</div>
-                            <div class=" description_more ff-body lg--f18">{{ block.settings.description }}</div>
+                            <div class="description active ff-body fs--body">{{ description }}</div>
+                            <div class=" description_more ff-body fs--body">{{ block.settings.description }}</div>
                             <a href="javascript:;" data-id="{{block.id}}"  class="read_more_btn ff-body lg--f16" id="read_more_btn--{{block.id}}">View more</a>
                         {% else %}
-                            <div class="description active ff-body lg--f18">{{ description }}</div>
+                            <div class="description active ff-body ">{{ description }}</div>
                         {% endif %}
                         
                     {% endif %}
                 </div>
             {% endfor %}
-        </div>
-        <div class="lg--hide scroll-controller">
-            <div class="item--count">
-                <span class="position">1</span>/<span>{{ section.blocks.size }}</span>
-            </div>
-            <div class="scroll-bar"><div class="scroll-tumb"></div></div>
-            <div class="scroll-button">
-                <img class="prev_btn" src="{{'prev_btn.png' | asset_url }}">
-                <img class="next_btn" src="{{'next_btn.png' | asset_url }}">
-            </div>
         </div>
     </div>
 </section>
@@ -103,48 +95,6 @@
         })
     }
 
-    var testminomialSlider = function() {
-        const prev_btn = document.querySelector('#section--{{ section.id }} .scroll-button .prev_btn');
-        const next_btn = document.querySelector('#section--{{ section.id }} .scroll-button .next_btn');
-        const scroll_content = document.querySelector('#section--{{ section.id }} .testimonials--content');
-        const scroll_content_width = scroll_content.offsetWidth;
-        const count = document.querySelector('#section--{{ section.id }} .item--count .position');
-        var scroll_position = 0;
-        const device_width = document.querySelector('body').offsetWidth;
-        const item_width = document.querySelector('#section--{{ section.id }} .testimonial--item').offsetWidth;
-        const scroll_bar_width = document.querySelector('#section--{{ section.id }} .scroll-bar').offsetWidth;
-        const scroll_tumb_width = scroll_bar_width / {{ section.blocks.size }};
-        const scroll_tumb = document.querySelector('#section--{{ section.id }} .scroll-tumb')
-        scroll_tumb.style.cssText += 'width: '+scroll_tumb_width+'px';
-        scroll_content.on('scroll', event=> {
-            scroll_position = scroll_content.scrollLeft;
-            const num = Math.floor((scroll_position + item_width * 0.5) / item_width) + 1;
-            if (num > {{section.blocks.size}}) {
-                num = num - 1;
-            }
-            count.innerHTML = num;
-            var margin_tumb = (num-1) * scroll_tumb_width;
-            scroll_tumb.style.cssText += 'margin-left: '+margin_tumb+'px';
-        })
-        prev_btn.on('click', event=> {
-            scroll_content.scrollTo({
-              top: 0,
-              left: scroll_position - (item_width+20),
-              behavior: 'smooth'
-            });
-        })
-        next_btn.on('click', event=> {
-            scroll_content.scrollTo({
-              top: 0,
-              left: scroll_position + item_width+20,
-              behavior: 'smooth'
-            });  
-        })
-        
-    }
-   
-    testminomialSlider();
-    
 </script>
 {% schema %}
     {

@@ -57,7 +57,7 @@
         </h2>
       </div>
       {% if section.settings.view_all_btn_text != blank %}
-        <a class="view_all_btn lg--f16 sm--f16 ff-body uppercase" href="{{ section.settings.view_all_btn_url }}">{{ section.settings.view_all_btn_text }}</a>   
+        <a class="view_all_btn ff-body uppercase sm--hide" href="{{ section.settings.view_all_btn_url }}">{{ section.settings.view_all_btn_text }}</a>   
       {% endif %}
     </div>
   {% endif %}
@@ -126,6 +126,9 @@
       </div>
     </div>
   {% endunless %}
+  {% if section.settings.view_all_btn_text != blank %}
+    <a class="view_all_btn ff-body uppercase md--hide lg--hide" href="{{ section.settings.view_all_btn_url }}">{{ section.settings.view_all_btn_text }}</a>   
+  {% endif %}
 </featured-collection-root>
 
 <script type="module">

@@ -2,6 +2,7 @@
   "sections": {
     "collection-header": {
       "type": "collection--header",
+      "disabled": true,
       "settings": {
         "enable-header": false,
         "show_breadcrumbs": true,
@@ -71,9 +72,9 @@
         "uppercase": false,
         "text_image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1.png",
         "video": "",
-        "subtitle": "<p>Risk free - Money <em>back guarantee<\/em><\/p><p><em>free shipping<\/em><\/p><p>Award winning <em>customer service<\/em><\/p>",
+        "subtitle": "<p>Risk free <\/p><p>Money back guarantee<\/p><p>free shipping<\/p><p>Award winning customer service<\/p>",
         "uppercase_subtitle": true,
-        "subtitle_size": "large",
+        "subtitle_size": "normal",
         "text": "<p>“I know you'll love MD GLAM as much as I do, but if for any reason you're not completely satisfied, just return the containers within 60 days of receipt, and you'll get a full refund of the purchase price (minus shipping and handling).”<\/p><p><\/p><p><strong>Dr. Cat<\/strong><\/p><p><em>(Board-Certified Plastic Surgeon,<\/em><\/p><p><em> Founder of MD GLAM)<\/em><\/p>",
         "btn_text": "",
         "btn_url": "",
